@@ -1,0 +1,71 @@
+name: collect-prices
+
+on:
+  schedule:
+    # 04:40 UTC = 07:40 Israel (IDT). Chains publish the day's PriceFull files between 02:00 and 07:00.
+    - cron: "40 4 * * *"
+  push:
+    branches: [main]
+    paths:
+      - "collector/**"
+      - ".github/workflows/collect.yml"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "discover | catalog | daily"
+        required: true
+        default: "daily"
+      date:
+        description: "override observation date (YYYY-MM-DD), optional"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: collect
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q requests lxml pandas
+      - name: resolve mode
+        id: mode
+        env:
+          IN_MODE: ${{ github.event.inputs.mode || '' }}
+          IN_DATE: ${{ github.event.inputs.date || '' }}
+        run: |
+          # push-triggered runs take their mode from collector/run_mode.txt (one word per line: mode [date]);
+          # scheduled runs are always daily; manual runs use the inputs.
+          if [ "${{ github.event_name }}" = "schedule" ]; then MODE=daily; DATE="";
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then MODE="$IN_MODE"; DATE="$IN_DATE";
+          else read -r MODE DATE < collector/run_mode.txt || true; fi
+          MODE=${MODE:-daily}
+          echo "mode=$MODE" >> "$GITHUB_OUTPUT"; echo "date=$DATE" >> "$GITHUB_OUTPUT"
+          echo "mode=$MODE date=$DATE"
+      - name: run collector
+        env:
+          MODE: ${{ steps.mode.outputs.mode }}
+          DATE: ${{ steps.mode.outputs.date }}
+        run: |
+          set -o pipefail
+          mkdir -p logs
+          if [ -n "$DATE" ]; then python collector/collect.py --mode "$MODE" --date "$DATE" 2>&1 | tee "logs/last_${MODE}.log";
+          else python collector/collect.py --mode "$MODE" 2>&1 | tee "logs/last_${MODE}.log"; fi
+      - name: commit results
+        if: always()
+        run: |
+          git config user.name "price-collector"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A data logs
+          git diff --cached --quiet && echo "nothing to commit" || git commit -m "collect ${{ steps.mode.outputs.mode }} $(date -u +%FT%H:%M)"
+          git pull --rebase origin main || true
+          git push

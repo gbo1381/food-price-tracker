@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrefour - אתר שקיפות מחירים</title>
+    <!-- <link rel="stylesheet" href="css/old-index.css"> -->
+    <style>body > :not(.picker),
+body > :not(.picker) * {
+    transition: all .15s;
+}
+
+* {
+    direction: rtl;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    width: 100%;
+    margin: 0px;
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0px 120px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2, h3, h4, h5 {
+    font-weight: normal;
+}
+
+.centerTxt {
+    text-align: center;
+}
+
+.companyLogo {
+    display: inherit;
+    text-align: center;
+    margin: 0 auto;
+    height: auto;
+    width: 200px;
+    max-width: 90%;
+}
+
+.parentDirDiv {
+    display: inline-block;
+    font-size: large;
+    margin: 10px 0px;
+    text-decoration: underline;
+}
+
+.parentDirDiv:hover {
+    cursor: pointer;
+    opacity: .65;
+}
+
+.fileDiv {
+    transform-origin: top center;
+    position: relative;
+    display: grid;
+    padding: 10px 15px;
+    border: none;
+    font-size: large;
+    grid-template-columns: 1fr 1fr .75fr .2fr;
+}
+
+.fileDiv:nth-of-type(odd) {
+    background-color: #efefef;
+}
+
+.fileDiv:first-of-type {
+    border: 1px solid #ccc;
+    color: #555;
+}
+
+.fileDiv:first-of-type .filterLink {
+    color: royalblue;
+    text-decoration: underline;
+}
+
+.fileDiv:first-of-type span[filter="m"] {
+    cursor: pointer;
+}
+
+.fileDiv:not(:first-of-type) {
+    animation: slide .3s ease 1;
+}
+
+.fileDiv:not(:first-of-type):hover {
+    opacity: .7;
+}
+
+.fileDiv:not(:first-of-type) .fileSize {
+    text-align: right;
+    direction: ltr;
+}
+
+.fileDiv .downloadBtn {
+    text-decoration: none;
+    color: inherit;
+}
+
+.fileDiv .fa-folder {
+    color: orange;
+}
+
+.input {
+    margin: 10px 0px;
+    padding: 10px 20px;
+    font-size: large;
+    color: #333;
+    background: #efefef;
+    border: none;
+    border-radius: 8px;
+    max-width: 30%;
+    box-sizing: border-box;
+}
+
+.paginationDiv {
+    display: none;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.paginationBtn {
+    box-sizing: border-box;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    background-color: #eee;
+    /*color: #16a06e;*/
+    
+    border: none;
+    border-radius: 5px;
+    font-size: small;
+}
+
+.paginationNav {
+    background-color: #077ccc;
+    color: #fff;
+}
+
+.paginationPages {
+    display: inline-block;
+}
+
+.paginationBtn_disabled {
+    background-color: #f6f6f6;
+    color: #ededed;
+    pointer-events: none;
+}
+
+.paginationBtn_selected {
+    background-color: #077ccc;
+    color: #fff;
+}
+
+.paginationBtn:hover {
+    cursor: pointer;
+    opacity: .6;
+}
+
+.paginationTxt {
+    font-weight: bold;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0px;
+    /*background-color: #02b48b;*/
+     background-color: #ececec; 
+    color: #333;
+    border-top: 1px solid #ccc;
+    font-size: small;
+}
+
+.footer p {
+    font-weight: bold;
+    margin: 0px;
+}
+
+.footer a {
+    /*color: #98ffd4;*/
+    color: #16a06e;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+@keyframes slide {
+    0% {transform: scaleY(0); transform-origin: top center;}
+    100% {transform: scaleY(1); transform-origin: top center;}
+}
+
+@media only screen and (max-width: 1500px) {
+    .container {
+        padding: 40px 10px;
+    }
+    
+    .fileDiv, .input {
+        font-size: medium;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .fileDiv {
+        font-size: small;
+        grid-template-columns: 1fr .75fr .2fr;
+    }
+    
+    h1 {
+        font-size: large;
+    }
+    
+    .input {
+        font-size: small;
+    }
+    
+    .fileDiv .fileSize, .first_row_fileSize {
+        display: none;
+    }
+}
+
+/* Picker Style START */
+.picker-close {
+    right: auto;
+    left: 0;
+}
+/* Picker Style END */</style>
+    <link rel="shortcut icon" href="https://brand.carrefour.co.il/_next/static/media/carrefour-footer.9c60174d.svg" type="image/png">
+    <link rel="icon" type="image/png" href="https://brand.carrefour.co.il/_next/static/media/carrefour-footer.9c60174d.svg">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./picker.min.js"></script>
+    <link href="./picker.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div class="container">
+    <img class="companyLogo" src="https://brand.carrefour.co.il/_next/static/media/carrefour-footer.9c60174d.svg" alt="Carrefour Logo">
+    <!-- <h1 class="title">
+    אתר שקיפות מחירים
+    </h1> -->
+
+    <div class="filters">
+        <!-- <input type="text" class="input" placeholder="חיפוש קובץ" id="free_search_filter" oninput="filterFiles(true);"> -->
+
+        <select class="input selectFilter" id="category_filter" onchange="filterFiles(true);">
+            <option value="">קטגוריה</option>
+            <option value="Price">Price</option>
+            <option value="PriceFull">PriceFull</option>
+            <option value="Promo">Promo</option>
+            <option value="PromoFull">PromoFull</option>
+            <option value="Stores">Stores</option>
+        </select>
+
+        
+    <select class="input selectFilter" id="branch_filter" onchange="filterFiles(true);">
+        <option value="">סניף</option>
+    <option value="002">002 - קרפור מרקט  אשקלון חאן</option><option value="004">004 - קרפור היפר   אשקלון צפוני</option><option value="009">009 - קרפור היפר   רעננה</option><option value="010">010 - קרפור היפר   כפר סבא</option><option value="012">012 - פתח תקוה בר כוכבא</option><option value="019">019 - קרפור מרקט  תל מונד</option><option value="026">026 - קרפור מרקט    ראש העין</option><option value="030">030 - קרפור מרקט אילת</option><option value="033">033 - קרפור היפר   בית שמש</option><option value="037">037 - קרפור מרקט  אור יהודה</option><option value="041">041 - קרפור היפר אור עקיבא</option><option value="044">044 - קרפור מרקט  מעלות</option><option value="046">046 - קרפור מרקט  רמלה</option><option value="055">055 - קרפור היפר דליית אל כרמל</option><option value="056">056 - קרפור מרקט  ערד</option><option value="057">057 - קרפור מרקט  בית שאן</option><option value="060">060 - קרפור מרקט  אשדוד בסיטי ש.ש.ה</option><option value="061">061 - קרפור מרקט נתניה בסיטי</option><option value="062">062 - קרפור סיטי  מודיעין בסיטי</option><option value="063">063 - קרפור מרקט ראשלצ בסיטי</option><option value="064">064 - קרפור סיטי  הרצליה ליד הבית</option><option value="065">065 - קרפור מרקט אשקלון</option><option value="067">067 - קרפור סיטי  חולון בסיטי</option><option value="068">068 - קרפור מרקט  אשקלון סיטי ברנע</option><option value="073">073 - קרפור מרקט  עתלית</option><option value="074">074 - קרפור רמלה לוין</option><option value="080">080 - יינות ביתן טבעון</option><option value="081">081 - קרפור סיטי  ראשון מערב</option><option value="083">083 - קרפור סיטי  צור יצחק</option><option value="084">084 - קרפור סיטי  מתן</option><option value="085">085 - קרפור סיטי  מנחם בגין 152 תא</option><option value="089">089 - קרפור סיטי TLV  תל אביב</option><option value="091">091 - קרפור מרקט ריינס</option><option value="108">108 - קרפור סיטי  פנקס</option><option value="116">116 - קרפור סיטי  כיכר דיזינגוף</option><option value="117">117 - סינמה סיטי</option><option value="119">119 - קרפור כרכור</option><option value="120">120 - היפר אופקים</option><option value="123">123 - מרקט בית שמש האמוראי</option><option value="124">124 - מרקט יבנה דואני</option><option value="125">125 - קרפור יבנה נאות שמיר</option><option value="126">126 - היפר עפולה</option><option value="127">127 - היפר נתיבות מרכז</option><option value="128">128 - היפר ירושלים תלפיות</option><option value="129">129 - קרפור קרית שמונה</option><option value="132">132 - קרפור סיטי  ויצמן תל אביב</option><option value="140">140 - קרפור סיטי  גרינברג חיפה</option><option value="183">183 - קרפור סיטי עוזיאל בת ים</option><option value="205">205 - קרפור מרקט  לה גרדיה</option><option value="213">213 - קרפור סיטי  אבן גבירול</option><option value="221">221 - קרפור מרקט  מגדל נחום</option><option value="256">256 - קרפור סיטי רמת יוסף</option><option value="329">329 - קרפור סיטי  נאות רחל</option><option value="337">337 - קרפור סיטי  נאות אפקה</option><option value="345">345 - קרפור סיטי  נאות שושנים</option><option value="353">353 - קרפור סיטי  הצרכנייה אשדוד ד</option><option value="493">493 - קרפור הרואה רמת גן</option><option value="515">515 - קרפור רווה רמת גן</option><option value="523">523 - קרפור סיטי דימונה</option><option value="558">558 - קרפור סיטי  רמת החייל</option><option value="580">580 - קרפור סיטי  עמק ברכה</option><option value="610">610 - קרפור סיטי  הצרכניה רובע ט ב'ש</option><option value="620">620 - קרפור סיטי  ירושלים נתניה</option><option value="698">698 - קרפור סיטי  בית אבות</option><option value="701">701 - קרפור סיטי  קרית אונו</option><option value="752">752 - קרפור סיטי  רמת אפעל</option><option value="820">820 - קרפור מרכז רעננה</option><option value="830">830 - קרפור גולן רעננה</option><option value="850">850 - קרפור סיטי  קרית שרת</option><option value="870">870 - קרפור סיטי  ותיקים רעננה</option><option value="906">906 - קרפור סיטי  מרכז נתניה</option><option value="914">914 - קרפור סיטי  נווה אביבים</option><option value="981">981 - קרפור סיטי אזורים נתניה</option><option value="400">400 - קרפור סיטי  קניון כפר סבא (1030)</option><option value="401">401 - קרפור סיטי  הוד השרון (1040)</option><option value="402">402 - קרפור סיטי  לב דיזנגוף (1090)</option><option value="403">403 - קרפור סיטי  הצרכנייה רמלה (1112)</option><option value="404">404 - קרפור סיטי  רון כפר סבא (1139)</option><option value="405">405 - קרפור סיטי  נווה כרמית (1147)</option><option value="406">406 - קרפור סיטי  מכבים (1150)</option><option value="407">407 - בעיר חפץ חיים (1171)</option><option value="408">408 - קרפור סיטי  צמרות (1190)</option><option value="409">409 - קרפור מרקט  יהלומים (1201)</option><option value="410">410 - קרפור מרקט  תל כביר (1228)</option><option value="411">411 - קרפור סיטי  מגדלי דוד (1236)</option><option value="412">412 - קרפור מעלה אילת (1252)</option><option value="413">413 - קרפור סיטי  בילינסון פ"ת (1279)</option><option value="414">414 - קרפור סיטי  מאוז אביב (1295)</option><option value="415">415 - קרפור סיטי  רמת אביב ג (1309)</option><option value="416">416 - בעיר שדרות B (1340)</option><option value="417">417 - קרפור סיטי  קיראון (1430)</option><option value="418">418 - קרפור כרמליה (2040)</option><option value="419">419 - קרפור סיטי  כפר יונה דרום (2070)</option><option value="420">420 - קרפור מרקט   אילת (2150)</option><option value="421">421 - קרפור סיטי  אבן יהודה (2180)</option><option value="422">422 - קרפור סיטי  גני העיר רחובות (2190)</option><option value="423">423 - קרפור מרקט  גני אביב לוד (2230)</option><option value="424">424 - קרפור מרקט  בית וגן ק.אתא (2240)</option><option value="425">425 - קרפור מרקט  גן יבנה (2310)</option><option value="426">426 - קרפור סיטי  קניון גבעתיים (2320)</option><option value="427">427 - קרפור סיטי  אשדוד י"ב (2330)</option><option value="428">428 - קרפור מרקט  עיר ימים נתניה (2410)</option><option value="429">429 - קרפור מרקט  נאות חן חדרה (2470)</option><option value="430">430 - קרפור סיטי  כפר שלם (2490)</option><option value="431">431 - בעיר פארק הירקון (2518)</option><option value="432">432 - בעיר בת גלים (2530)</option><option value="433">433 - קרפור מרקט  מודיעין שמשוני (2540)</option><option value="434">434 - קרפור סיטי לב נתניה (2577)</option><option value="435">435 - קרפור מרקט מגדל העמק (2730)</option><option value="436">436 - קרפור מרקט  שרונה רחובות (2740)</option><option value="437">437 - קרפור  עמישב פ"ת (2750)</option><option value="438">438 - קרפור מרקט  אשדוד ח (2840)</option><option value="439">439 - קרפור סיטי  נוף זכרון (2960)</option><option value="440">440 - קרפור סיטי  צפון באר-שבע (2976)</option><option value="441">441 - קרפור מרקט בית אליעזר (3020)</option><option value="442">442 - קרפור סיטי  כפר יונה (3050)</option><option value="443">443 - קרפור סיטי  בר אילן (3174)</option><option value="444">444 - קרפור סיטי  רמות צהלה (3180)</option><option value="445">445 - קרפור סיטי לב אשקלון (3210)</option><option value="446">446 - קרפור סיטי  אלוני השרון נתניה (3280)</option><option value="447">447 - קרפור מרקט  קניון אביה (3300)</option><option value="448">448 - קרפור מרקט  אלנבי ירושלים (3420)</option><option value="449">449 - קרפור סיטי  מזכרת בתיה (3440)</option><option value="450">450 - קרפור סיטי  גבעת סביון (3506)</option><option value="451">451 - קרפור סיטי  רמות אלון (3580)</option><option value="452">452 - קרפור מרקט  שטמפפר פ"ת (3600)</option><option value="453">453 - שוק מהדרין הרצל חיפה (3610)</option><option value="454">454 - קרפור מרקט בית שמש (3680)</option><option value="455">455 - קרפור מרקט  נווה זאב (3700)</option><option value="456">456 - קרפור מרקט  אפרידר אשקלון (3740)</option><option value="457">457 - קרפור סיטי  בית הכרם (3850)</option><option value="458">458 - קרפור סיטי  תל ברוך (3990)</option><option value="459">459 - קרפור מרקט לב הרצלה (4110)</option><option value="460">460 - קרפור הדר הרצליה (4120)</option><option value="461">461 - קרפור סיטי  נווה אמירים (4130)</option><option value="462">462 - קרפור סיטי  הרצליה פיתוח (4150)</option><option value="463">463 - קרפור סיטי  נוף ים (4160)</option><option value="464">464 - בעיר נווה עמל (4170)</option><option value="465">465 - קרפור סיטי  זרובבל רמה"ש (4200)</option><option value="466">466 - קרפור סיטי  נצר סירני (4220)</option><option value="467">467 - אלעד קרפור מרקט (4270)</option><option value="468">468 - קרפור מרקט  אודיטוריום חיפה (4280)</option><option value="469">469 - קרפור מרקט  אואזיס רמת גן  (4420) (4420)</option><option value="470">470 - קרפור מגדלי כרמל (4640)</option><option value="473">473 - כפר סבא @ קוויק</option><option value="471">471 - קרפור אונליין   כפר סבא @ קרפור (5304)</option><option value="472">472 - @ יהלומים ביתן (9032)</option></select>
+        <input type="text" class="input" id="dateInput" value="16/09/2026" placeholder="חיפוש לפי תאריך">
+    </div>
+
+
+    <div class="filesDiv">
+        <div class="fileDiv">
+            <div class="first_row_col">שם קובץ</div>
+            <div class="first_row_col filterLink" onclick="sort_modified(true);">
+                נערך
+                <i class="fa fa-arrow-down modifiedIcon"></i>
+            </div>
+            <div class="first_row_col first_row_fileSize">גודל</div>
+            <div class="first_row_col">הורדה</div>
+        </div>
+        <h4 class="errMsg centerTxt " style="display: none;"></h4>
+    </div>
+    <div class="paginationDiv" style="display: block;">
+        <button class="paginationBtn paginationNav paginationBtn_disabled" onclick="firstPage();" data-action="first">
+        <i class="fas fa-angle-double-right"></i>
+    </button>
+    <button class="paginationBtn paginationNav paginationBtn_disabled" onclick="prevPage();" data-action="prev">
+        <i class="fas fa-angle-right"></i>
+    </button>
+    <div class="paginationPages">
+        <button class="paginationBtn paginationBtn_selected" onclick="changePage(1)" data-page="1">1</button>
+        
+        <button class="paginationBtn " onclick="changePage(2)" data-page="2">2</button>
+        
+        <button class="paginationBtn " onclick="changePage(3)" data-page="3">3</button>
+        </div>
+    <button class="paginationBtn paginationNav" onclick="nextPage();" data-action="next">
+        <i class="fas fa-angle-left"></i>
+    </button>
+    <button class="paginationBtn paginationNav" onclick="lastPage();" data-action="last">
+        <i class="fas fa-angle-double-left"></i>
+    </button>
+    <p class="paginationTxt">
+        <span class="paginationCurrent">1</span>
+        /
+        <span class="paginationTotal">73</span>
+    </p>
+</div>
+</div>
+
+<div class="footer">
+    <p>
+        ©
+        2026        Powered by
+        <a href="https://il.u-code.net">U-CODE.NET</a>
+    </p>
+</div>
+
+<script>
+    const path = '20260916';
+    const files = [{"name":"Price7290055700007-001-002-20260916-080004.gz","size":532,"modified":"07:58 16-09-2026"},{"name":"Price7290055700007-001-004-20260916-080017.gz","size":770,"modified":"08:00 16-09-2026"},{"name":"Price7290055700007-001-009-20260916-090008.gz","size":811,"modified":"09:00 16-09-2026"},{"name":"Price7290055700007-001-010-20260916-080005.gz","size":1208,"modified":"08:04 16-09-2026"},{"name":"Price7290055700007-001-010-20260916-090010.gz","size":1400,"modified":"09:04 16-09-2026"},{"name":"Price7290055700007-001-012-20260916-070019.gz","size":54620,"modified":"07:00 16-09-2026"},{"name":"Price7290055700007-001-012-20260916-080004.gz","size":54724,"modified":"08:00 16-09-2026"},{"name":"Price7290055700007-001-012-20260916-090014.gz","size":55180,"modified":"09:00 16-09-2026"},{"name":"Price7290055700007-001-019-20260916-080012.gz","size":598,"modified":"08:03 16-09-2026"},{"name":"Price7290055700007-001-019-20260916-090002.gz","size":1148,"modified":"09:03 16-09-2026"},{"name":"Price7290055700007-001-026-20260916-080002.gz","size":684,"modified":"08:00 16-09-2026"},{"name":"Price7290055700007-001-026-20260916-090002.gz","size":1013,"modified":"09:00 16-09-2026"},{"name":"Price7290055700007-001-030-20260916-090006.gz","size":626,"modified":"09:07 16-09-2026"},{"name":"Price7290055700007-001-033-20260916-080016.gz","size":506,"modified":"08:01 16-09-2026"},{"name":"Price7290055700007-001-033-20260916-090006.gz","size":505,"modified":"09:00 16-09-2026"},{"name":"Price7290055700007-001-037-20260916-090015.gz","size":776,"modified":"09:00 16-09-2026"},{"name":"Price7290055700007-001-041-20260916-080002.gz","size":690,"modified":"08:02 16-09-2026"},{"name":"Price7290055700007-001-044-20260916-090003.gz","size":858,"modified":"09:00 16-09-2026"},{"name":"Price7290055700007-001-046-20260916-080006.gz","size":776,"modified":"08:10 16-09-2026"},{"name":"Price7290055700007-001-055-20260916-080006.gz","size":604,"modified":"08:02 16-09-2026"},{"name":"Price7290055700007-001-055-20260916-090016.gz","size":953,"modified":"09:02 16-09-2026"},{"name":"Price7290055700007-001-056-20260916-090016.gz","size":665,"modified":"08:54 16-09-2026"},{"name":"Price7290055700007-001-057-20260916-090004.gz","size":5014,"modified":"09:01 16-09-2026"},{"name":"Price7290055700007-001-060-20260916-090019.gz","size":644,"modified":"09:07 16-09-2026"},{"name":"Price7290055700007-001-062-20260916-080004.gz","size":918,"modified":"09:04 16-09-2026"},{"name":"Price7290055700007-001-063-20260916-090014.gz","size":668,"modified":"09:00 16-09-2026"},{"name":"Price7290055700007-001-064-20260916-080008.gz","size":766,"modified":"07:58 16-09-2026"},{"name":"Price7290055700007-001-064-20260916-090014.gz","size":1107,"modified":"08:58 16-09-2026"},{"name":"Price7290055700007-001-065-20260916-070016.gz","size":31063,"modified":"07:00 16-09-2026"},{"name":"Price7290055700007-001-065-20260916-090016.gz","size":31426,"modified":"09:00 16-09-2026"},{"name":"Price7290055700007-001-067-20260916-080004.gz","size":687,"modified":"07:58 16-09-2026"},{"name":"Price7290055700007-001-067-20260916-090014.gz","size":1250,"modified":"08:59 16-09-2026"},{"name":"Price7290055700007-001-068-20260916-080010.gz","size":15431,"modified":"08:07 16-09-2026"},{"name":"Price7290055700007-001-073-20260916-080017.gz","size":851,"modified":"07:57 16-09-2026"},{"name":"Price7290055700007-001-073-20260916-090003.gz","size":1037,"modified":"08:57 16-09-2026"},{"name":"Price7290055700007-001-080-20260916-090017.gz","size":774,"modified":"09:00 16-09-2026"},{"name":"Price7290055700007-001-081-20260916-080006.gz","size":507,"modified":"08:02 16-09-2026"},{"name":"Price7290055700007-001-081-20260916-090016.gz","size":1231,"modified":"09:02 16-09-2026"},{"name":"Price7290055700007-001-083-20260916-080011.gz","size":843,"modified":"08:05 16-09-2026"},{"name":"Price7290055700007-001-084-20260916-090016.gz","size":2388,"modified":"08:56 16-09-2026"},{"name":"Price7290055700007-001-085-20260916-080003.gz","size":3810,"modified":"07:54 16-09-2026"},{"name":"Price7290055700007-001-085-20260916-090013.gz","size":4003,"modified":"08:54 16-09-2026"},{"name":"Price7290055700007-001-089-20260916-080019.gz","size":881,"modified":"08:00 16-09-2026"},{"name":"Price7290055700007-001-091-20260916-090002.gz","size":2536,"modified":"09:06 16-09-2026"},{"name":"Price7290055700007-001-108-20260916-070011.gz","size":510,"modified":"06:59 16-09-2026"},{"name":"Price7290055700007-001-108-20260916-090011.gz","size":768,"modified":"08:59 16-09-2026"},{"name":"Price7290055700007-001-117-20260916-080006.gz","size":538,"modified":"08:00 16-09-2026"},{"name":"Price7290055700007-001-119-20260916-080012.gz","size":1084,"modified":"08:00 16-09-2026"},{"name":"Price7290055700007-001-120-20260916-080010.gz","size":734,"modified":"08:00 16-09-2026"},{"name":"Price7290055700007-001-123-20260916-070015.gz","size":46633,"modified":"07:00 16-09-2026"},{"name":"Price7290055700007-001-123-20260916-080005.gz","size":46855,"modified":"08:00 16-09-2026"},{"name":"Price7290055700007-001-123-20260916-090005.gz","size":46857,"modified":"09:00 16-09-2026"},{"name":"Price7290055700007-001-124-20260916-070008.gz","size":34393,"modified":"07:00 16-09-2026"},{"name":"Price7290055700007-001-124-20260916-080013.gz","size":34764,"modified":"08:00 16-09-2026"},{"name":"Price7290055700007-001-125-20260916-070007.gz","size":48196,"modified":"07:01 16-09-2026"},{"name":"Price7290055700007-001-125-20260916-080008.gz","size":48977,"modified":"08:01 16-09-2026"},{"name":"Price7290055700007-001-126-20260916-080008.gz","size":1257,"modified":"08:00 16-09-2026"},{"name":"Price7290055700007-001-128-20260916-070017.gz","size":83415,"modified":"07:00 16-09-2026"},{"name":"Price7290055700007-001-128-20260916-080007.gz","size":83678,"modified":"08:00 16-09-2026"},{"name":"Price7290055700007-001-129-20260916-080008.gz","size":1106,"modified":"08:00 16-09-2026"},{"name":"Price7290055700007-001-132-20260916-080001.gz","size":3128,"modified":"08:04 16-09-2026"},{"name":"Price7290055700007-001-132-20260916-090007.gz","size":3532,"modified":"09:04 16-09-2026"},{"name":"Price7290055700007-001-213-20260916-090002.gz","size":519,"modified":"08:59 16-09-2026"},{"name":"Price7290055700007-001-221-20260916-080003.gz","size":679,"modified":"08:03 16-09-2026"},{"name":"Price7290055700007-001-221-20260916-090013.gz","size":904,"modified":"09:03 16-09-2026"},{"name":"Price7290055700007-001-256-20260916-080020.gz","size":507,"modified":"08:01 16-09-2026"},{"name":"Price7290055700007-001-256-20260916-090010.gz","size":867,"modified":"09:01 16-09-2026"},{"name":"Price7290055700007-001-329-20260916-080013.gz","size":540,"modified":"08:03 16-09-2026"},{"name":"Price7290055700007-001-337-20260916-070019.gz","size":510,"modified":"07:01 16-09-2026"},{"name":"Price7290055700007-001-337-20260916-080009.gz","size":510,"modified":"08:01 16-09-2026"},{"name":"Price7290055700007-001-337-20260916-090019.gz","size":1018,"modified":"09:01 16-09-2026"},{"name":"Price7290055700007-001-345-20260916-080005.gz","size":1931,"modified":"08:04 16-09-2026"},{"name":"Price7290055700007-001-400-20260916-070004.gz","size":508,"modified":"07:04 16-09-2026"},{"name":"Price7290055700007-001-400-20260916-080014.gz","size":1027,"modified":"08:04 16-09-2026"},{"name":"Price7290055700007-001-402-20260916-090003.gz","size":1137,"modified":"09:00 16-09-2026"},{"name":"Price7290055700007-001-403-20260916-080014.gz","size":544,"modified":"08:00 16-09-2026"},{"name":"Price7290055700007-001-403-20260916-090005.gz","size":830,"modified":"09:00 16-09-2026"},{"name":"Price7290055700007-001-404-20260916-070010.gz","size":510,"modified":"07:01 16-09-2026"},{"name":"Price7290055700007-001-404-20260916-090011.gz","size":826,"modified":"09:01 16-09-2026"},{"name":"Price7290055700007-001-405-20260916-080005.gz","size":489,"modified":"08:00 16-09-2026"},{"name":"Price7290055700007-001-405-20260916-090020.gz","size":1106,"modified":"09:00 16-09-2026"},{"name":"Price7290055700007-001-406-20260916-080017.gz","size":1102,"modified":"08:04 16-09-2026"},{"name":"Price7290055700007-001-407-20260916-090008.gz","size":869,"modified":"08:59 16-09-2026"},{"name":"Price7290055700007-001-408-20260916-080007.gz","size":540,"modified":"08:09 16-09-2026"},{"name":"Price7290055700007-001-410-20260916-080001.gz","size":672,"modified":"08:06 16-09-2026"},{"name":"Price7290055700007-001-411-20260916-080008.gz","size":1046,"modified":"08:08 16-09-2026"},{"name":"Price7290055700007-001-412-20260916-080019.gz","size":2491,"modified":"08:00 16-09-2026"},{"name":"Price7290055700007-001-413-20260916-080007.gz","size":1533,"modified":"08:00 16-09-2026"},{"name":"Price7290055700007-001-415-20260916-080013.gz","size":505,"modified":"08:08 16-09-2026"},{"name":"Price7290055700007-001-415-20260916-090013.gz","size":765,"modified":"09:08 16-09-2026"},{"name":"Price7290055700007-001-416-20260916-080001.gz","size":508,"modified":"08:01 16-09-2026"},{"name":"Price7290055700007-001-416-20260916-090011.gz","size":770,"modified":"09:01 16-09-2026"},{"name":"Price7290055700007-001-417-20260916-070017.gz","size":56724,"modified":"07:10 16-09-2026"},{"name":"Price7290055700007-001-418-20260916-090005.gz","size":657,"modified":"09:04 16-09-2026"},{"name":"Price7290055700007-001-419-20260916-080012.gz","size":776,"modified":"08:01 16-09-2026"},{"name":"Price7290055700007-001-419-20260916-090002.gz","size":1124,"modified":"09:01 16-09-2026"},{"name":"Price7290055700007-001-421-20260916-070002.gz","size":53759,"modified":"07:01 16-09-2026"},{"name":"Price7290055700007-001-421-20260916-080012.gz","size":54478,"modified":"08:01 16-09-2026"},{"name":"Price7290055700007-001-422-20260916-080012.gz","size":786,"modified":"08:02 16-09-2026"},{"name":"Price7290055700007-001-422-20260916-090013.gz","size":1517,"modified":"09:02 16-09-2026"},{"name":"Price7290055700007-001-423-20260916-070018.gz","size":57735,"modified":"07:11 16-09-2026"},{"name":"Price7290055700007-001-424-20260916-070012.gz","size":635,"modified":"07:01 16-09-2026"},{"name":"Price7290055700007-001-424-20260916-090012.gz","size":1207,"modified":"09:01 16-09-2026"},{"name":"Price7290055700007-001-425-20260916-090009.gz","size":894,"modified":"09:01 16-09-2026"},{"name":"Price7290055700007-001-426-20260916-080004.gz","size":54206,"modified":"08:10 16-09-2026"},{"name":"Price7290055700007-001-427-20260916-080014.gz","size":848,"modified":"08:02 16-09-2026"},{"name":"Price7290055700007-001-429-20260916-080011.gz","size":1404,"modified":"08:02 16-09-2026"},{"name":"Price7290055700007-001-431-20260916-080007.gz","size":786,"modified":"08:03 16-09-2026"},{"name":"Price7290055700007-001-432-20260916-080018.gz","size":874,"modified":"08:01 16-09-2026"},{"name":"Price7290055700007-001-433-20260916-080005.gz","size":750,"modified":"08:05 16-09-2026"},{"name":"Price7290055700007-001-434-20260916-080019.gz","size":3616,"modified":"08:11 16-09-2026"},{"name":"Price7290055700007-001-435-20260916-080000.gz","size":1418,"modified":"08:08 16-09-2026"},{"name":"Price7290055700007-001-436-20260916-080019.gz","size":545,"modified":"08:00 16-09-2026"},{"name":"Price7290055700007-001-437-20260916-080003.gz","size":600,"modified":"08:05 16-09-2026"},{"name":"Price7290055700007-001-437-20260916-090013.gz","size":944,"modified":"09:05 16-09-2026"},{"name":"Price7290055700007-001-439-20260916-080004.gz","size":510,"modified":"08:00 16-09-2026"},{"name":"Price7290055700007-001-439-20260916-090014.gz","size":666,"modified":"09:00 16-09-2026"},{"name":"Price7290055700007-001-440-20260916-090018.gz","size":545,"modified":"09:01 16-09-2026"},{"name":"Price7290055700007-001-441-20260916-080018.gz","size":727,"modified":"08:06 16-09-2026"},{"name":"Price7290055700007-001-441-20260916-090013.gz","size":974,"modified":"09:06 16-09-2026"},{"name":"Price7290055700007-001-442-20260916-070012.gz","size":512,"modified":"07:03 16-09-2026"},{"name":"Price7290055700007-001-442-20260916-090013.gz","size":769,"modified":"09:03 16-09-2026"},{"name":"Price7290055700007-001-443-20260916-070004.gz","size":689,"modified":"07:04 16-09-2026"},{"name":"Price7290055700007-001-443-20260916-090004.gz","size":1065,"modified":"09:04 16-09-2026"},{"name":"Price7290055700007-001-444-20260916-080007.gz","size":780,"modified":"08:04 16-09-2026"},{"name":"Price7290055700007-001-444-20260916-090017.gz","size":1032,"modified":"09:04 16-09-2026"},{"name":"Price7290055700007-001-445-20260916-080018.gz","size":702,"modified":"08:07 16-09-2026"},{"name":"Price7290055700007-001-445-20260916-090008.gz","size":1029,"modified":"09:07 16-09-2026"},{"name":"Price7290055700007-001-446-20260916-080007.gz","size":1837,"modified":"07:59 16-09-2026"},{"name":"Price7290055700007-001-446-20260916-090018.gz","size":2409,"modified":"08:59 16-09-2026"},{"name":"Price7290055700007-001-447-20260916-080004.gz","size":1326,"modified":"08:05 16-09-2026"},{"name":"Price7290055700007-001-448-20260916-070015.gz","size":660,"modified":"07:08 16-09-2026"},{"name":"Price7290055700007-001-448-20260916-080005.gz","size":1265,"modified":"08:07 16-09-2026"},{"name":"Price7290055700007-001-449-20260916-090003.gz","size":682,"modified":"08:48 16-09-2026"},{"name":"Price7290055700007-001-450-20260916-080010.gz","size":1089,"modified":"08:02 16-09-2026"},{"name":"Price7290055700007-001-451-20260916-080017.gz","size":845,"modified":"08:05 16-09-2026"},{"name":"Price7290055700007-001-452-20260916-080002.gz","size":1447,"modified":"08:07 16-09-2026"},{"name":"Price7290055700007-001-453-20260916-070007.gz","size":592,"modified":"07:07 16-09-2026"},{"name":"Price7290055700007-001-453-20260916-080017.gz","size":835,"modified":"08:07 16-09-2026"},{"name":"Price7290055700007-001-454-20260916-080011.gz","size":1330,"modified":"07:59 16-09-2026"},{"name":"Price7290055700007-001-455-20260916-080017.gz","size":1855,"modified":"08:03 16-09-2026"},{"name":"Price7290055700007-001-456-20260916-080002.gz","size":541,"modified":"08:03 16-09-2026"},{"name":"Price7290055700007-001-458-20260916-070009.gz","size":509,"modified":"07:03 16-09-2026"},{"name":"Price7290055700007-001-458-20260916-080009.gz","size":868,"modified":"08:03 16-09-2026"},{"name":"Price7290055700007-001-459-20260916-070014.gz","size":693,"modified":"07:06 16-09-2026"},{"name":"Price7290055700007-001-459-20260916-080004.gz","size":963,"modified":"08:06 16-09-2026"},{"name":"Price7290055700007-001-460-20260916-080011.gz","size":508,"modified":"08:02 16-09-2026"},{"name":"Price7290055700007-001-460-20260916-090001.gz","size":781,"modified":"09:02 16-09-2026"},{"name":"Price7290055700007-001-461-20260916-070017.gz","size":510,"modified":"07:06 16-09-2026"},{"name":"Price7290055700007-001-461-20260916-080017.gz","size":975,"modified":"08:06 16-09-2026"},{"name":"Price7290055700007-001-462-20260916-080007.gz","size":1123,"modified":"08:11 16-09-2026"},{"name":"Price7290055700007-001-463-20260916-080002.gz","size":687,"modified":"08:05 16-09-2026"},{"name":"Price7290055700007-001-464-20260916-070014.gz","size":510,"modified":"06:59 16-09-2026"},{"name":"Price7290055700007-001-464-20260916-080005.gz","size":534,"modified":"07:59 16-09-2026"},{"name":"Price7290055700007-001-465-20260916-080010.gz","size":506,"modified":"07:58 16-09-2026"},{"name":"Price7290055700007-001-465-20260916-090001.gz","size":683,"modified":"08:58 16-09-2026"},{"name":"Price7290055700007-001-467-20260916-080001.gz","size":536,"modified":"08:05 16-09-2026"},{"name":"Price7290055700007-001-468-20260916-070020.gz","size":57804,"modified":"07:00 16-09-2026"},{"name":"Price7290055700007-001-468-20260916-080010.gz","size":57975,"modified":"08:00 16-09-2026"},{"name":"Price7290055700007-001-468-20260916-090000.gz","size":58304,"modified":"09:00 16-09-2026"},{"name":"Price7290055700007-001-469-20260916-080004.gz","size":856,"modified":"08:03 16-09-2026"},{"name":"Price7290055700007-001-470-20260916-080010.gz","size":646,"modified":"08:07 16-09-2026"},{"name":"Price7290055700007-001-471-20260916-070008.gz","size":90204,"modified":"07:01 16-09-2026"},{"name":"Price7290055700007-001-471-20260916-080018.gz","size":82349,"modified":"08:01 16-09-2026"},{"name":"Price7290055700007-001-472-20260916-070006.gz","size":16070,"modified":"07:00 16-09-2026"},{"name":"Price7290055700007-001-473-20260916-080003.gz","size":1101,"modified":"08:12 16-09-2026"},{"name":"Price7290055700007-001-515-20260916-070006.gz","size":510,"modified":"07:04 16-09-2026"},{"name":"Price7290055700007-001-515-20260916-080016.gz","size":1142,"modified":"08:04 16-09-2026"},{"name":"Price7290055700007-001-523-20260916-080010.gz","size":909,"modified":"08:11 16-09-2026"},{"name":"Price7290055700007-001-580-20260916-080017.gz","size":780,"modified":"08:05 16-09-2026"},{"name":"Price7290055700007-001-610-20260916-080016.gz","size":920,"modified":"08:04 16-09-2026"},{"name":"Price7290055700007-001-620-20260916-080009.gz","size":4151,"modified":"08:06 16-09-2026"},{"name":"Price7290055700007-001-698-20260916-090001.gz","size":2165,"modified":"08:51 16-09-2026"},{"name":"Price7290055700007-001-701-20260916-090010.gz","size":861,"modified":"09:06 16-09-2026"},{"name":"Price7290055700007-001-820-20260916-070004.gz","size":39796,"modified":"07:00 16-09-2026"},{"name":"Price7290055700007-001-820-20260916-080009.gz","size":39907,"modified":"08:00 16-09-2026"},{"name":"Price7290055700007-001-820-20260916-090019.gz","size":40128,"modified":"09:00 16-09-2026"},{"name":"Price7290055700007-001-830-20260916-080006.gz","size":1337,"modified":"08:08 16-09-2026"},{"name":"Price7290055700007-001-850-20260916-090015.gz","size":812,"modified":"09:00 16-09-2026"},{"name":"Price7290055700007-001-914-20260916-070012.gz","size":509,"modified":"07:04 16-09-2026"},{"name":"Price7290055700007-001-914-20260916-090012.gz","size":666,"modified":"09:04 16-09-2026"},{"name":"Price7290055700007-001-981-20260916-080002.gz","size":543,"modified":"09:01 16-09-2026"},{"name":"PriceFull7290055700007-001-002-20260916-051018.gz","size":479226,"modified":"05:09 16-09-2026"},{"name":"PriceFull7290055700007-001-004-20260916-051011.gz","size":933519,"modified":"05:10 16-09-2026"},{"name":"PriceFull7290055700007-001-009-20260916-051007.gz","size":962754,"modified":"05:10 16-09-2026"},{"name":"PriceFull7290055700007-001-010-20260916-051014.gz","size":906433,"modified":"05:14 16-09-2026"},{"name":"PriceFull7290055700007-001-012-20260916-051003.gz","size":598924,"modified":"05:10 16-09-2026"},{"name":"PriceFull7290055700007-001-019-20260916-051000.gz","size":743325,"modified":"05:13 16-09-2026"},{"name":"PriceFull7290055700007-001-026-20260916-051001.gz","size":769657,"modified":"05:10 16-09-2026"},{"name":"PriceFull7290055700007-001-030-20260916-051005.gz","size":764129,"modified":"05:17 16-09-2026"},{"name":"PriceFull7290055700007-001-030-20260916-061001.gz","size":756648,"modified":"06:17 16-09-2026"},{"name":"PriceFull7290055700007-001-033-20260916-051005.gz","size":885301,"modified":"05:11 16-09-2026"},{"name":"PriceFull7290055700007-001-037-20260916-051004.gz","size":696149,"modified":"05:10 16-09-2026"},{"name":"PriceFull7290055700007-001-041-20260916-051006.gz","size":836282,"modified":"05:13 16-09-2026"},{"name":"PriceFull7290055700007-001-044-20260916-051002.gz","size":862509,"modified":"05:10 16-09-2026"},{"name":"PriceFull7290055700007-001-046-20260916-051014.gz","size":743717,"modified":"05:20 16-09-2026"},{"name":"PriceFull7290055700007-001-055-20260916-051015.gz","size":678320,"modified":"05:13 16-09-2026"},{"name":"PriceFull7290055700007-001-056-20260916-051018.gz","size":859269,"modified":"05:04 16-09-2026"},{"name":"PriceFull7290055700007-001-057-20260916-051003.gz","size":822126,"modified":"05:11 16-09-2026"},{"name":"PriceFull7290055700007-001-060-20260916-051018.gz","size":655442,"modified":"05:17 16-09-2026"},{"name":"PriceFull7290055700007-001-061-20260916-051002.gz","size":499455,"modified":"05:21 16-09-2026"},{"name":"PriceFull7290055700007-001-062-20260916-051018.gz","size":476673,"modified":"06:14 16-09-2026"},{"name":"PriceFull7290055700007-001-063-20260916-051012.gz","size":567544,"modified":"05:10 16-09-2026"},{"name":"PriceFull7290055700007-001-064-20260916-051012.gz","size":384197,"modified":"05:09 16-09-2026"},{"name":"PriceFull7290055700007-001-065-20260916-051015.gz","size":520755,"modified":"05:10 16-09-2026"},{"name":"PriceFull7290055700007-001-067-20260916-051018.gz","size":561996,"modified":"05:09 16-09-2026"},{"name":"PriceFull7290055700007-001-068-20260916-051019.gz","size":510879,"modified":"05:18 16-09-2026"},{"name":"PriceFull7290055700007-001-073-20260916-051011.gz","size":730169,"modified":"05:07 16-09-2026"},{"name":"PriceFull7290055700007-001-074-20260916-051010.gz","size":523296,"modified":"05:22 16-09-2026"},{"name":"PriceFull7290055700007-001-080-20260916-051016.gz","size":486068,"modified":"05:10 16-09-2026"},{"name":"PriceFull7290055700007-001-081-20260916-051000.gz","size":484158,"modified":"05:12 16-09-2026"},{"name":"PriceFull7290055700007-001-083-20260916-051000.gz","size":505186,"modified":"05:15 16-09-2026"},{"name":"PriceFull7290055700007-001-084-20260916-051020.gz","size":667344,"modified":"05:06 16-09-2026"},{"name":"PriceFull7290055700007-001-085-20260916-051001.gz","size":329416,"modified":"05:04 16-09-2026"},{"name":"PriceFull7290055700007-001-089-20260916-051008.gz","size":583082,"modified":"05:10 16-09-2026"},{"name":"PriceFull7290055700007-001-091-20260916-051001.gz","size":496331,"modified":"05:16 16-09-2026"},{"name":"PriceFull7290055700007-001-108-20260916-051010.gz","size":755453,"modified":"05:10 16-09-2026"},{"name":"PriceFull7290055700007-001-116-20260916-051009.gz","size":598571,"modified":"05:12 16-09-2026"},{"name":"PriceFull7290055700007-001-117-20260916-051015.gz","size":897340,"modified":"05:10 16-09-2026"},{"name":"PriceFull7290055700007-001-119-20260916-051006.gz","size":622177,"modified":"05:10 16-09-2026"},{"name":"PriceFull7290055700007-001-120-20260916-051009.gz","size":672305,"modified":"05:10 16-09-2026"},{"name":"PriceFull7290055700007-001-123-20260916-051014.gz","size":493971,"modified":"05:10 16-09-2026"},{"name":"PriceFull7290055700007-001-124-20260916-051012.gz","size":447061,"modified":"05:10 16-09-2026"},{"name":"PriceFull7290055700007-001-125-20260916-051007.gz","size":622587,"modified":"05:11 16-09-2026"},{"name":"PriceFull7290055700007-001-126-20260916-051001.gz","size":832360,"modified":"05:10 16-09-2026"},{"name":"PriceFull7290055700007-001-127-20260916-051007.gz","size":757714,"modified":"05:10 16-09-2026"},{"name":"PriceFull7290055700007-001-128-20260916-051006.gz","size":871978,"modified":"05:10 16-09-2026"},{"name":"PriceFull7290055700007-001-129-20260916-051012.gz","size":628767,"modified":"05:10 16-09-2026"},{"name":"PriceFull7290055700007-001-132-20260916-051000.gz","size":519979,"modified":"05:15 16-09-2026"},{"name":"PriceFull7290055700007-001-140-20260916-051006.gz","size":424329,"modified":"05:14 16-09-2026"},{"name":"PriceFull7290055700007-001-183-20260916-051010.gz","size":618295,"modified":"05:15 16-09-2026"},{"name":"PriceFull7290055700007-001-205-20260916-051008.gz","size":711203,"modified":"05:15 16-09-2026"},{"name":"PriceFull7290055700007-001-213-20260916-051001.gz","size":720738,"modified":"05:09 16-09-2026"},{"name":"PriceFull7290055700007-001-221-20260916-051012.gz","size":720666,"modified":"05:13 16-09-2026"},{"name":"PriceFull7290055700007-001-256-20260916-051019.gz","size":428533,"modified":"05:11 16-09-2026"},{"name":"PriceFull7290055700007-001-329-20260916-051006.gz","size":664239,"modified":"05:13 16-09-2026"},{"name":"PriceFull7290055700007-001-337-20260916-051003.gz","size":587359,"modified":"05:11 16-09-2026"},{"name":"PriceFull7290055700007-001-345-20260916-051004.gz","size":482749,"modified":"05:14 16-09-2026"},{"name":"PriceFull7290055700007-001-400-20260916-051003.gz","size":668600,"modified":"05:14 16-09-2026"},{"name":"PriceFull7290055700007-001-401-20260916-051009.gz","size":577344,"modified":"05:19 16-09-2026"},{"name":"PriceFull7290055700007-001-402-20260916-051016.gz","size":761649,"modified":"05:10 16-09-2026"},{"name":"PriceFull7290055700007-001-403-20260916-051013.gz","size":522979,"modified":"05:10 16-09-2026"},{"name":"PriceFull7290055700007-001-404-20260916-051005.gz","size":685493,"modified":"05:11 16-09-2026"},{"name":"PriceFull7290055700007-001-405-20260916-051014.gz","size":655078,"modified":"05:10 16-09-2026"},{"name":"PriceFull7290055700007-001-406-20260916-051011.gz","size":546577,"modified":"05:14 16-09-2026"},{"name":"PriceFull7290055700007-001-407-20260916-051006.gz","size":689943,"modified":"05:09 16-09-2026"},{"name":"PriceFull7290055700007-001-408-20260916-054921.gz","size":719453,"modified":"05:59 16-09-2026"},{"name":"PriceFull7290055700007-001-409-20260916-051017.gz","size":763970,"modified":"05:10 16-09-2026"},{"name":"PriceFull7290055700007-001-410-20260916-051010.gz","size":631177,"modified":"05:16 16-09-2026"},{"name":"PriceFull7290055700007-001-411-20260916-051017.gz","size":614336,"modified":"05:18 16-09-2026"},{"name":"PriceFull7290055700007-001-412-20260916-051007.gz","size":840739,"modified":"05:10 16-09-2026"},{"name":"PriceFull7290055700007-001-413-20260916-051006.gz","size":568351,"modified":"05:10 16-09-2026"},{"name":"PriceFull7290055700007-001-414-20260916-051012.gz","size":422972,"modified":"05:16 16-09-2026"},{"name":"PriceFull7290055700007-001-415-20260916-051016.gz","size":707887,"modified":"05:19 16-09-2026"},{"name":"PriceFull7290055700007-001-416-20260916-000011.gz","size":946416,"modified":"00:01 16-09-2026"},{"name":"PriceFull7290055700007-001-416-20260916-010011.gz","size":894563,"modified":"01:01 16-09-2026"},{"name":"PriceFull7290055700007-001-416-20260916-020011.gz","size":892246,"modified":"02:01 16-09-2026"},{"name":"PriceFull7290055700007-001-416-20260916-030035.gz","size":894639,"modified":"03:02 16-09-2026"},{"name":"PriceFull7290055700007-001-416-20260916-040011.gz","size":884247,"modified":"04:01 16-09-2026"},{"name":"PriceFull7290055700007-001-416-20260916-050012.gz","size":885763,"modified":"05:01 16-09-2026"},{"name":"PriceFull7290055700007-001-416-20260916-051009.gz","size":881663,"modified":"05:11 16-09-2026"},{"name":"PriceFull7290055700007-001-416-20260916-070021.gz","size":888717,"modified":"07:02 16-09-2026"},{"name":"PriceFull7290055700007-001-416-20260916-080011.gz","size":900797,"modified":"08:01 16-09-2026"},{"name":"PriceFull7290055700007-001-417-20260916-051001.gz","size":697335,"modified":"05:20 16-09-2026"},{"name":"PriceFull7290055700007-001-418-20260916-051008.gz","size":431987,"modified":"05:15 16-09-2026"},{"name":"PriceFull7290055700007-001-419-20260916-051011.gz","size":685493,"modified":"05:11 16-09-2026"},{"name":"PriceFull7290055700007-001-420-20260916-051007.gz","size":795375,"modified":"05:09 16-09-2026"},{"name":"PriceFull7290055700007-001-421-20260916-083957.gz","size":649507,"modified":"08:41 16-09-2026"},{"name":"PriceFull7290055700007-001-422-20260916-051011.gz","size":675937,"modified":"05:12 16-09-2026"},{"name":"PriceFull7290055700007-001-423-20260916-055952.gz","size":802456,"modified":"06:11 16-09-2026"},{"name":"PriceFull7290055700007-001-424-20260916-051006.gz","size":705858,"modified":"05:11 16-09-2026"},{"name":"PriceFull7290055700007-001-425-20260916-051013.gz","size":670127,"modified":"05:12 16-09-2026"},{"name":"PriceFull7290055700007-001-426-20260916-083229.gz","size":836431,"modified":"08:42 16-09-2026"},{"name":"PriceFull7290055700007-001-427-20260916-051013.gz","size":682068,"modified":"05:12 16-09-2026"},{"name":"PriceFull7290055700007-001-428-20260916-051013.gz","size":819873,"modified":"05:17 16-09-2026"},{"name":"PriceFull7290055700007-001-429-20260916-051000.gz","size":622194,"modified":"05:12 16-09-2026"},{"name":"PriceFull7290055700007-001-430-20260916-051019.gz","size":530949,"modified":"05:11 16-09-2026"},{"name":"PriceFull7290055700007-001-431-20260916-051006.gz","size":570689,"modified":"05:13 16-09-2026"},{"name":"PriceFull7290055700007-001-432-20260916-051012.gz","size":564367,"modified":"05:11 16-09-2026"},{"name":"PriceFull7290055700007-001-433-20260916-051019.gz","size":850209,"modified":"05:16 16-09-2026"},{"name":"PriceFull7290055700007-001-434-20260916-051008.gz","size":644402,"modified":"05:21 16-09-2026"},{"name":"PriceFull7290055700007-001-435-20260916-051009.gz","size":617551,"modified":"05:18 16-09-2026"},{"name":"PriceFull7290055700007-001-436-20260916-051009.gz","size":764250,"modified":"05:10 16-09-2026"},{"name":"PriceFull7290055700007-001-437-20260916-051017.gz","size":686948,"modified":"05:15 16-09-2026"},{"name":"PriceFull7290055700007-001-438-20260916-051010.gz","size":706302,"modified":"05:19 16-09-2026"},{"name":"PriceFull7290055700007-001-439-20260916-051018.gz","size":703860,"modified":"05:10 16-09-2026"},{"name":"PriceFull7290055700007-001-440-20260916-051017.gz","size":441762,"modified":"05:12 16-09-2026"},{"name":"PriceFull7290055700007-001-441-20260916-051012.gz","size":572322,"modified":"05:16 16-09-2026"},{"name":"PriceFull7290055700007-001-442-20260916-051012.gz","size":620897,"modified":"05:13 16-09-2026"},{"name":"PriceFull7290055700007-001-443-20260916-051003.gz","size":449592,"modified":"05:14 16-09-2026"},{"name":"PriceFull7290055700007-001-444-20260916-051016.gz","size":543556,"modified":"05:15 16-09-2026"},{"name":"PriceFull7290055700007-001-445-20260916-051012.gz","size":609598,"modified":"05:17 16-09-2026"},{"name":"PriceFull7290055700007-001-446-20260916-051002.gz","size":556925,"modified":"05:09 16-09-2026"},{"name":"PriceFull7290055700007-001-447-20260916-051002.gz","size":749061,"modified":"05:15 16-09-2026"},{"name":"PriceFull7290055700007-001-448-20260916-051014.gz","size":740678,"modified":"05:18 16-09-2026"},{"name":"PriceFull7290055700007-001-449-20260916-051001.gz","size":652066,"modified":"04:58 16-09-2026"},{"name":"PriceFull7290055700007-001-450-20260916-051004.gz","size":723571,"modified":"05:13 16-09-2026"},{"name":"PriceFull7290055700007-001-451-20260916-051016.gz","size":614688,"modified":"05:15 16-09-2026"},{"name":"PriceFull7290055700007-001-452-20260916-051001.gz","size":681487,"modified":"05:17 16-09-2026"},{"name":"PriceFull7290055700007-001-453-20260916-051006.gz","size":569940,"modified":"05:17 16-09-2026"},{"name":"PriceFull7290055700007-001-454-20260916-051006.gz","size":605249,"modified":"05:09 16-09-2026"},{"name":"PriceFull7290055700007-001-455-20260916-051006.gz","size":783147,"modified":"05:13 16-09-2026"},{"name":"PriceFull7290055700007-001-456-20260916-051016.gz","size":630845,"modified":"05:14 16-09-2026"},{"name":"PriceFull7290055700007-001-457-20260916-084249.gz","size":771099,"modified":"08:44 16-09-2026"},{"name":"PriceFull7290055700007-001-458-20260916-051013.gz","size":662336,"modified":"05:13 16-09-2026"},{"name":"PriceFull7290055700007-001-459-20260916-051013.gz","size":737671,"modified":"05:16 16-09-2026"},{"name":"PriceFull7290055700007-001-460-20260916-051015.gz","size":584289,"modified":"05:13 16-09-2026"},{"name":"PriceFull7290055700007-001-461-20260916-051011.gz","size":772117,"modified":"05:17 16-09-2026"},{"name":"PriceFull7290055700007-001-462-20260916-051011.gz","size":471549,"modified":"05:21 16-09-2026"},{"name":"PriceFull7290055700007-001-463-20260916-051001.gz","size":449840,"modified":"05:15 16-09-2026"},{"name":"PriceFull7290055700007-001-464-20260916-051003.gz","size":461887,"modified":"05:09 16-09-2026"},{"name":"PriceFull7290055700007-001-465-20260916-051009.gz","size":568936,"modified":"05:08 16-09-2026"},{"name":"PriceFull7290055700007-001-466-20260916-051004.gz","size":631415,"modified":"05:14 16-09-2026"},{"name":"PriceFull7290055700007-001-467-20260916-051019.gz","size":526849,"modified":"05:16 16-09-2026"},{"name":"PriceFull7290055700007-001-468-20260916-051014.gz","size":703714,"modified":"05:10 16-09-2026"},{"name":"PriceFull7290055700007-001-469-20260916-051003.gz","size":666835,"modified":"05:13 16-09-2026"},{"name":"PriceFull7290055700007-001-470-20260916-051004.gz","size":399138,"modified":"05:17 16-09-2026"},{"name":"PriceFull7290055700007-001-471-20260916-051008.gz","size":754066,"modified":"05:11 16-09-2026"},{"name":"PriceFull7290055700007-001-472-20260916-051005.gz","size":212709,"modified":"05:10 16-09-2026"},{"name":"PriceFull7290055700007-001-473-20260916-051017.gz","size":406607,"modified":"05:22 16-09-2026"},{"name":"PriceFull7290055700007-001-493-20260916-051015.gz","size":423826,"modified":"05:16 16-09-2026"},{"name":"PriceFull7290055700007-001-515-20260916-051000.gz","size":509873,"modified":"05:14 16-09-2026"},{"name":"PriceFull7290055700007-001-523-20260916-053014.gz","size":547878,"modified":"05:41 16-09-2026"},{"name":"PriceFull7290055700007-001-558-20260916-051014.gz","size":482277,"modified":"05:17 16-09-2026"},{"name":"PriceFull7290055700007-001-580-20260916-051016.gz","size":478702,"modified":"05:15 16-09-2026"},{"name":"PriceFull7290055700007-001-610-20260916-051014.gz","size":475425,"modified":"05:14 16-09-2026"},{"name":"PriceFull7290055700007-001-620-20260916-051018.gz","size":441887,"modified":"05:16 16-09-2026"},{"name":"PriceFull7290055700007-001-698-20260916-051010.gz","size":282379,"modified":"05:01 16-09-2026"},{"name":"PriceFull7290055700007-001-701-20260916-051009.gz","size":337262,"modified":"05:16 16-09-2026"},{"name":"PriceFull7290055700007-001-752-20260916-051005.gz","size":560424,"modified":"05:13 16-09-2026"},{"name":"PriceFull7290055700007-001-820-20260916-051012.gz","size":449674,"modified":"05:12 16-09-2026"},{"name":"PriceFull7290055700007-001-830-20260916-051005.gz","size":646466,"modified":"05:18 16-09-2026"},{"name":"PriceFull7290055700007-001-850-20260916-051014.gz","size":495651,"modified":"05:11 16-09-2026"},{"name":"PriceFull7290055700007-001-870-20260916-051008.gz","size":400804,"modified":"05:10 16-09-2026"},{"name":"PriceFull7290055700007-001-906-20260916-051007.gz","size":585813,"modified":"05:21 16-09-2026"},{"name":"PriceFull7290055700007-001-914-20260916-051011.gz","size":690330,"modified":"05:14 16-09-2026"},{"name":"PriceFull7290055700007-001-981-20260916-051011.gz","size":557114,"modified":"06:12 16-09-2026"},{"name":"Promo7290055700007-001-010-20260916-090025.gz","size":892,"modified":"09:04 16-09-2026"},{"name":"Promo7290055700007-001-041-20260916-090027.gz","size":696,"modified":"09:03 16-09-2026"},{"name":"Promo7290055700007-001-128-20260916-090027.gz","size":697,"modified":"09:00 16-09-2026"},{"name":"Promo7290055700007-001-426-20260916-073811.gz","size":6653,"modified":"07:48 16-09-2026"},{"name":"Promo7290055700007-001-426-20260916-080034.gz","size":6653,"modified":"08:10 16-09-2026"},{"name":"Promo7290055700007-001-453-20260916-090022.gz","size":787,"modified":"09:07 16-09-2026"},{"name":"Promo7290055700007-001-456-20260916-080017.gz","size":3082,"modified":"08:03 16-09-2026"},{"name":"Promo7290055700007-001-463-20260916-080017.gz","size":3071,"modified":"08:05 16-09-2026"},{"name":"Promo7290055700007-001-493-20260916-090020.gz","size":889,"modified":"09:06 16-09-2026"},{"name":"Promo7290055700007-001-981-20260916-080022.gz","size":698,"modified":"09:02 16-09-2026"},{"name":"PromoFull7290055700007-001-002-20260916-051126.gz","size":196166,"modified":"05:10 16-09-2026"},{"name":"PromoFull7290055700007-001-004-20260916-051108.gz","size":207314,"modified":"05:11 16-09-2026"},{"name":"PromoFull7290055700007-001-009-20260916-051059.gz","size":187824,"modified":"05:11 16-09-2026"},{"name":"PromoFull7290055700007-001-010-20260916-051120.gz","size":205603,"modified":"05:15 16-09-2026"},{"name":"PromoFull7290055700007-001-012-20260916-051100.gz","size":204387,"modified":"05:11 16-09-2026"},{"name":"PromoFull7290055700007-001-019-20260916-051055.gz","size":196141,"modified":"05:14 16-09-2026"},{"name":"PromoFull7290055700007-001-026-20260916-051052.gz","size":206980,"modified":"05:10 16-09-2026"},{"name":"PromoFull7290055700007-001-030-20260916-051101.gz","size":206254,"modified":"05:18 16-09-2026"},{"name":"PromoFull7290055700007-001-030-20260916-061036.gz","size":206254,"modified":"06:18 16-09-2026"},{"name":"PromoFull7290055700007-001-033-20260916-051102.gz","size":206787,"modified":"05:11 16-09-2026"},{"name":"PromoFull7290055700007-001-037-20260916-051057.gz","size":204048,"modified":"05:11 16-09-2026"},{"name":"PromoFull7290055700007-001-041-20260916-051134.gz","size":211238,"modified":"05:14 16-09-2026"},{"name":"PromoFull7290055700007-001-044-20260916-051058.gz","size":207749,"modified":"05:11 16-09-2026"},{"name":"PromoFull7290055700007-001-046-20260916-051101.gz","size":194447,"modified":"05:21 16-09-2026"},{"name":"PromoFull7290055700007-001-055-20260916-051102.gz","size":203571,"modified":"05:13 16-09-2026"},{"name":"PromoFull7290055700007-001-056-20260916-051215.gz","size":218245,"modified":"05:06 16-09-2026"},{"name":"PromoFull7290055700007-001-057-20260916-051059.gz","size":211306,"modified":"05:12 16-09-2026"},{"name":"PromoFull7290055700007-001-060-20260916-051114.gz","size":199295,"modified":"05:18 16-09-2026"},{"name":"PromoFull7290055700007-001-061-20260916-051058.gz","size":205084,"modified":"05:21 16-09-2026"},{"name":"PromoFull7290055700007-001-062-20260916-051112.gz","size":174992,"modified":"06:15 16-09-2026"},{"name":"PromoFull7290055700007-001-063-20260916-051107.gz","size":188427,"modified":"05:11 16-09-2026"},{"name":"PromoFull7290055700007-001-064-20260916-051154.gz","size":192539,"modified":"05:10 16-09-2026"},{"name":"PromoFull7290055700007-001-065-20260916-051108.gz","size":203574,"modified":"05:11 16-09-2026"},{"name":"PromoFull7290055700007-001-067-20260916-051116.gz","size":176022,"modified":"05:10 16-09-2026"},{"name":"PromoFull7290055700007-001-068-20260916-051115.gz","size":197257,"modified":"05:18 16-09-2026"},{"name":"PromoFull7290055700007-001-073-20260916-051152.gz","size":195953,"modified":"05:09 16-09-2026"},{"name":"PromoFull7290055700007-001-074-20260916-051059.gz","size":196975,"modified":"05:23 16-09-2026"},{"name":"PromoFull7290055700007-001-080-20260916-051102.gz","size":187531,"modified":"05:10 16-09-2026"},{"name":"PromoFull7290055700007-001-081-20260916-051058.gz","size":202880,"modified":"05:12 16-09-2026"},{"name":"PromoFull7290055700007-001-083-20260916-051055.gz","size":183194,"modified":"05:16 16-09-2026"},{"name":"PromoFull7290055700007-001-084-20260916-051136.gz","size":189521,"modified":"05:07 16-09-2026"},{"name":"PromoFull7290055700007-001-085-20260916-051114.gz","size":193100,"modified":"05:05 16-09-2026"},{"name":"PromoFull7290055700007-001-089-20260916-051103.gz","size":191909,"modified":"05:11 16-09-2026"},{"name":"PromoFull7290055700007-001-091-20260916-051057.gz","size":198663,"modified":"05:17 16-09-2026"},{"name":"PromoFull7290055700007-001-108-20260916-051102.gz","size":189477,"modified":"05:10 16-09-2026"},{"name":"PromoFull7290055700007-001-116-20260916-051100.gz","size":191952,"modified":"05:13 16-09-2026"},{"name":"PromoFull7290055700007-001-117-20260916-051112.gz","size":205218,"modified":"05:11 16-09-2026"},{"name":"PromoFull7290055700007-001-119-20260916-051103.gz","size":203860,"modified":"05:11 16-09-2026"},{"name":"PromoFull7290055700007-001-120-20260916-051104.gz","size":204550,"modified":"05:11 16-09-2026"},{"name":"PromoFull7290055700007-001-123-20260916-051107.gz","size":205171,"modified":"05:11 16-09-2026"},{"name":"PromoFull7290055700007-001-124-20260916-051109.gz","size":209962,"modified":"05:11 16-09-2026"},{"name":"PromoFull7290055700007-001-125-20260916-051102.gz","size":187081,"modified":"05:12 16-09-2026"},{"name":"PromoFull7290055700007-001-126-20260916-051057.gz","size":209354,"modified":"05:11 16-09-2026"},{"name":"PromoFull7290055700007-001-127-20260916-051103.gz","size":209928,"modified":"05:11 16-09-2026"},{"name":"PromoFull7290055700007-001-128-20260916-051102.gz","size":207552,"modified":"05:11 16-09-2026"},{"name":"PromoFull7290055700007-001-129-20260916-051109.gz","size":209164,"modified":"05:11 16-09-2026"},{"name":"PromoFull7290055700007-001-132-20260916-051112.gz","size":181694,"modified":"05:16 16-09-2026"},{"name":"PromoFull7290055700007-001-140-20260916-051114.gz","size":193661,"modified":"05:15 16-09-2026"},{"name":"PromoFull7290055700007-001-183-20260916-051116.gz","size":194709,"modified":"05:16 16-09-2026"},{"name":"PromoFull7290055700007-001-205-20260916-051116.gz","size":198616,"modified":"05:16 16-09-2026"},{"name":"PromoFull7290055700007-001-213-20260916-051056.gz","size":173985,"modified":"05:10 16-09-2026"},{"name":"PromoFull7290055700007-001-221-20260916-051106.gz","size":182079,"modified":"05:14 16-09-2026"},{"name":"PromoFull7290055700007-001-256-20260916-051109.gz","size":190184,"modified":"05:12 16-09-2026"},{"name":"PromoFull7290055700007-001-329-20260916-051128.gz","size":193019,"modified":"05:14 16-09-2026"},{"name":"PromoFull7290055700007-001-337-20260916-051100.gz","size":191872,"modified":"05:12 16-09-2026"},{"name":"PromoFull7290055700007-001-345-20260916-051118.gz","size":195554,"modified":"05:15 16-09-2026"},{"name":"PromoFull7290055700007-001-400-20260916-051058.gz","size":187432,"modified":"05:15 16-09-2026"},{"name":"PromoFull7290055700007-001-401-20260916-051100.gz","size":194505,"modified":"05:20 16-09-2026"},{"name":"PromoFull7290055700007-001-402-20260916-051122.gz","size":179036,"modified":"05:11 16-09-2026"},{"name":"PromoFull7290055700007-001-403-20260916-051106.gz","size":185874,"modified":"05:11 16-09-2026"},{"name":"PromoFull7290055700007-001-404-20260916-051121.gz","size":195955,"modified":"05:12 16-09-2026"},{"name":"PromoFull7290055700007-001-405-20260916-051120.gz","size":191780,"modified":"05:11 16-09-2026"},{"name":"PromoFull7290055700007-001-406-20260916-051117.gz","size":171624,"modified":"05:15 16-09-2026"},{"name":"PromoFull7290055700007-001-407-20260916-051112.gz","size":196196,"modified":"05:10 16-09-2026"},{"name":"PromoFull7290055700007-001-408-20260916-055020.gz","size":171965,"modified":"05:59 16-09-2026"},{"name":"PromoFull7290055700007-001-409-20260916-051110.gz","size":203995,"modified":"05:11 16-09-2026"},{"name":"PromoFull7290055700007-001-410-20260916-051106.gz","size":193880,"modified":"05:17 16-09-2026"},{"name":"PromoFull7290055700007-001-411-20260916-051111.gz","size":192050,"modified":"05:19 16-09-2026"},{"name":"PromoFull7290055700007-001-412-20260916-051102.gz","size":191250,"modified":"05:11 16-09-2026"},{"name":"PromoFull7290055700007-001-413-20260916-051113.gz","size":189054,"modified":"05:11 16-09-2026"},{"name":"PromoFull7290055700007-001-414-20260916-051104.gz","size":195520,"modified":"05:17 16-09-2026"},{"name":"PromoFull7290055700007-001-415-20260916-051123.gz","size":175002,"modified":"05:20 16-09-2026"},{"name":"PromoFull7290055700007-001-416-20260916-000046.gz","size":207394,"modified":"00:02 16-09-2026"},{"name":"PromoFull7290055700007-001-416-20260916-010046.gz","size":212418,"modified":"01:02 16-09-2026"},{"name":"PromoFull7290055700007-001-416-20260916-020050.gz","size":212418,"modified":"02:02 16-09-2026"},{"name":"PromoFull7290055700007-001-416-20260916-030117.gz","size":212418,"modified":"03:02 16-09-2026"},{"name":"PromoFull7290055700007-001-416-20260916-040049.gz","size":212418,"modified":"04:02 16-09-2026"},{"name":"PromoFull7290055700007-001-416-20260916-050051.gz","size":199666,"modified":"05:02 16-09-2026"},{"name":"PromoFull7290055700007-001-416-20260916-051103.gz","size":199666,"modified":"05:12 16-09-2026"},{"name":"PromoFull7290055700007-001-416-20260916-060026.gz","size":199666,"modified":"06:02 16-09-2026"},{"name":"PromoFull7290055700007-001-416-20260916-070055.gz","size":199666,"modified":"07:02 16-09-2026"},{"name":"PromoFull7290055700007-001-416-20260916-080047.gz","size":199666,"modified":"08:02 16-09-2026"},{"name":"PromoFull7290055700007-001-416-20260916-090026.gz","size":199666,"modified":"09:02 16-09-2026"},{"name":"PromoFull7290055700007-001-417-20260916-051108.gz","size":192525,"modified":"05:20 16-09-2026"},{"name":"PromoFull7290055700007-001-418-20260916-051058.gz","size":191097,"modified":"05:15 16-09-2026"},{"name":"PromoFull7290055700007-001-419-20260916-051108.gz","size":195692,"modified":"05:12 16-09-2026"},{"name":"PromoFull7290055700007-001-420-20260916-051145.gz","size":198692,"modified":"05:11 16-09-2026"},{"name":"PromoFull7290055700007-001-421-20260916-084027.gz","size":193291,"modified":"08:41 16-09-2026"},{"name":"PromoFull7290055700007-001-422-20260916-051118.gz","size":165799,"modified":"05:13 16-09-2026"},{"name":"PromoFull7290055700007-001-423-20260916-060100.gz","size":205706,"modified":"06:12 16-09-2026"},{"name":"PromoFull7290055700007-001-424-20260916-051101.gz","size":174351,"modified":"05:12 16-09-2026"},{"name":"PromoFull7290055700007-001-425-20260916-051105.gz","size":201271,"modified":"05:12 16-09-2026"},{"name":"PromoFull7290055700007-001-426-20260916-083308.gz","size":179565,"modified":"08:43 16-09-2026"},{"name":"PromoFull7290055700007-001-427-20260916-051120.gz","size":195033,"modified":"05:13 16-09-2026"},{"name":"PromoFull7290055700007-001-428-20260916-051116.gz","size":191193,"modified":"05:18 16-09-2026"},{"name":"PromoFull7290055700007-001-429-20260916-051055.gz","size":206158,"modified":"05:13 16-09-2026"},{"name":"PromoFull7290055700007-001-430-20260916-051113.gz","size":186838,"modified":"05:12 16-09-2026"},{"name":"PromoFull7290055700007-001-431-20260916-051058.gz","size":188967,"modified":"05:14 16-09-2026"},{"name":"PromoFull7290055700007-001-432-20260916-051103.gz","size":192434,"modified":"05:12 16-09-2026"},{"name":"PromoFull7290055700007-001-433-20260916-051142.gz","size":208372,"modified":"05:17 16-09-2026"},{"name":"PromoFull7290055700007-001-434-20260916-051102.gz","size":177010,"modified":"05:22 16-09-2026"},{"name":"PromoFull7290055700007-001-435-20260916-051105.gz","size":208690,"modified":"05:19 16-09-2026"},{"name":"PromoFull7290055700007-001-436-20260916-051104.gz","size":198890,"modified":"05:11 16-09-2026"},{"name":"PromoFull7290055700007-001-437-20260916-051113.gz","size":191611,"modified":"05:16 16-09-2026"},{"name":"PromoFull7290055700007-001-438-20260916-051105.gz","size":190674,"modified":"05:20 16-09-2026"},{"name":"PromoFull7290055700007-001-439-20260916-051110.gz","size":194515,"modified":"05:11 16-09-2026"},{"name":"PromoFull7290055700007-001-440-20260916-051109.gz","size":177076,"modified":"05:12 16-09-2026"},{"name":"PromoFull7290055700007-001-441-20260916-051121.gz","size":184555,"modified":"05:17 16-09-2026"},{"name":"PromoFull7290055700007-001-442-20260916-051106.gz","size":186247,"modified":"05:14 16-09-2026"},{"name":"PromoFull7290055700007-001-443-20260916-051054.gz","size":178231,"modified":"05:15 16-09-2026"},{"name":"PromoFull7290055700007-001-444-20260916-051111.gz","size":196735,"modified":"05:15 16-09-2026"},{"name":"PromoFull7290055700007-001-445-20260916-051103.gz","size":181166,"modified":"05:18 16-09-2026"},{"name":"PromoFull7290055700007-001-446-20260916-051115.gz","size":196642,"modified":"05:10 16-09-2026"},{"name":"PromoFull7290055700007-001-447-20260916-051109.gz","size":199810,"modified":"05:16 16-09-2026"},{"name":"PromoFull7290055700007-001-448-20260916-051109.gz","size":187775,"modified":"05:18 16-09-2026"},{"name":"PromoFull7290055700007-001-449-20260916-051113.gz","size":184891,"modified":"04:59 16-09-2026"},{"name":"PromoFull7290055700007-001-450-20260916-051129.gz","size":194230,"modified":"05:14 16-09-2026"},{"name":"PromoFull7290055700007-001-451-20260916-051124.gz","size":196869,"modified":"05:16 16-09-2026"},{"name":"PromoFull7290055700007-001-452-20260916-051109.gz","size":201428,"modified":"05:18 16-09-2026"},{"name":"PromoFull7290055700007-001-453-20260916-051101.gz","size":202299,"modified":"05:17 16-09-2026"},{"name":"PromoFull7290055700007-001-454-20260916-051102.gz","size":212467,"modified":"05:10 16-09-2026"},{"name":"PromoFull7290055700007-001-455-20260916-051112.gz","size":196567,"modified":"05:13 16-09-2026"},{"name":"PromoFull7290055700007-001-456-20260916-051107.gz","size":203484,"modified":"05:14 16-09-2026"},{"name":"PromoFull7290055700007-001-457-20260916-084335.gz","size":195413,"modified":"08:44 16-09-2026"},{"name":"PromoFull7290055700007-001-458-20260916-051121.gz","size":193372,"modified":"05:14 16-09-2026"},{"name":"PromoFull7290055700007-001-459-20260916-051107.gz","size":176956,"modified":"05:17 16-09-2026"},{"name":"PromoFull7290055700007-001-460-20260916-051106.gz","size":175142,"modified":"05:13 16-09-2026"},{"name":"PromoFull7290055700007-001-461-20260916-051117.gz","size":187813,"modified":"05:17 16-09-2026"},{"name":"PromoFull7290055700007-001-462-20260916-051103.gz","size":195492,"modified":"05:22 16-09-2026"},{"name":"PromoFull7290055700007-001-463-20260916-051108.gz","size":199126,"modified":"05:16 16-09-2026"},{"name":"PromoFull7290055700007-001-464-20260916-051056.gz","size":173098,"modified":"05:10 16-09-2026"},{"name":"PromoFull7290055700007-001-465-20260916-051125.gz","size":192991,"modified":"05:09 16-09-2026"},{"name":"PromoFull7290055700007-001-466-20260916-051104.gz","size":193269,"modified":"05:14 16-09-2026"},{"name":"PromoFull7290055700007-001-467-20260916-051207.gz","size":213206,"modified":"05:18 16-09-2026"},{"name":"PromoFull7290055700007-001-468-20260916-051106.gz","size":201279,"modified":"05:11 16-09-2026"},{"name":"PromoFull7290055700007-001-469-20260916-051110.gz","size":173116,"modified":"05:14 16-09-2026"},{"name":"PromoFull7290055700007-001-470-20260916-051055.gz","size":186084,"modified":"05:17 16-09-2026"},{"name":"PromoFull7290055700007-001-471-20260916-051155.gz","size":326000,"modified":"05:13 16-09-2026"},{"name":"PromoFull7290055700007-001-472-20260916-051057.gz","size":153463,"modified":"05:11 16-09-2026"},{"name":"PromoFull7290055700007-001-473-20260916-051248.gz","size":322076,"modified":"05:25 16-09-2026"},{"name":"PromoFull7290055700007-001-493-20260916-051110.gz","size":200690,"modified":"05:17 16-09-2026"},{"name":"PromoFull7290055700007-001-515-20260916-051052.gz","size":192544,"modified":"05:15 16-09-2026"},{"name":"PromoFull7290055700007-001-523-20260916-053123.gz","size":191106,"modified":"05:42 16-09-2026"},{"name":"PromoFull7290055700007-001-558-20260916-051106.gz","size":194834,"modified":"05:18 16-09-2026"},{"name":"PromoFull7290055700007-001-580-20260916-051122.gz","size":192995,"modified":"05:16 16-09-2026"},{"name":"PromoFull7290055700007-001-610-20260916-051121.gz","size":193696,"modified":"05:15 16-09-2026"},{"name":"PromoFull7290055700007-001-620-20260916-051110.gz","size":193263,"modified":"05:17 16-09-2026"},{"name":"PromoFull7290055700007-001-698-20260916-051140.gz","size":190064,"modified":"05:03 16-09-2026"},{"name":"PromoFull7290055700007-001-701-20260916-051105.gz","size":175532,"modified":"05:16 16-09-2026"},{"name":"PromoFull7290055700007-001-752-20260916-051101.gz","size":190552,"modified":"05:14 16-09-2026"},{"name":"PromoFull7290055700007-001-820-20260916-051307.gz","size":194853,"modified":"05:13 16-09-2026"},{"name":"PromoFull7290055700007-001-830-20260916-051101.gz","size":200216,"modified":"05:19 16-09-2026"},{"name":"PromoFull7290055700007-001-850-20260916-051120.gz","size":172403,"modified":"05:11 16-09-2026"},{"name":"PromoFull7290055700007-001-870-20260916-051100.gz","size":175031,"modified":"05:11 16-09-2026"},{"name":"PromoFull7290055700007-001-906-20260916-051057.gz","size":186588,"modified":"05:22 16-09-2026"},{"name":"PromoFull7290055700007-001-914-20260916-051108.gz","size":190059,"modified":"05:15 16-09-2026"},{"name":"PromoFull7290055700007-001-981-20260916-051103.gz","size":185962,"modified":"06:12 16-09-2026"},{"name":"Stores7290055700007-000-20260916-000100.xml","size":61394,"modified":"00:01 16-09-2026"}];
+    const branches = {"002":"קרפור מרקט  אשקלון חאן","004":"קרפור היפר   אשקלון צפוני","009":"קרפור היפר   רעננה","010":"קרפור היפר   כפר סבא","012":"פתח תקוה בר כוכבא","019":"קרפור מרקט  תל מונד","026":"קרפור מרקט    ראש העין","030":"קרפור מרקט אילת","033":"קרפור היפר   בית שמש","037":"קרפור מרקט  אור יהודה","041":"קרפור היפר אור עקיבא","044":"קרפור מרקט  מעלות","046":"קרפור מרקט  רמלה","055":"קרפור היפר דליית אל כרמל","056":"קרפור מרקט  ערד","057":"קרפור מרקט  בית שאן","060":"קרפור מרקט  אשדוד בסיטי ש.ש.ה","061":"קרפור מרקט נתניה בסיטי","062":"קרפור סיטי  מודיעין בסיטי","063":"קרפור מרקט ראשלצ בסיטי","064":"קרפור סיטי  הרצליה ליד הבית","065":"קרפור מרקט אשקלון","067":"קרפור סיטי  חולון בסיטי","068":"קרפור מרקט  אשקלון סיטי ברנע","073":"קרפור מרקט  עתלית","074":"קרפור רמלה לוין","080":"יינות ביתן טבעון","081":"קרפור סיטי  ראשון מערב","083":"קרפור סיטי  צור יצחק","084":"קרפור סיטי  מתן","085":"קרפור סיטי  מנחם בגין 152 תא","089":"קרפור סיטי TLV  תל אביב","091":"קרפור מרקט ריינס","108":"קרפור סיטי  פנקס","116":"קרפור סיטי  כיכר דיזינגוף","117":"סינמה סיטי","119":"קרפור כרכור","120":"היפר אופקים","123":"מרקט בית שמש האמוראי","124":"מרקט יבנה דואני","125":"קרפור יבנה נאות שמיר","126":"היפר עפולה","127":"היפר נתיבות מרכז","128":"היפר ירושלים תלפיות","129":"קרפור קרית שמונה","132":"קרפור סיטי  ויצמן תל אביב","140":"קרפור סיטי  גרינברג חיפה","183":"קרפור סיטי עוזיאל בת ים","205":"קרפור מרקט  לה גרדיה","213":"קרפור סיטי  אבן גבירול","221":"קרפור מרקט  מגדל נחום","256":"קרפור סיטי רמת יוסף","329":"קרפור סיטי  נאות רחל","337":"קרפור סיטי  נאות אפקה","345":"קרפור סיטי  נאות שושנים","353":"קרפור סיטי  הצרכנייה אשדוד ד","493":"קרפור הרואה רמת גן","515":"קרפור רווה רמת גן","523":"קרפור סיטי דימונה","558":"קרפור סיטי  רמת החייל","580":"קרפור סיטי  עמק ברכה","610":"קרפור סיטי  הצרכניה רובע ט ב\u0027ש","620":"קרפור סיטי  ירושלים נתניה","698":"קרפור סיטי  בית אבות","701":"קרפור סיטי  קרית אונו","752":"קרפור סיטי  רמת אפעל","820":"קרפור מרכז רעננה","830":"קרפור גולן רעננה","850":"קרפור סיטי  קרית שרת","870":"קרפור סיטי  ותיקים רעננה","906":"קרפור סיטי  מרכז נתניה","914":"קרפור סיטי  נווה אביבים","981":"קרפור סיטי אזורים נתניה","400":"קרפור סיטי  קניון כפר סבא (1030)","401":"קרפור סיטי  הוד השרון (1040)","402":"קרפור סיטי  לב דיזנגוף (1090)","403":"קרפור סיטי  הצרכנייה רמלה (1112)","404":"קרפור סיטי  רון כפר סבא (1139)","405":"קרפור סיטי  נווה כרמית (1147)","406":"קרפור סיטי  מכבים (1150)","407":"בעיר חפץ חיים (1171)","408":"קרפור סיטי  צמרות (1190)","409":"קרפור מרקט  יהלומים (1201)","410":"קרפור מרקט  תל כביר (1228)","411":"קרפור סיטי  מגדלי דוד (1236)","412":"קרפור מעלה אילת (1252)","413":"קרפור סיטי  בילינסון פ\u0022ת (1279)","414":"קרפור סיטי  מאוז אביב (1295)","415":"קרפור סיטי  רמת אביב ג (1309)","416":"בעיר שדרות B (1340)","417":"קרפור סיטי  קיראון (1430)","418":"קרפור כרמליה (2040)","419":"קרפור סיטי  כפר יונה דרום (2070)","420":"קרפור מרקט   אילת (2150)","421":"קרפור סיטי  אבן יהודה (2180)","422":"קרפור סיטי  גני העיר רחובות (2190)","423":"קרפור מרקט  גני אביב לוד (2230)","424":"קרפור מרקט  בית וגן ק.אתא (2240)","425":"קרפור מרקט  גן יבנה (2310)","426":"קרפור סיטי  קניון גבעתיים (2320)","427":"קרפור סיטי  אשדוד י\u0022ב (2330)","428":"קרפור מרקט  עיר ימים נתניה (2410)","429":"קרפור מרקט  נאות חן חדרה (2470)","430":"קרפור סיטי  כפר שלם (2490)","431":"בעיר פארק הירקון (2518)","432":"בעיר בת גלים (2530)","433":"קרפור מרקט  מודיעין שמשוני (2540)","434":"קרפור סיטי לב נתניה (2577)","435":"קרפור מרקט מגדל העמק (2730)","436":"קרפור מרקט  שרונה רחובות (2740)","437":"קרפור  עמישב פ\u0022ת (2750)","438":"קרפור מרקט  אשדוד ח (2840)","439":"קרפור סיטי  נוף זכרון (2960)","440":"קרפור סיטי  צפון באר-שבע (2976)","441":"קרפור מרקט בית אליעזר (3020)","442":"קרפור סיטי  כפר יונה (3050)","443":"קרפור סיטי  בר אילן (3174)","444":"קרפור סיטי  רמות צהלה (3180)","445":"קרפור סיטי לב אשקלון (3210)","446":"קרפור סיטי  אלוני השרון נתניה (3280)","447":"קרפור מרקט  קניון אביה (3300)","448":"קרפור מרקט  אלנבי ירושלים (3420)","449":"קרפור סיטי  מזכרת בתיה (3440)","450":"קרפור סיטי  גבעת סביון (3506)","451":"קרפור סיטי  רמות אלון (3580)","452":"קרפור מרקט  שטמפפר פ\u0022ת (3600)","453":"שוק מהדרין הרצל חיפה (3610)","454":"קרפור מרקט בית שמש (3680)","455":"קרפור מרקט  נווה זאב (3700)","456":"קרפור מרקט  אפרידר אשקלון (3740)","457":"קרפור סיטי  בית הכרם (3850)","458":"קרפור סיטי  תל ברוך (3990)","459":"קרפור מרקט לב הרצלה (4110)","460":"קרפור הדר הרצליה (4120)","461":"קרפור סיטי  נווה אמירים (4130)","462":"קרפור סיטי  הרצליה פיתוח (4150)","463":"קרפור סיטי  נוף ים (4160)","464":"בעיר נווה עמל (4170)","465":"קרפור סיטי  זרובבל רמה\u0022ש (4200)","466":"קרפור סיטי  נצר סירני (4220)","467":"אלעד קרפור מרקט (4270)","468":"קרפור מרקט  אודיטוריום חיפה (4280)","469":"קרפור מרקט  אואזיס רמת גן  (4420) (4420)","470":"קרפור מגדלי כרמל (4640)","473":"כפר סבא @ קוויק","471":"קרפור אונליין   כפר סבא @ קרפור (5304)","472":"@ יהלומים ביתן (9032)"};
+</script>
+<script>async function getFileInfo(url) {
+  try {
+    // Call your PHP proxy
+    const proxyUrl = `file_info.php?url=${encodeURIComponent(url)}`;
+    const res = await fetch(proxyUrl);
+    const data = await res.json();
+    return data;
+  } catch (err) {
+    console.error('Error fetching file info:', err);
+    return null;
+  }
+}
+
+// Usage
+// const fileUrl = files[0];
+// getFileInfo(fileUrl).then(info => {
+//   if (info) {
+//     console.log("Size (bytes):", info.size_bytes);
+//     console.log("Size (readable):", info.size);
+//     console.log("Last modified:", info.last_modified);
+//   }
+// });
+
+let filtered_files = files, sorted_files = filtered_files;
+let filesInfoCache = [];
+let currentPage = 0, totalPages = 1;
+let rowsPerPage = 10;
+
+const zipIcon = '<i class="fas fa-file-archive"></i>';
+const downloadIcon = '<i class="fas fa-download"></i>';
+
+$(document).ready(function(){
+    sortBranchSelectOptions();
+    getLastSessFilters();
+    
+    filterFiles();
+    sort_modified();
+    displayFiles();
+
+    enablePicker();
+})
+
+function sortBranchSelectOptions() {
+    var $select = $('#branch_filter');
+
+    var $options = $select.find('option');
+
+    $options.sort(function (a, b) {
+        var numA = parseInt($(a).text().split('-')[0].trim(), 10);
+        var numB = parseInt($(b).text().split('-')[0].trim(), 10);
+        return numA - numB;
+    });
+
+    $select.empty().append($options);
+}
+
+function filterFiles(showFiles = false) {
+    filtered_files = files;
+    currentPage = 0;
+    saveOnSessionStorage();
+    makeAllFilters();
+    updatePaginationInfo();
+    sorted_files = filtered_files;
+    if (showFiles) {
+        displayFiles();
+    }
+}
+
+function saveOnSessionStorage() {
+    let branchValue = $('#branch_filter').val();
+    let categoryValue = $('#category_filter').val();
+
+    if (branchValue) {
+        sessionStorage.setItem('branch', branchValue)
+    } else {
+        sessionStorage.removeItem('branch')
+    }
+    
+    if (categoryValue) {
+        sessionStorage.setItem('category', categoryValue)
+    } else {
+        sessionStorage.removeItem('category')
+    }
+}
+
+function getLastSessFilters() {
+    if (sessionStorage.getItem('branch')) {
+        $(`#branch_filter option[value="${sessionStorage.getItem('branch')}"]`).prop('selected', true);
+    }
+
+    if (sessionStorage.getItem('category')) {
+        $(`#category_filter option[value="${sessionStorage.getItem('category')}"]`).prop('selected', true);
+    }
+}
+
+function makeAllFilters() {
+    filtered_files = filtered_files.filter((file_info) => {
+        
+        const filename = file_info.name;
+        return (
+            isBranchFiltered(filename) 
+            && isCategoryFiltered(filename) 
+            && isFreeSearchFiltered(filename)
+        );
+    });
+}
+
+function isFreeSearchFiltered(filename = '') {
+    let value = $('#free_search_filter').val();
+    if (value) {
+        value = value.trim();
+    }
+
+    let filtered = false;
+    if (value) {
+        filtered = (filename.includes(value));
+    } else {
+        filtered = true;
+    }
+
+    return filtered;
+}
+
+function isBranchFiltered(filename = '') {
+    const branch_select = $('#branch_filter');
+    const value = branch_select.val();
+
+    let filtered = false;
+    if (value && filename) {
+        // console.log('Filtering to branch: '+value)
+        const splitted_filename = filename.split('-');
+        let branch = 0;
+        if (splitted_filename.length == 3) { // Old Structure
+            branch = splitted_filename[1];
+            // console.log(branch);
+        } else if (splitted_filename.length == 5) { // New Structure
+            branch = splitted_filename[2];
+            // console.log(branch);
+        }
+
+        filtered = (parseInt(branch) == parseInt(value));
+    } else {
+        filtered = true;
+    }
+
+    return filtered;
+}
+
+function hasExactWord(str, word) {
+  const regex = new RegExp(`\\b${word}(?![a-zA-Z])`);
+  return regex.test(str);
+}
+
+function isCategoryFiltered(filename = '') {
+    const category_select = $('#category_filter');
+    const value = category_select.val();
+
+    let filtered = false;
+
+    if (value && filename) {
+        // console.log('Filtering to Category: '+value);
+        filtered = hasExactWord(filename, value);
+    } else {
+        filtered = true;
+    }
+
+    return filtered;
+}
+
+function updatePaginationInfo() {
+    totalPages = Math.ceil(filtered_files.length / rowsPerPage);
+}
+
+function clearFiles() {
+    $('.filesDiv .fileDiv:not(:first-of-type)').remove();
+}
+
+async function displayFiles() {
+    clearFiles();
+    updatePaginationHTML();
+    let html = '';
+    for (let i = currentPage*rowsPerPage; i < currentPage*rowsPerPage+rowsPerPage; i++) {
+        if (sorted_files[i]) {
+            const file_info = sorted_files[i];
+            const filename = file_info.name;
+            const file_link = window.location.origin+'/'+path+'/'+filename;
+
+            // const fileInfo = await getFileInfo(file_link);
+            // console.log(fileInfo)
+
+            html += `
+            <div class="fileDiv" id="${i}">
+                <a class="fileNameA">
+                    ${zipIcon}
+                    <span class="fileName">${filename}</span>
+                </a>
+                <span class="modified">${file_info.modified}</span>
+                <span class="fileSize">${formatBytes(file_info.size)}</span>
+                <a href="${file_link}" class="downloadBtn">
+                    ${downloadIcon}
+                </a>
+            </div>
+            `;
+        } else {
+            break;
+        }
+    }
+
+    if (html != '') {
+        $('.filesDiv .errMsg').fadeOut(0);
+        $('.filesDiv').append(html);
+    } else {
+        $('.filesDiv .errMsg').fadeIn(0);
+        $('.filesDiv .errMsg').html('לא נמצאו קבצים!');
+    }
+}
+
+function updatePaginationHTML() {
+    $('.paginationPages').empty();
+    $('.paginationCurrent').html(currentPage+1);
+    $('.paginationTotal').html(totalPages)
+
+    let counter = 0;
+
+    $('.paginationNav[data-action="next"], .paginationNav[data-action="last"], .paginationNav[data-action="prev"], .paginationNav[data-action="first"]').removeClass('paginationBtn_disabled')
+
+    if (currentPage == totalPages-1) { // last
+        for (let i = totalPages-1; i >= 0; i--) {
+            if (counter >= 3) break;
+            const page_selected = (i == currentPage) ? 'paginationBtn_selected' : '';
+            $('.paginationPages').prepend(`
+                <button class="paginationBtn ${page_selected}" onclick="changePage(${i})" data-page="${i}">${i+1}</button>    
+            `);
+            counter++;
+        }
+
+        $('.paginationNav[data-action="next"]').addClass('paginationBtn_disabled')
+        $('.paginationNav[data-action="last"]').addClass('paginationBtn_disabled')
+
+        if (currentPage == 0) {
+            $('.paginationNav[data-action="prev"]').addClass('paginationBtn_disabled')
+            $('.paginationNav[data-action="first"]').addClass('paginationBtn_disabled')
+        }
+    } else if (currentPage == 0) { // first
+        console.log('HERE 0!!!')
+        for (let i = 0; i < totalPages; i++) {
+            if (counter >= 3) break;
+            const page_selected = (i == currentPage) ? 'paginationBtn_selected' : '';
+            $('.paginationPages').append(`
+                <button class="paginationBtn ${page_selected}" onclick="changePage(${i})" data-page="${i}">${i+1}</button>    
+            `);
+            counter++;
+        }
+
+        $('.paginationNav[data-action="prev"]').addClass('paginationBtn_disabled')
+        $('.paginationNav[data-action="first"]').addClass('paginationBtn_disabled')
+
+        if (totalPages == 0) {
+            $('.paginationNav[data-action="next"]').addClass('paginationBtn_disabled')
+            $('.paginationNav[data-action="last"]').addClass('paginationBtn_disabled')
+        }
+    } else {
+        console.log('Here!!!')
+        let firstBoxPage = currentPage-1;
+        for (let i = firstBoxPage; i < totalPages; i++) {
+            if (counter >= 3) break;
+            const page_selected = (i == currentPage) ? 'paginationBtn_selected' : '';
+            $('.paginationPages').append(`
+                <button class="paginationBtn ${page_selected}" onclick="changePage(${i})" data-page="${i}">${i+1}</button>    
+            `);
+            counter++;
+        }
+    }
+}
+
+function nextPage() {
+    currentPage = (currentPage+1 >= totalPages) ? currentPage : currentPage+1;
+    displayFiles();
+}
+
+function prevPage() {
+    currentPage = (currentPage-1 < 0) ? currentPage : currentPage-1;
+    displayFiles();
+}
+
+function firstPage() {
+    currentPage = 0;
+    displayFiles();
+}
+
+function lastPage() {
+    currentPage = totalPages-1;
+    displayFiles();
+}
+
+function changePage(pageNum) {
+    if (pageNum < totalPages && pageNum >= 0) {
+        currentPage = pageNum;
+        displayFiles();
+    }
+}
+
+// Picker Code
+
+function enablePicker() {
+    var eventDateInput = document.getElementById('dateInput');
+	var datepicker = new Picker(eventDateInput, {
+		date: eventDateInput.value,
+		format: 'DD/MM/YYYY',
+		controls: true,
+		headers: true,
+		text: {
+			title: 'תאריך',
+			cancel: 'ביטול',
+			confirm: 'אישור',
+			year: 'שנה',
+			month: 'חודש',
+			day: 'יום'
+		},
+		translate(type, text) {
+// 			if (type == 'month') {
+// 				text = trans.months.full.find(x => x.en === text).he;
+// 			}
+			return String(text);
+		},
+		pick: (data) => {
+			let picker_year = data.target.picker.data.year.current;
+			let picker_month = data.target.picker.data.month.current;
+			let picker_day = data.target.picker.data.day.current;
+			let value_month = picker_month+1;
+			value_month = (value_month < 10) ? '0'+value_month : value_month;
+      picker_day = (picker_day < 10) ? '0'+picker_day : picker_day;
+			const newDate = `${picker_year}${value_month}${picker_day}`;
+			changeDate(newDate);
+		}
+	});
+}
+
+function changeDate(date) {
+    const allParams = getSearchParams();
+    allParams[`date`] = date;
+    let paramsEncoded = replaceURLParams($.param(allParams));
+    window.location.replace(`/?${paramsEncoded}`)
+}
+
+function getSearchParams(k) {
+    var p = {};
+    location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(s, k, v) {
+        p[k] = v
+    })
+    return k ? p[k] : p;
+}
+
+function replaceURLParams(params) {
+    let paramsEncoded = params.replaceAll('%252F', '/');
+    paramsEncoded = params.replaceAll('%2F', '/');
+    return paramsEncoded;
+}
+
+function formatBytes(bytes, decimals = 2) {
+    if (bytes === 0) return '0 Bytes';
+
+    const k = 1024;
+    const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(decimals)) + ' ' + sizes[i];
+}
+
+let current_modified_state = 0;
+function sort_modified(showFiles = false) {
+    const modified_states = ['asc', 'desc'];
+    current_modified_state++;
+
+    if (current_modified_state === modified_states.length) {
+        current_modified_state = 0;
+    }
+
+    $('.modifiedIcon').removeClass('hidden')
+    $('.modifiedIcon').removeClass('fa-arrow-down')
+    $('.modifiedIcon').removeClass('fa-arrow-up')
+    switch (modified_states[current_modified_state]) {
+        case 'asc':
+            $('.modifiedIcon').addClass('fa-arrow-up');
+            sorted_files = [...filtered_files].sort((a, b) => {
+                const dateA = parseModifiedDate(a.modified);
+                const dateB = parseModifiedDate(b.modified);
+                return dateA - dateB;  // Sort by date in ascending order
+            });
+            break;
+
+        case 'desc':
+            $('.modifiedIcon').addClass('fa-arrow-down');
+            sorted_files = [...filtered_files].sort((a, b) => {
+                const dateA = parseModifiedDate(a.modified);
+                const dateB = parseModifiedDate(b.modified);
+                return dateB - dateA;  // Sort by date in descending order
+            });
+            break;
+
+        default: // none → restore original order
+            $('.modifiedIcon').addClass('hidden');
+            sorted_files = [...filtered_files];
+            break;
+    }
+
+
+    if (showFiles) {
+        displayFiles();
+    }
+}
+
+// Define the sorting function
+function parseModifiedDate(dateString) {
+    // Split the string into time and date parts
+    const [time, date] = dateString.split(' ');
+
+    // Split the date part into day, month, and year
+    const [day, month, year] = date.split('-');
+
+    // Reformat to 'Y-m-d H:i' which JavaScript Date object can understand
+    return new Date(`${year}-${month}-${day}T${time}:00`);
+}</script>
+
+</body>
+</html>

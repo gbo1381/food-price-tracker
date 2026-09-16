@@ -1,0 +1,53 @@
+{
+ "index_status": 200,
+ "/api/files": {
+  "status": 404,
+  "ctype": "text/html; charset=iso-8859-1",
+  "head": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL was not found on this server.</p>\n<hr>\n<address>Apache/2.4.52 (Ubuntu) Server at prices.carrefour.co.il Port 443</address>\n</body></html>\n"
+ },
+ "/files": {
+  "status": 404,
+  "ctype": "text/html; charset=iso-8859-1",
+  "head": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL was not found on this server.</p>\n<hr>\n<address>Apache/2.4.52 (Ubuntu) Server at prices.carrefour.co.il Port 443</address>\n</body></html>\n"
+ },
+ "/file": {
+  "status": 404,
+  "ctype": "text/html; charset=iso-8859-1",
+  "head": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL was not found on this server.</p>\n<hr>\n<address>Apache/2.4.52 (Ubuntu) Server at prices.carrefour.co.il Port 443</address>\n</body></html>\n"
+ },
+ "/list": {
+  "status": 404,
+  "ctype": "text/html; charset=iso-8859-1",
+  "head": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL was not found on this server.</p>\n<hr>\n<address>Apache/2.4.52 (Ubuntu) Server at prices.carrefour.co.il Port 443</address>\n</body></html>\n"
+ },
+ "/api/list": {
+  "status": 404,
+  "ctype": "text/html; charset=iso-8859-1",
+  "head": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL was not found on this server.</p>\n<hr>\n<address>Apache/2.4.52 (Ubuntu) Server at prices.carrefour.co.il Port 443</address>\n</body></html>\n"
+ },
+ "/getfiles": {
+  "status": 404,
+  "ctype": "text/html; charset=iso-8859-1",
+  "head": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL was not found on this server.</p>\n<hr>\n<address>Apache/2.4.52 (Ubuntu) Server at prices.carrefour.co.il Port 443</address>\n</body></html>\n"
+ },
+ "/api/getfiles": {
+  "status": 404,
+  "ctype": "text/html; charset=iso-8859-1",
+  "head": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL was not found on this server.</p>\n<hr>\n<address>Apache/2.4.52 (Ubuntu) Server at prices.carrefour.co.il Port 443</address>\n</body></html>\n"
+ },
+ "/?page=1": {
+  "status": 200,
+  "ctype": "text/html; charset=UTF-8",
+  "head": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Carrefour - אתר שקיפות מחירים</title>\n    <!-- <link rel=\"stylesheet\" href=\"css/old-index.css\"> -->\n    <style>body > :not(.picker),\nbody > :not(.picker) * {\n    transition: all .15s;\n}\n\n* {\n    direction: rtl;\n    font-family: Arial, Helvetica, sans-serif;\n}\n\n*:focus {\n    outline: none;\n}\n\nbody {\n    width: 100%;\n    margin: 0px;\n}\n\n.hidden {\n    display: none;\n}\n\n.container {\n    box-sizing: border-box;\n    width: 100%;\n    padding: 0px 120px;\n    padding-top: 40px;\n    padding-bottom: 40px;\n}\n\nh1 {\n    text-align: center;\n}\n\nh2, h3, h4, h5 {\n    font-weight: normal;\n}\n\n.centerTxt {\n    text-align: center;\n}\n\n.companyLogo {\n    display: inherit;\n    text-align: center;\n    margin: 0 auto;\n    height: auto;\n    width: 200px;\n    max-width: 90%;\n}\n\n.parentDirDiv {\n    display: inline-block;\n    font-size: large;\n    margin: 10px 0px;\n    text-decoration: underline;\n}\n\n.parentDirDiv:hover {\n    cursor: pointer;\n    opacity: .65;\n}\n\n.fileDiv {\n    transform-origin: top center;\n    position: relative;\n    display: grid;\n    padding: 10px 15px;\n    border: none;\n    font-size: large;\n    grid-template-columns: 1fr 1fr .75fr .2fr;\n}\n\n.fileDiv:nth-of-type(odd) {\n    background-color: #efefef;\n}\n\n.fileDiv:first-of-type {\n    border: 1px solid #ccc;\n    color: #555;\n}\n\n.fileDiv:first-of-type .filterLink {\n    color: royalblue;\n    text-decoration: underline;\n}\n\n.fileDiv:first-of-type span[filter=\"m\"] {\n    cursor: pointer;\n}\n\n.fileDiv:not(:first-of-type) {\n    animation: slide .3s ease 1;\n}\n\n.fileDiv:not(:first-of-type):hover {\n    opacity: .7;\n}\n\n.fileDiv:not(:first-of-type) .fileSize {\n    text-align: right;\n    direction: ltr;\n}\n\n.fileDiv .downloadBtn {\n    text-decoration: none;\n    color: inherit;\n}\n\n.fileDiv .fa-folder {\n    color: orange;\n}\n\n.input {\n    margin: 10px 0px;\n    padding: 10px 20px;\n    font-size: large;\n    color: #333;\n    background: #efefef;\n    border: none;\n    border-radius: 8px;\n    max-width: 30%;\n    box-sizing: border-box;\n}\n\n.paginationDiv {\n    display: none;\n    margin-top: 40px;\n    text-align: center;\n}\n\n.paginationBtn {\n    box-sizing: border-box;\n    height: 30px;\n    width: 30px;\n    text-align: center;\n    background-color: #eee;\n    /*color: #16a06e;*/\n    \n    border: none;\n    border-radius: 5px;\n    font-size: small;\n}\n\n.paginationNav {\n    background-color: #077ccc;\n    color: #fff;\n}\n\n.paginationPages {\n    display: inline-block;\n}\n\n.paginationBtn_disabled {\n    background-color: #f6f6f6;\n    color: #ededed;\n    pointer-events: none;\n}\n\n.paginationBtn_selected {\n    background-color: #077ccc;\n    color: #fff;\n}\n\n.paginationBtn:hover {\n    cursor: pointer;\n    opacity: .6;\n}\n\n.paginationTxt {\n    font-weight: bold;\n}\n\n.footer {\n    position: fixed;\n    bottom: 0;\n    text-align: center;\n    width: 100%;\n    padding: 10px 0px;\n    /*background-color: #02b48b;*"
+ },
+ "/Prices": {
+  "status": 404,
+  "ctype": "text/html; charset=iso-8859-1",
+  "head": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL was not found on this server.</p>\n<hr>\n<address>Apache/2.4.52 (Ubuntu) Server at prices.carrefour.co.il Port 443</address>\n</body></html>\n"
+ },
+ "/prices": {
+  "status": 404,
+  "ctype": "text/html; charset=iso-8859-1",
+  "head": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL was not found on this server.</p>\n<hr>\n<address>Apache/2.4.52 (Ubuntu) Server at prices.carrefour.co.il Port 443</address>\n</body></html>\n"
+ }
+}

@@ -1,123 +1,123 @@
 ﻿group,cbs_code,cbs_name,chain,items,found,on_promo
 food,120070,לחם,carrefour,3,3,0
-food,120070,לחם,ramilevy,3,3,0
-food,120070,לחם,shufersal,3,3,0
-food,120070,לחם,tivtaam,3,3,0
+food,120070,לחם,ramilevy,3,3,1
+food,120070,לחם,shufersal,3,3,1
+food,120070,לחם,tivtaam,3,3,1
 food,120080,"ביסקוויטים, עוגות וכדומה",carrefour,3,3,0
-food,120080,"ביסקוויטים, עוגות וכדומה",ramilevy,3,3,0
+food,120080,"ביסקוויטים, עוגות וכדומה",ramilevy,3,3,1
 food,120080,"ביסקוויטים, עוגות וכדומה",shufersal,3,3,0
-food,120080,"ביסקוויטים, עוגות וכדומה",tivtaam,3,3,0
+food,120080,"ביסקוויטים, עוגות וכדומה",tivtaam,3,3,1
 food,120090,קמח,carrefour,3,3,0
-food,120090,קמח,ramilevy,3,3,0
+food,120090,קמח,ramilevy,3,3,2
 food,120090,קמח,shufersal,3,3,0
-food,120090,קמח,tivtaam,3,3,0
+food,120090,קמח,tivtaam,3,3,2
 food,120100,מוצרי בצק,carrefour,3,3,0
-food,120100,מוצרי בצק,ramilevy,3,3,0
-food,120100,מוצרי בצק,shufersal,3,3,0
-food,120100,מוצרי בצק,tivtaam,3,3,0
-food,120110,קטניות ומוצרי דגן,carrefour,3,3,0
-food,120110,קטניות ומוצרי דגן,ramilevy,3,3,0
+food,120100,מוצרי בצק,ramilevy,3,3,1
+food,120100,מוצרי בצק,shufersal,3,3,3
+food,120100,מוצרי בצק,tivtaam,3,3,1
+food,120110,קטניות ומוצרי דגן,carrefour,3,3,1
+food,120110,קטניות ומוצרי דגן,ramilevy,3,3,2
 food,120110,קטניות ומוצרי דגן,shufersal,3,3,0
-food,120110,קטניות ומוצרי דגן,tivtaam,3,3,0
+food,120110,קטניות ומוצרי דגן,tivtaam,3,3,2
 food,120120,ביצים,carrefour,2,2,0
 food,120120,ביצים,shufersal,2,2,0
 food,120120,ביצים,tivtaam,2,2,0
 food,120140,בשר בקר,carrefour,3,3,0
-food,120140,בשר בקר,ramilevy,3,3,0
+food,120140,בשר בקר,ramilevy,3,3,1
 food,120140,בשר בקר,shufersal,2,2,0
 food,120140,בשר בקר,tivtaam,2,2,0
 food,120160,עופות,carrefour,3,3,0
-food,120160,עופות,ramilevy,3,3,0
-food,120160,עופות,shufersal,3,3,0
-food,120160,עופות,tivtaam,3,3,0
-food,120170,בשר משומר ומעובד,carrefour,3,3,0
-food,120170,בשר משומר ומעובד,ramilevy,3,3,0
-food,120170,בשר משומר ומעובד,shufersal,3,3,0
+food,120160,עופות,ramilevy,3,3,3
+food,120160,עופות,shufersal,3,3,2
+food,120160,עופות,tivtaam,3,3,3
+food,120170,בשר משומר ומעובד,carrefour,3,3,1
+food,120170,בשר משומר ומעובד,ramilevy,3,3,2
+food,120170,בשר משומר ומעובד,shufersal,3,3,1
 food,120170,בשר משומר ומעובד,tivtaam,3,3,0
 food,120180,דגים,carrefour,3,3,0
-food,120180,דגים,ramilevy,2,2,0
-food,120180,דגים,shufersal,2,2,0
-food,120180,דגים,tivtaam,2,2,0
-food,120190,שימורי דגים ודגים מעובדים,carrefour,3,3,0
-food,120190,שימורי דגים ודגים מעובדים,ramilevy,3,3,0
-food,120190,שימורי דגים ודגים מעובדים,shufersal,3,3,0
+food,120180,דגים,ramilevy,2,2,2
+food,120180,דגים,shufersal,2,2,2
+food,120180,דגים,tivtaam,2,2,1
+food,120190,שימורי דגים ודגים מעובדים,carrefour,3,3,1
+food,120190,שימורי דגים ודגים מעובדים,ramilevy,3,3,3
+food,120190,שימורי דגים ודגים מעובדים,shufersal,3,3,1
 food,120190,שימורי דגים ודגים מעובדים,tivtaam,3,3,0
-food,120210,שמנים,carrefour,3,3,0
-food,120210,שמנים,ramilevy,3,3,0
-food,120210,שמנים,shufersal,3,3,0
-food,120210,שמנים,tivtaam,3,3,0
+food,120210,שמנים,carrefour,3,3,1
+food,120210,שמנים,ramilevy,3,3,2
+food,120210,שמנים,shufersal,3,3,1
+food,120210,שמנים,tivtaam,3,3,2
 food,120220,מרגרינה,carrefour,3,3,0
 food,120220,מרגרינה,ramilevy,3,3,0
 food,120220,מרגרינה,shufersal,3,3,0
 food,120220,מרגרינה,tivtaam,2,2,0
-food,120240,חלב,carrefour,3,3,0
+food,120240,חלב,carrefour,3,3,1
 food,120240,חלב,ramilevy,3,3,0
 food,120240,חלב,shufersal,3,3,0
 food,120240,חלב,tivtaam,3,3,0
-food,120250,"לבן, יוגורט ומעדני חלב",carrefour,3,3,0
-food,120250,"לבן, יוגורט ומעדני חלב",ramilevy,3,3,0
-food,120250,"לבן, יוגורט ומעדני חלב",shufersal,3,3,0
-food,120250,"לבן, יוגורט ומעדני חלב",tivtaam,3,3,0
+food,120250,"לבן, יוגורט ומעדני חלב",carrefour,3,3,1
+food,120250,"לבן, יוגורט ומעדני חלב",ramilevy,3,3,1
+food,120250,"לבן, יוגורט ומעדני חלב",shufersal,3,3,1
+food,120250,"לבן, יוגורט ומעדני חלב",tivtaam,3,3,1
 food,120260,שמנת,carrefour,3,3,0
-food,120260,שמנת,ramilevy,3,3,0
+food,120260,שמנת,ramilevy,3,3,1
 food,120260,שמנת,shufersal,3,3,0
 food,120260,שמנת,tivtaam,3,3,0
-food,120270,חמאה,carrefour,3,3,0
-food,120270,חמאה,ramilevy,3,3,0
+food,120270,חמאה,carrefour,3,3,1
+food,120270,חמאה,ramilevy,3,3,1
 food,120270,חמאה,shufersal,3,3,0
 food,120270,חמאה,tivtaam,3,3,0
-food,120280,גבינה,carrefour,3,3,0
-food,120280,גבינה,ramilevy,3,3,0
+food,120280,גבינה,carrefour,3,3,1
+food,120280,גבינה,ramilevy,3,3,1
 food,120280,גבינה,shufersal,3,3,0
 food,120280,גבינה,tivtaam,3,3,0
-food,120285,גלידות,carrefour,3,3,0
-food,120285,גלידות,ramilevy,3,3,0
-food,120285,גלידות,shufersal,3,3,0
-food,120285,גלידות,tivtaam,3,3,0
-food,120300,"תבלינים, רטבים, מוצרים לעוגה ומזון לתינוקות",carrefour,3,3,0
-food,120300,"תבלינים, רטבים, מוצרים לעוגה ומזון לתינוקות",ramilevy,3,3,0
-food,120300,"תבלינים, רטבים, מוצרים לעוגה ומזון לתינוקות",shufersal,3,3,0
-food,120300,"תבלינים, רטבים, מוצרים לעוגה ומזון לתינוקות",tivtaam,3,3,0
-food,120310,תה,carrefour,3,3,0
-food,120310,תה,ramilevy,3,3,0
-food,120310,תה,shufersal,3,3,0
-food,120310,תה,tivtaam,3,3,0
-food,120320,קפה,carrefour,3,3,0
-food,120320,קפה,ramilevy,3,3,0
+food,120285,גלידות,carrefour,3,3,2
+food,120285,גלידות,ramilevy,3,3,2
+food,120285,גלידות,shufersal,3,3,3
+food,120285,גלידות,tivtaam,3,3,1
+food,120300,"תבלינים, רטבים, מוצרים לעוגה ומזון לתינוקות",carrefour,3,3,2
+food,120300,"תבלינים, רטבים, מוצרים לעוגה ומזון לתינוקות",ramilevy,3,3,2
+food,120300,"תבלינים, רטבים, מוצרים לעוגה ומזון לתינוקות",shufersal,3,3,2
+food,120300,"תבלינים, רטבים, מוצרים לעוגה ומזון לתינוקות",tivtaam,3,3,2
+food,120310,תה,carrefour,3,3,1
+food,120310,תה,ramilevy,3,3,2
+food,120310,תה,shufersal,3,3,1
+food,120310,תה,tivtaam,3,3,2
+food,120320,קפה,carrefour,3,3,1
+food,120320,קפה,ramilevy,3,3,1
 food,120320,קפה,shufersal,3,3,0
 food,120320,קפה,tivtaam,3,3,0
 food,120330,קקאו,carrefour,3,3,0
-food,120330,קקאו,ramilevy,3,3,0
-food,120330,קקאו,shufersal,3,3,0
+food,120330,קקאו,ramilevy,3,3,1
+food,120330,קקאו,shufersal,3,3,1
 food,120330,קקאו,tivtaam,3,3,0
-food,120350,משקאות קלים,carrefour,3,3,0
+food,120350,משקאות קלים,carrefour,3,3,1
 food,120350,משקאות קלים,ramilevy,3,3,0
-food,120350,משקאות קלים,shufersal,3,3,0
-food,120350,משקאות קלים,tivtaam,3,3,0
+food,120350,משקאות קלים,shufersal,3,3,1
+food,120350,משקאות קלים,tivtaam,3,3,1
 food,120360,משקאות אלכוהולים,carrefour,3,3,0
-food,120360,משקאות אלכוהולים,ramilevy,3,3,0
-food,120360,משקאות אלכוהולים,shufersal,3,3,0
-food,120360,משקאות אלכוהולים,tivtaam,3,3,0
+food,120360,משקאות אלכוהולים,ramilevy,3,3,2
+food,120360,משקאות אלכוהולים,shufersal,3,3,1
+food,120360,משקאות אלכוהולים,tivtaam,3,3,2
 food,120380,סוכר ותחליפיו,carrefour,3,3,0
 food,120380,סוכר ותחליפיו,ramilevy,3,3,0
 food,120380,סוכר ותחליפיו,shufersal,3,3,0
 food,120380,סוכר ותחליפיו,tivtaam,3,3,0
 food,120390,"ריבה, דבש וכדומה",carrefour,3,3,0
-food,120390,"ריבה, דבש וכדומה",ramilevy,3,3,0
-food,120390,"ריבה, דבש וכדומה",shufersal,3,3,0
-food,120390,"ריבה, דבש וכדומה",tivtaam,3,3,0
-food,120400,ממתקים ושוקולד,carrefour,3,3,0
-food,120400,ממתקים ושוקולד,ramilevy,3,3,0
-food,120400,ממתקים ושוקולד,shufersal,3,3,0
-food,120400,ממתקים ושוקולד,tivtaam,3,3,0
-food,150315,סלטים מוכנים,carrefour,3,3,0
-food,150315,סלטים מוכנים,ramilevy,3,3,0
-food,150315,סלטים מוכנים,tivtaam,3,3,0
+food,120390,"ריבה, דבש וכדומה",ramilevy,3,3,2
+food,120390,"ריבה, דבש וכדומה",shufersal,3,3,1
+food,120390,"ריבה, דבש וכדומה",tivtaam,3,3,1
+food,120400,ממתקים ושוקולד,carrefour,3,3,2
+food,120400,ממתקים ושוקולד,ramilevy,3,3,2
+food,120400,ממתקים ושוקולד,shufersal,3,3,1
+food,120400,ממתקים ושוקולד,tivtaam,3,3,1
+food,150315,סלטים מוכנים,carrefour,3,3,3
+food,150315,סלטים מוכנים,ramilevy,3,3,3
+food,150315,סלטים מוכנים,tivtaam,3,3,2
 fv,120042,ירקות טריים,carrefour,5,5,0
-fv,120042,ירקות טריים,ramilevy,6,6,0
-fv,120042,ירקות טריים,shufersal,6,6,0
+fv,120042,ירקות טריים,ramilevy,6,6,1
+fv,120042,ירקות טריים,shufersal,6,6,2
 fv,120042,ירקות טריים,tivtaam,5,5,0
 fv,120043,פירות טריים,carrefour,5,5,0
-fv,120043,פירות טריים,ramilevy,6,6,0
-fv,120043,פירות טריים,shufersal,6,6,0
-fv,120043,פירות טריים,tivtaam,6,6,0
+fv,120043,פירות טריים,ramilevy,6,6,1
+fv,120043,פירות טריים,shufersal,6,6,1
+fv,120043,פירות טריים,tivtaam,6,6,1

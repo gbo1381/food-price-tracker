@@ -1,38 +1,74 @@
 {
- "promos": 0,
- "active": 0,
- "open_to_all": 0,
- "basket_hits": 0,
- "raw": {
-  "root": "Root",
-  "head": "﻿<Root>\r\n  <ChainID>7290873255550</ChainID>\r\n  <SubChainID>000</SubChainID>\r\n  <StoreID>014</StoreID>\r\n  <BikoretNo>3</BikoretNo>\r\n  <Promotions>\r\n    <Promotion>\r\n      <PromotionUpdateTime>2026-09-06T11:52:00.000</PromotionUpdateTime>\r\n      <AllowMultipleDiscounts>1</AllowMultipleDiscounts>\r\n      <PromotionID>110211</PromotionID>\r\n      <PromotionDescription>הנחה DM 10%</PromotionDescription>\r\n      <PromotionStartDateTime>2016-01-01T00:00:00.000</PromotionStartDateTime>\r\n      <PromotionEndDateTime>2030-12-31T23:58:00.000</PromotionEndDateTime>\r\n      <PromotionStartHour>00:00:00.000</PromotionStartHour>\r\n      <PromotionEndHour>23:58:00.000</PromotionEndHour>\r\n      <PromotionDays />\r\n      <RedemptionLimit>0</RedemptionLimit>\r\n      <MinNoOfItemOffered>10</MinNoOfItemOffered>\r\n      <ClubID>1 - המועדון החדש</ClubID>\r\n      <IsGiftItem />\r\n      <AdditionalIsCoupon>0</AdditionalIsCoupon>\r\n      <AdditionalRestrictions />\r\n      <Remarks />\r\n      <Groups>\r\n        <Group>\r\n          <GroupID>1</GroupID>\r\n          <MinPurchaseAmount></MinPurchaseAmount>\r\n          <DiscountType>0</DiscountType>\r\n          <PromotionItems>\r\n            <PromotionItem>\r\n              <ItemCode>7290001829455</ItemCode>\r\n              <ItemType>1</ItemType>\r\n              <RewardType>2</RewardType>\r\n              <MinQty>1.00</MinQty>\r\n              <MaxQty></MaxQty>\r\n              <DiscountRate>10</DiscountRate>\r\n              <DiscountedPrice>602.10</DiscountedPrice>\r\n   ",
-  "tag_counts": {
-   "PromotionItem": 33347,
-   "ItemCode": 33347,
-   "ItemType": 33347,
-   "RewardType": 33347,
-   "MinQty": 33347,
-   "DiscountRate": 33347,
-   "DiscountedPrice": 33347,
-   "DiscountedPricePerMida": 33347,
-   "bIsWeighted": 33347,
-   "MaxQty": 33343,
-   "Group": 2723,
-   "GroupID": 2723,
-   "MinPurchaseAmount": 2723,
-   "DiscountType": 2723,
-   "PromotionItems": 2723,
-   "Promotion": 2648,
-   "PromotionUpdateTime": 2648,
-   "AllowMultipleDiscounts": 2648,
-   "PromotionID": 2648,
-   "PromotionDescription": 2648,
-   "PromotionStartDateTime": 2648,
-   "PromotionEndDateTime": 2648,
-   "PromotionStartHour": 2648,
-   "PromotionEndHour": 2648,
-   "PromotionDays": 2648
+ "promos": 33347,
+ "active": 33347,
+ "open_to_all": 6103,
+ "basket_hits": 124,
+ "sample": [
+  {
+   "promo_desc": "הנחה DM 10%",
+   "start": "2016-01-01T00:00:00.000",
+   "end": "2030-12-31T23:58:00.000",
+   "clubs": "1 - המועדון החדש",
+   "is_coupon": "0",
+   "min_qty": 1.0,
+   "discounted_price": 602.1,
+   "discount_rate": 10.0,
+   "barcode": "7290001829455"
+  },
+  {
+   "promo_desc": "הנחה DM 10%",
+   "start": "2016-01-01T00:00:00.000",
+   "end": "2030-12-31T23:58:00.000",
+   "clubs": "1 - המועדון החדש",
+   "is_coupon": "0",
+   "min_qty": 1.0,
+   "discounted_price": 14.31,
+   "discount_rate": 10.0,
+   "barcode": "7290010824823"
+  },
+  {
+   "promo_desc": "הנחה DM 10%",
+   "start": "2016-01-01T00:00:00.000",
+   "end": "2030-12-31T23:58:00.000",
+   "clubs": "1 - המועדון החדש",
+   "is_coupon": "0",
+   "min_qty": 1.0,
+   "discounted_price": 260.1,
+   "discount_rate": 10.0,
+   "barcode": "7290015937399"
+  },
+  {
+   "promo_desc": "יין מוני 2 ב 80 מועדון",
+   "start": "2018-01-24T00:00:00.000",
+   "end": "2027-01-04T14:34:00.000",
+   "clubs": "1 - המועדון החדש",
+   "is_coupon": "0",
+   "min_qty": 2.0,
+   "discounted_price": 80.0,
+   "discount_rate": null,
+   "barcode": "7290006744302"
+  },
+  {
+   "promo_desc": "יין מוני 2 ב 80 מועדון",
+   "start": "2018-01-24T00:00:00.000",
+   "end": "2027-01-04T14:34:00.000",
+   "clubs": "1 - המועדון החדש",
+   "is_coupon": "0",
+   "min_qty": 2.0,
+   "discounted_price": 80.0,
+   "discount_rate": null,
+   "barcode": "7290006744333"
+  },
+  {
+   "promo_desc": "יין מוני 2 ב 80 מועדון",
+   "start": "2018-01-24T00:00:00.000",
+   "end": "2027-01-04T14:34:00.000",
+   "clubs": "1 - המועדון החדש",
+   "is_coupon": "0",
+   "min_qty": 2.0,
+   "discounted_price": 80.0,
+   "discount_rate": null,
+   "barcode": "7290006744425"
   }
- },
- "sample": []
+ ]
 }

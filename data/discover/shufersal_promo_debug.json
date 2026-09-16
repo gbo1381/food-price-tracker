@@ -3,5 +3,36 @@
  "active": 0,
  "open_to_all": 0,
  "basket_hits": 0,
+ "raw": {
+  "root": "Root",
+  "head": "﻿<Root>\r\n  <ChainID>7290027600007</ChainID>\r\n  <SubChainID>002</SubChainID>\r\n  <StoreID>290</StoreID>\r\n  <BikoretNo>1</BikoretNo>\r\n  <Promotions>\r\n    <Promotion>\r\n      <PromotionUpdateTime>2023-06-07T10:30:00.000</PromotionUpdateTime>\r\n      <AllowMultipleDiscounts>1</AllowMultipleDiscounts>\r\n      <PromotionID>667573</PromotionID>\r\n      <PromotionDescription>קופון דבש לחיץ 500 גרם - מתנה</PromotionDescription>\r\n      <PromotionStartDateTime>2014-07-16T00:00:00.000</PromotionStartDateTime>\r\n      <PromotionEndDateTime>2031-01-01T02:59:00.000</PromotionEndDateTime>\r\n      <PromotionStartHour>00:00:00.000</PromotionStartHour>\r\n      <PromotionEndHour>02:59:00.000</PromotionEndHour>\r\n      <PromotionDays />\r\n      <RedemptionLimit>1</RedemptionLimit>\r\n      <MinNoOfItemOffered>10</MinNoOfItemOffered>\r\n      <ClubID>0 - כלל הלקוחות</ClubID>\r\n      <IsGiftItem />\r\n      <AdditionalIsCoupon>1</AdditionalIsCoupon>\r\n      <AdditionalRestrictions />\r\n      <Remarks />\r\n      <Groups>\r\n        <Group>\r\n          <GroupID>1</GroupID>\r\n          <MinPurchaseAmount></MinPurchaseAmount>\r\n          <DiscountType>0</DiscountType>\r\n          <PromotionItems>\r\n            <PromotionItem>\r\n              <ItemCode>7296073173045</ItemCode>\r\n              <ItemType>1</ItemType>\r\n              <RewardType>2</RewardType>\r\n              <MinQty>1.00</MinQty>\r\n              <MaxQty></MaxQty>\r\n              <DiscountRate>100</DiscountRate>\r\n              <DiscountedPri",
+  "tag_counts": {
+   "PromotionItem": 27861,
+   "ItemCode": 27861,
+   "ItemType": 27861,
+   "RewardType": 27861,
+   "MinQty": 27861,
+   "DiscountRate": 27861,
+   "DiscountedPrice": 27861,
+   "DiscountedPricePerMida": 27861,
+   "bIsWeighted": 27861,
+   "MaxQty": 27810,
+   "Group": 1687,
+   "GroupID": 1687,
+   "MinPurchaseAmount": 1687,
+   "DiscountType": 1687,
+   "PromotionItems": 1687,
+   "Promotion": 1620,
+   "PromotionUpdateTime": 1620,
+   "AllowMultipleDiscounts": 1620,
+   "PromotionID": 1620,
+   "PromotionDescription": 1620,
+   "PromotionStartDateTime": 1620,
+   "PromotionEndDateTime": 1620,
+   "PromotionStartHour": 1620,
+   "PromotionEndHour": 1620,
+   "PromotionDays": 1620
+  }
+ },
  "sample": []
 }

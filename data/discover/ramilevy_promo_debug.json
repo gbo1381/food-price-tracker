@@ -3,5 +3,36 @@
  "active": 0,
  "open_to_all": 0,
  "basket_hits": 0,
+ "raw": {
+  "root": "Root",
+  "head": "﻿<Root>\r\n  <ChainID>7290058140886</ChainID>\r\n  <SubChainID>001</SubChainID>\r\n  <StoreID>055</StoreID>\r\n  <BikoretNo>7</BikoretNo>\r\n  <Promotions>\r\n    <Promotion>\r\n      <PromotionUpdateTime>2026-09-14T00:00:00.000</PromotionUpdateTime>\r\n      <AllowMultipleDiscounts>0</AllowMultipleDiscounts>\r\n      <PromotionID>0001424660</PromotionID>\r\n      <PromotionDescription>בשר טחון טרי ב54.90 מעל 75 מו6 רשתי</PromotionDescription>\r\n      <PromotionStartDateTime>2026-09-06T00:00:00.000</PromotionStartDateTime>\r\n      <PromotionEndDateTime>2026-09-19T23:59:00.000</PromotionEndDateTime>\r\n      <PromotionStartHour/>\r\n      <PromotionEndHour/>\r\n      <PromotionDays/>\r\n      <RedemptionLimit>6</RedemptionLimit>\r\n      <MinNoOfItemOffered>10</MinNoOfItemOffered>\r\n      <ClubID>0</ClubID>\r\n      <IsGiftItem>1</IsGiftItem>\r\n      <AdditionalIsCoupon>0</AdditionalIsCoupon>\r\n      <AdditionalRestrictions/>\r\n      <Remarks/>\r\n      <Groups>\r\n        <Group>\r\n          <GroupID>1</GroupID>\r\n          <MinPurchaseAmount>75.00</MinPurchaseAmount>\r\n          <DiscountType/>\r\n          <PromotionItems>\r\n            <PromotionItem>\r\n              <ItemCode>7290001004746</ItemCode>\r\n              <ItemType>1</ItemType>\r\n              <RewardType>10</RewardType>\r\n              <MinQty>0.010</MinQty>\r\n              <MaxQty>6</MaxQty>\r\n              <DiscountRate>15.41</DiscountRate>\r\n              <DiscountedPrice>54.90</DiscountedPrice>\r\n              <DiscountedPricePerMida>54.90",
+  "tag_counts": {
+   "PromotionItem": 14173,
+   "ItemCode": 14173,
+   "ItemType": 14173,
+   "RewardType": 14173,
+   "MinQty": 14173,
+   "MaxQty": 14173,
+   "DiscountRate": 14173,
+   "DiscountedPrice": 14173,
+   "DiscountedPricePerMida": 14173,
+   "bIsWeighted": 14173,
+   "Group": 2777,
+   "GroupID": 2777,
+   "MinPurchaseAmount": 2777,
+   "DiscountType": 2777,
+   "PromotionItems": 2777,
+   "Promotion": 2743,
+   "PromotionUpdateTime": 2743,
+   "AllowMultipleDiscounts": 2743,
+   "PromotionID": 2743,
+   "PromotionDescription": 2743,
+   "PromotionStartDateTime": 2743,
+   "PromotionEndDateTime": 2743,
+   "PromotionStartHour": 2743,
+   "PromotionEndHour": 2743,
+   "PromotionDays": 2743
+  }
+ },
  "sample": []
 }

@@ -114,9 +114,11 @@ def build_workbook(df, daily, sub, base):
                 ws.cell(i, j, v)
         ws.freeze_panes = ws.cell(r0 + 1, 1)
         ws.sheet_view.rightToLeft = True
-        for col in ws.columns:
-            L = max((len(str(c.value)) for c in col if c.value is not None), default=10)
-            ws.column_dimensions[col[0].column_letter].width = min(max(L + 2, 10), 46)
+        from openpyxl.utils import get_column_letter
+        for j, c in enumerate(dfin.columns, 1):
+            body = dfin.iloc[:, j - 1].astype(str).head(200).tolist()
+            L = max([len(str(c))] + [len(str(x)) for x in body])
+            ws.column_dimensions[get_column_letter(j)].width = min(max(L + 2, 10), 46)
         return ws
 
     wb.remove(wb.active)

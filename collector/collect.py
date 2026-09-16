@@ -203,6 +203,16 @@ def mode_daily(ads, on):
         try:
             fp, prices = with_budget(600, download_kind, ad, "PriceFull", store)
             pf, promos = with_budget(600, download_kind, ad, "PromoFull", store)
+            # promo diagnostics
+            from sources import promo_open_to_all, promo_active
+            n_active = sum(1 for p in promos if promo_active(p, on))
+            n_open = sum(1 for p in promos if promo_active(p, on) and promo_open_to_all(p))
+            bset = set(bk["barcode"])
+            n_basket = sum(1 for p in promos if p["barcode"] in bset)
+            dbg = {"promos": len(promos), "active": n_active, "open_to_all": n_open, "basket_hits": n_basket,
+                   "sample": [{k: p.get(k) for k in ("promo_desc", "start", "end", "clubs", "is_coupon", "is_total", "min_qty", "min_purchase", "min_basket", "discounted_price", "discount_rate", "reward_type", "barcode")} for p in promos[:6]]}
+            (DATA / "discover").mkdir(parents=True, exist_ok=True)
+            (DATA / "discover" / f"{name}_promo_debug.json").write_text(json.dumps(dbg, ensure_ascii=False, indent=1, default=str), encoding="utf-8")
             df = effective_prices(prices, promos, on)
             m = bk.merge(df, on="barcode", how="left", suffixes=("", "_file"))
             m.insert(0, "date", on.isoformat())

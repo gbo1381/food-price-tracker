@@ -1,10 +1,92 @@
 {
  "ramilevy": {
-  "n_pricefull_files": 0,
-  "sample": []
+  "n_pricefull_files": 163,
+  "sample": [
+   {
+    "name": "PriceFull7290058140886-001-001-20260916-001011.gz",
+    "url": "https://url.publishedprices.co.il/file/d/PriceFull7290058140886-001-001-20260916-001011.gz",
+    "store_id": 1,
+    "store_name": "",
+    "size": 952895,
+    "updated": "09/16/2026 00:20"
+   },
+   {
+    "name": "PriceFull7290058140886-001-002-20260916-001016.gz",
+    "url": "https://url.publishedprices.co.il/file/d/PriceFull7290058140886-001-002-20260916-001016.gz",
+    "store_id": 2,
+    "store_name": "",
+    "size": 872682,
+    "updated": "09/16/2026 00:38"
+   },
+   {
+    "name": "PriceFull7290058140886-001-003-20260916-001013.gz",
+    "url": "https://url.publishedprices.co.il/file/d/PriceFull7290058140886-001-003-20260916-001013.gz",
+    "store_id": 3,
+    "store_name": "",
+    "size": 511572,
+    "updated": "09/16/2026 00:10"
+   },
+   {
+    "name": "PriceFull7290058140886-001-003-20260916-060006.gz",
+    "url": "https://url.publishedprices.co.il/file/d/PriceFull7290058140886-001-003-20260916-060006.gz",
+    "store_id": 3,
+    "store_name": "",
+    "size": 517096,
+    "updated": "09/16/2026 05:59"
+   },
+   {
+    "name": "PriceFull7290058140886-001-005-20260916-001019.gz",
+    "url": "https://url.publishedprices.co.il/file/d/PriceFull7290058140886-001-005-20260916-001019.gz",
+    "store_id": 5,
+    "store_name": "",
+    "size": 1095477,
+    "updated": "09/16/2026 00:10"
+   }
+  ]
  },
  "tivtaam": {
-  "n_pricefull_files": 0,
-  "sample": []
+  "n_pricefull_files": 54,
+  "sample": [
+   {
+    "name": "PriceFull7290873255550-000-002-20260916-003215.gz",
+    "url": "https://url.publishedprices.co.il/file/d/PriceFull7290873255550-000-002-20260916-003215.gz",
+    "store_id": 2,
+    "store_name": "",
+    "size": 1058620,
+    "updated": "09/16/2026 00:48"
+   },
+   {
+    "name": "PriceFull7290873255550-000-003-20260916-003215.gz",
+    "url": "https://url.publishedprices.co.il/file/d/PriceFull7290873255550-000-003-20260916-003215.gz",
+    "store_id": 3,
+    "store_name": "",
+    "size": 973387,
+    "updated": "09/16/2026 00:48"
+   },
+   {
+    "name": "PriceFull7290873255550-000-006-20260916-003215.gz",
+    "url": "https://url.publishedprices.co.il/file/d/PriceFull7290873255550-000-006-20260916-003215.gz",
+    "store_id": 6,
+    "store_name": "",
+    "size": 810069,
+    "updated": "09/16/2026 00:48"
+   },
+   {
+    "name": "PriceFull7290873255550-000-007-20260916-003215.gz",
+    "url": "https://url.publishedprices.co.il/file/d/PriceFull7290873255550-000-007-20260916-003215.gz",
+    "store_id": 7,
+    "store_name": "",
+    "size": 913122,
+    "updated": "09/16/2026 00:48"
+   },
+   {
+    "name": "PriceFull7290873255550-000-010-20260916-003215.gz",
+    "url": "https://url.publishedprices.co.il/file/d/PriceFull7290873255550-000-010-20260916-003215.gz",
+    "store_id": 10,
+    "store_name": "",
+    "size": 556890,
+    "updated": "09/16/2026 00:48"
+   }
+  ]
  }
 }

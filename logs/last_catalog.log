@@ -1,0 +1,13 @@
+06:43:48 === mode catalog ===
+06:44:33   shufersal: PriceFull PriceFull7290027600007-002-290-20260916-030000.gz -> 9222 rows
+06:45:28   shufersal: PromoFull PromoFull7290027600007-002-290-20260916-030000.gz -> 0 rows
+06:45:28 shufersal: catalog 9222 items written
+06:45:33   ramilevy: PriceFull PriceFull7290058140886-001-055-20260916-001015.gz -> 14867 rows
+06:45:35   ramilevy: PromoFull PromoFull7290058140886-001-055-20260916-001129.gz -> 0 rows
+06:45:36 ramilevy: catalog 14867 items written
+06:45:42   tivtaam: PriceFull PriceFull7290873255550-000-014-20260916-003215.gz -> 23125 rows
+06:45:44   tivtaam: PromoFull PromoFull7290873255550-000-014-20260916-003215.gz -> 0 rows
+06:45:45 tivtaam: catalog 23125 items written
+06:45:49   carrefour: PriceFull PriceFull7290055700007-001-009-20260916-051007.gz -> 12646 rows
+06:45:50   carrefour: PromoFull PromoFull7290055700007-001-009-20260916-051059.gz -> 0 rows
+06:45:50 carrefour: catalog 12645 items written

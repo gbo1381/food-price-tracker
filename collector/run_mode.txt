@@ -1,1 +1,1 @@
-discover,catalog
+discover

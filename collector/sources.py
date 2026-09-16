@@ -63,6 +63,31 @@ def _iter(el, name) -> Iterable:
             yield c
 
 
+def kind_store_from_name(fname: str):
+    """Return (kind, store_id) from a transparency file name.
+
+    Two published structures share the same field order:
+      <Kind><chainid>-<subchain>-<store>-<YYYYMMDD>-<HHMMSS>   (5 dash-parts, "new")
+      <Kind><chainid>-<store>-<YYYYMMDD>-<HHMMSS>              (4 dash-parts, "old")
+    The kind prefix is stripped first so the leading chain id is a pure number.
+    """
+    m = re.match(r"(PriceFull|PromoFull|Price|Promo|Stores)(.+?)\.(?:gz|xml|zip)$", fname, re.I)
+    if not m:
+        m = re.match(r"(PriceFull|PromoFull|Price|Promo|Stores)(.+)$", fname, re.I)
+        if not m:
+            return None, None
+    kind = m.group(1)
+    parts = m.group(2).split("-")
+    nums = [p for p in parts if p.isdigit()]
+    # nums = [chainid, (subchain,) store, date, time]; store is the one before the 8-digit date
+    date_idx = next((i for i, p in enumerate(nums) if len(p) == 8 and p.startswith("2")), None)
+    if date_idx is not None and date_idx >= 1:
+        return kind, int(nums[date_idx - 1])
+    if len(nums) >= 3:
+        return kind, int(nums[-3])
+    return kind, None
+
+
 def _f(x, default=None):
     try:
         return float(x)
@@ -238,8 +263,7 @@ class Shufersal:
                 if fname in seen_names:
                     continue
                 seen_names.add(fname)
-                mm = re.match(r"(Price|PriceFull|Promo|PromoFull|Stores)(\d+)-(\d+)-(\d+)?-?(\d{8})-(\d{4,6})", fname)
-                store = int(mm.group(4)) if mm and mm.group(4) else None
+                _, store = kind_store_from_name(fname)
                 out.append(
                     {
                         "name": fname,
@@ -334,13 +358,7 @@ class PublishedPrices:
             "promofull_names": [n for n in names if n and n.startswith("PromoFull")][:8],
         }
 
-    @staticmethod
-    def _store_from_name(fname: str):
-        # Cerberus names: PriceFull<chain>-<store>-<datetime>.gz  (store may be zero-padded)
-        m = re.match(r"(PriceFull|PromoFull|Price|Promo|Stores)(\d+)-(\d+)-(\d{8,14})", fname)
-        if not m:
-            return None, None
-        return m.group(1), int(m.group(3))
+    _store_from_name = staticmethod(lambda fname: kind_store_from_name(fname))
 
     def list_files(self, kind: str, store_id=None) -> list[dict]:
         if not self._logged:
@@ -428,10 +446,9 @@ class Carrefour:
         out = []
         for f in files:
             name = f["name"]
-            mm = re.match(r"(Price|PriceFull|Promo|PromoFull|Stores)(\d+)-(\d+)-(\d+)-", name)
-            if not mm or mm.group(1) != kind:
+            k, st = kind_store_from_name(name)
+            if k != kind:
                 continue
-            st = int(mm.group(3))
             if store_id is not None and st != int(store_id):
                 continue
             out.append(

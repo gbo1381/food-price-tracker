@@ -1,8 +1,8 @@
 {
   "chains": [
     {"chain": "shufersal", "display": "שופרסל דיל פ\"ת יכין סנטר", "store_id": 290},
-    {"chain": "ramilevy", "display": "רמי לוי", "platform": "publishedprices", "username": "RamiLevi", "store_id": null},
-    {"chain": "tivtaam", "display": "טיב טעם", "platform": "publishedprices", "username": "TivTaam", "store_id": null},
+    {"chain": "ramilevy", "display": "רמי לוי", "platform": "publishedprices", "username": "RamiLevi", "store_id": 55},
+    {"chain": "tivtaam", "display": "טיב טעם", "platform": "publishedprices", "username": "TivTaam", "store_id": 14},
     {"chain": "carrefour", "display": "קרפור סניף 9", "store_id": 9}
   ]
 }

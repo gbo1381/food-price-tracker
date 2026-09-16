@@ -1,10 +1,5 @@
-Traceback (most recent call last):
-  File "/home/runner/work/food-price-tracker/food-price-tracker/collector/build_index.py", line 211, in <module>
-    fn = build_workbook(df, daily, sub, base)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/food-price-tracker/food-price-tracker/collector/build_index.py", line 131, in build_workbook
-    sheet("מדד יומי", dwide.round(3),
-  File "/home/runner/work/food-price-tracker/food-price-tracker/collector/build_index.py", line 119, in sheet
-    ws.column_dimensions[col[0].column_letter].width = min(max(L + 2, 10), 46)
-                         ^^^^^^^^^^^^^^^^^^^^
-AttributeError: 'MergedCell' object has no attribute 'column_letter'
+days: 1 | latest index:
+  group  index  dod_pct  sub_items  coverage_permille
+0  food  100.0      NaN         29             114.16
+1    fv  100.0      NaN          2              23.74
+workbook -> /home/runner/work/food-price-tracker/food-price-tracker/data/workbook/מעקב מחירי מזון.xlsx

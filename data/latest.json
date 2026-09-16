@@ -1,6 +1,6 @@
 {
  "date": "2026-09-16",
- "run_utc": "2026-09-16T06:55:07+00:00",
+ "run_utc": "2026-09-16T06:59:22+00:00",
  "chains": {
   "shufersal": {
    "ok": true,
@@ -12,8 +12,8 @@
   },
   "ramilevy": {
    "ok": true,
-   "price_file": "PriceFull7290058140886-001-055-20260916-001015.gz",
-   "promo_file": "PromoFull7290058140886-001-055-20260916-001129.gz",
+   "price_file": "PriceFull7290058140886-001-055-20260916-061335.gz",
+   "promo_file": "PromoFull7290058140886-001-055-20260916-061423.gz",
    "basket_items": 95,
    "found": 95,
    "on_promo": 0

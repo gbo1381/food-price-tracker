@@ -1,6 +1,7 @@
 {
   "chains": [
-    {"chain": "shufersal", "display": "שופרסל", "store_id": null},
+    {"chain": "shufersal", "display": "שופרסל דיל פ\"ת יכין סנטר", "store_id": 290},
+    {"chain": "shufersal_online", "display": "שופרסל ONLINE", "store_id": 413},
     {"chain": "ramilevy", "display": "רמי לוי", "platform": "publishedprices", "username": "RamiLevi", "store_id": null},
     {"chain": "tivtaam", "display": "טיב טעם", "platform": "publishedprices", "username": "TivTaam", "store_id": null},
     {"chain": "carrefour", "display": "קרפור", "store_id": null}

@@ -421,8 +421,9 @@ def make_adapters(cfg: dict) -> dict:
     ads = {}
     for ch in cfg["chains"]:
         name = ch["chain"]
-        if name == "shufersal":
+        if name in ("shufersal", "shufersal_online"):
             ads[name] = Shufersal()
+            ads[name].chain = name
         elif name == "carrefour":
             ads[name] = Carrefour()
         elif ch.get("platform") == "publishedprices":

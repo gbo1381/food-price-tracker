@@ -49,6 +49,27 @@ def today_il():
     return datetime.now(IL_TZ).date()
 
 
+import signal
+
+
+class ChainTimeout(Exception):
+    pass
+
+
+def _alarm(signum, frame):
+    raise ChainTimeout("chain step exceeded time budget")
+
+
+def with_budget(seconds, fn, *a, **k):
+    """Run fn with a hard wall-clock budget (Linux only)."""
+    signal.signal(signal.SIGALRM, _alarm)
+    signal.alarm(int(seconds))
+    try:
+        return fn(*a, **k)
+    finally:
+        signal.alarm(0)
+
+
 def log(*a):
     print(datetime.now(timezone.utc).strftime("%H:%M:%S"), *a, flush=True)
 
@@ -122,22 +143,17 @@ def mode_discover(ads):
     out.mkdir(parents=True, exist_ok=True)
     summary = {}
     for name, ad in ads.items():
+        cfg = next(c for c in CFG["chains"] if c["chain"] == name)
+        if cfg.get("store_id") is not None:
+            continue
         log(f"discover {name}")
         try:
             if name == "carrefour":
                 info = ad.discover()
                 (out / "carrefour_index.html").write_text(info.pop("index_html", ""), encoding="utf-8")
                 (out / "carrefour_endpoints.json").write_text(json.dumps(info, ensure_ascii=False, indent=1), encoding="utf-8")
-            files = ad.list_files("PriceFull")
+            files = with_budget(600, ad.list_files, "PriceFull")
             pd.DataFrame(files).to_csv(out / f"{name}_pricefull_files.csv", index=False, encoding="utf-8-sig")
-            try:
-                stores_files = ad.list_files("Stores")
-                sf = pick_latest(stores_files)
-                if sf:
-                    xml = decode_payload(ad.fetch(sf["url"]))
-                    (out / f"{name}_stores.xml").write_bytes(xml)
-            except Exception as e:  # noqa
-                log(f"  stores file failed: {e}")
             summary[name] = {"n_pricefull_files": len(files), "sample": files[:5]}
         except Exception as e:  # noqa
             summary[name] = {"error": str(e), "trace": traceback.format_exc()[-2000:]}
@@ -155,8 +171,8 @@ def mode_catalog(ads, on):
             continue
         ad = ads[name]
         try:
-            fp, prices = download_kind(ad, "PriceFull", store)
-            _, promos = download_kind(ad, "PromoFull", store)
+            fp, prices = with_budget(600, download_kind, ad, "PriceFull", store)
+            _, promos = with_budget(600, download_kind, ad, "PromoFull", store)
             df = effective_prices(prices, promos, on)
             df.insert(0, "chain", name)
             df.insert(1, "store_id", store)
@@ -182,8 +198,8 @@ def mode_daily(ads, on):
         ad = ads[name]
         bk = basket[basket.chain == name]
         try:
-            fp, prices = download_kind(ad, "PriceFull", store)
-            pf, promos = download_kind(ad, "PromoFull", store)
+            fp, prices = with_budget(600, download_kind, ad, "PriceFull", store)
+            pf, promos = with_budget(600, download_kind, ad, "PromoFull", store)
             df = effective_prices(prices, promos, on)
             m = bk.merge(df, on="barcode", how="left", suffixes=("", "_file"))
             m.insert(0, "date", on.isoformat())
@@ -238,17 +254,21 @@ def mode_daily(ads, on):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--mode", choices=["discover", "catalog", "daily"], required=True)
+    ap.add_argument("--mode", required=True, help="discover|catalog|daily, comma-separated for several")
     ap.add_argument("--date", help="override observation date YYYY-MM-DD")
     a = ap.parse_args()
     on = datetime.strptime(a.date, "%Y-%m-%d").date() if a.date else today_il()
     ads = make_adapters(CFG)
-    if a.mode == "discover":
-        mode_discover(ads)
-    elif a.mode == "catalog":
-        mode_catalog(ads, on)
-    else:
-        mode_daily(ads, on)
+    for mode in [m.strip() for m in a.mode.split(",") if m.strip()]:
+        log(f"=== mode {mode} ===")
+        if mode == "discover":
+            mode_discover(ads)
+        elif mode == "catalog":
+            mode_catalog(ads, on)
+        elif mode == "daily":
+            mode_daily(ads, on)
+        else:
+            raise SystemExit(f"unknown mode {mode}")
 
 
 if __name__ == "__main__":

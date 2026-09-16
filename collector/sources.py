@@ -220,6 +220,8 @@ class Shufersal:
 
     def list_files(self, kind: str, store_id: int = 0, max_pages: int = 60) -> list[dict]:
         out, page = [], 1
+        seen_names = set()
+        max_pages = 8 if store_id else max_pages  # a single store fits in a page or two
         while page <= max_pages:
             url = f"{self.BASE}/FileObject/UpdateCategory?catID={self.CAT[kind]}&storeId={store_id}&page={page}"
             r = self.s.get(url, timeout=TIMEOUT)
@@ -233,6 +235,9 @@ class Shufersal:
                 cells = [re.sub(r"<[^>]+>", " ", c).strip() for c in re.findall(r"<td[^>]*>(.*?)</td>", row, flags=re.S | re.I)]
                 href = m.group(1).replace("&amp;", "&")
                 fname = href.split("/")[-1].split("?")[0]
+                if fname in seen_names:
+                    continue
+                seen_names.add(fname)
                 mm = re.match(r"(Price|PriceFull|Promo|PromoFull|Stores)(\d+)-(\d+)-(\d+)?-?(\d{8})-(\d{4,6})", fname)
                 store = int(mm.group(4)) if mm and mm.group(4) else None
                 out.append(
@@ -295,9 +300,7 @@ class PublishedPrices:
             raise RuntimeError(f"{self.chain}: login failed (no csrf token after login)")
         self._logged = True
 
-    def list_files(self, kind: str, store_id=None) -> list[dict]:
-        if not self._logged:
-            self.login()
+    def _raw_dir(self, kind: str = "") -> dict:
         data = {
             "sEcho": 1,
             "iColumns": 5,
@@ -317,16 +320,40 @@ class PublishedPrices:
         }
         r = self.s.post(f"{self.BASE}/file/json/dir", data=data, timeout=TIMEOUT)
         r.raise_for_status()
-        js = r.json()
+        return r.json()
+
+    def discover(self) -> dict:
+        self.login()
+        js = self._raw_dir("")
+        rows = js.get("aaData", [])
+        names = [(r.get("fname") or r.get("name")) for r in rows]
+        return {
+            "n_rows": len(rows),
+            "sample_rows": rows[:8],
+            "pricefull_names": [n for n in names if n and n.startswith("PriceFull")][:20],
+            "promofull_names": [n for n in names if n and n.startswith("PromoFull")][:8],
+        }
+
+    @staticmethod
+    def _store_from_name(fname: str):
+        # Cerberus names: PriceFull<chain>-<store>-<datetime>.gz  (store may be zero-padded)
+        m = re.match(r"(PriceFull|PromoFull|Price|Promo|Stores)(\d+)-(\d+)-(\d{8,14})", fname)
+        if not m:
+            return None, None
+        return m.group(1), int(m.group(3))
+
+    def list_files(self, kind: str, store_id=None) -> list[dict]:
+        if not self._logged:
+            self.login()
+        js = self._raw_dir(kind)
         out = []
         for row in js.get("aaData", []):
             fname = row.get("fname") or row.get("name")
             if not fname:
                 continue
-            mm = re.match(r"(Price|PriceFull|Promo|PromoFull|Stores)(\d+)-(\d+)-(\d{8,12})", fname)
-            if not mm or mm.group(1) != kind:
+            k, st = self._store_from_name(fname)
+            if k != kind:
                 continue
-            st = int(mm.group(3))
             if store_id is not None and st != int(store_id):
                 continue
             out.append(
@@ -386,30 +413,38 @@ class Carrefour:
         return info
 
     def list_files(self, kind: str, store_id=None, max_pages: int = 80) -> list[dict]:
+        # The index page embeds the full day's file list as a JS array:
+        #   const path = 'YYYYMMDD';  const files = [{name,size,modified}, ...];
+        # download link = origin + '/' + path + '/' + filename
+        r = self.s.get(self.BASE + "/", timeout=TIMEOUT)
+        r.raise_for_status()
+        html = r.text
+        mp = re.search(r"const path\s*=\s*'([^']+)'", html)
+        ma = re.search(r"const files\s*=\s*(\[.*?\]);", html, flags=re.S)
+        if not (mp and ma):
+            return []
+        path = mp.group(1)
+        files = json.loads(ma.group(1))
         out = []
-        # u-code sites commonly accept ?page=N and a text filter; try both plain and filtered
-        for page in range(1, max_pages + 1):
-            got = 0
-            for url in (f"{self.BASE}/?page={page}", f"{self.BASE}/?type={kind}&page={page}", f"{self.BASE}/?q={kind}&page={page}"):
-                try:
-                    r = self.s.get(url, timeout=TIMEOUT)
-                except Exception:
-                    continue
-                if r.status_code != 200:
-                    continue
-                links = [l for l in self._links_from_html(r.text) if l["kind"] == kind]
-                if links:
-                    out.extend(links)
-                    got += len(links)
-                    break
-            if got == 0:
-                break
-        seen, uniq = set(), []
-        for f in out:
-            if f["name"] not in seen and (store_id is None or f["store_id"] == int(store_id)):
-                seen.add(f["name"])
-                uniq.append(f)
-        return uniq
+        for f in files:
+            name = f["name"]
+            mm = re.match(r"(Price|PriceFull|Promo|PromoFull|Stores)(\d+)-(\d+)-(\d+)-", name)
+            if not mm or mm.group(1) != kind:
+                continue
+            st = int(mm.group(3))
+            if store_id is not None and st != int(store_id):
+                continue
+            out.append(
+                {
+                    "name": name,
+                    "url": f"{self.BASE}/{path}/{name}",
+                    "store_id": st,
+                    "store_name": "",
+                    "size": f.get("size", ""),
+                    "updated": f.get("modified", ""),
+                }
+            )
+        return out
 
     def fetch(self, url: str) -> bytes:
         r = self.s.get(url, timeout=TIMEOUT)

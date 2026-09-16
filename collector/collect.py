@@ -152,6 +152,9 @@ def mode_discover(ads):
                 info = ad.discover()
                 (out / "carrefour_index.html").write_text(info.pop("index_html", ""), encoding="utf-8")
                 (out / "carrefour_endpoints.json").write_text(json.dumps(info, ensure_ascii=False, indent=1), encoding="utf-8")
+            if hasattr(ad, "discover") and name != "carrefour":
+                dbg = with_budget(300, ad.discover)
+                (out / f"{name}_discover.json").write_text(json.dumps(dbg, ensure_ascii=False, indent=1, default=str), encoding="utf-8")
             files = with_budget(600, ad.list_files, "PriceFull")
             pd.DataFrame(files).to_csv(out / f"{name}_pricefull_files.csv", index=False, encoding="utf-8-sig")
             summary[name] = {"n_pricefull_files": len(files), "sample": files[:5]}

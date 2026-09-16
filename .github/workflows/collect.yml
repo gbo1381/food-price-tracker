@@ -60,6 +60,9 @@ jobs:
           mkdir -p logs
           if [ -n "$DATE" ]; then python collector/collect.py --mode "$MODE" --date "$DATE" 2>&1 | tee "logs/last_${MODE}.log";
           else python collector/collect.py --mode "$MODE" 2>&1 | tee "logs/last_${MODE}.log"; fi
+      - name: build workbook
+        if: contains(steps.mode.outputs.mode, 'daily')
+        run: pip install -q openpyxl && python collector/build_index.py 2>&1 | tee logs/last_index.log || true
       - name: commit results
         if: always()
         run: |

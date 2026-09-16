@@ -127,9 +127,10 @@ def _parse_dt(s: str | None):
     if not s:
         return None
     s = s.strip()
-    for fmt in ("%Y-%m-%d %H:%M:%S", "%Y-%m-%d %H:%M", "%Y-%m-%d", "%Y-%m-%dT%H:%M:%S", "%d/%m/%Y %H:%M:%S", "%d/%m/%Y"):
+    s = s.split(".")[0]  # drop fractional seconds (2026-09-16T00:00:00.000)
+    for fmt in ("%Y-%m-%dT%H:%M:%S", "%Y-%m-%d %H:%M:%S", "%Y-%m-%d %H:%M", "%Y-%m-%d", "%d/%m/%Y %H:%M:%S", "%d/%m/%Y"):
         try:
-            return datetime.strptime(s[: len(fmt) + 2] if "T" in fmt else s, fmt)
+            return datetime.strptime(s, fmt)
         except ValueError:
             continue
     try:
@@ -138,61 +139,90 @@ def _parse_dt(s: str | None):
         return None
 
 
+def _direct_text(el, *names, default=None):
+    """Text of a direct child (not descendant), case-insensitive, first match."""
+    if el is None:
+        return default
+    low = {n.lower() for n in names}
+    for c in el:
+        if isinstance(c.tag, str) and c.tag.lower() in low and c.text is not None:
+            return c.text.strip()
+    return default
+
+
 def parse_promos(xml_bytes: bytes) -> list[dict]:
-    """Flatten promotions to one row per (promotion, item)."""
+    """Flatten promotions to one row per (promotion, item).
+
+    Handles the observed variants: reward fields (MinQty/DiscountedPrice/DiscountRate/RewardType)
+    may sit on the Promotion or on each PromotionItem; dates are PromotionStart/EndDate(Time);
+    clubs are ClubId/ClubID with values like '0 - כלל הלקוחות'.
+    """
     root = etree.fromstring(xml_bytes, parser=etree.XMLParser(recover=True, huge_tree=True))
     rows = []
     for pr in _iter(root, "Promotion"):
-        clubs = [c.text.strip() for c in _iter(pr, "ClubId") if c.text]
-        add = None
-        for a in _iter(pr, "AdditionalRestrictions"):
-            add = a
-            break
+        clubs = [c.text.strip() for c in pr.iter() if isinstance(c.tag, str) and c.tag.lower() in ("clubid",) and c.text]
         base = {
-            "promo_id": _txt(pr, "PromotionId"),
-            "promo_desc": _txt(pr, "PromotionDescription", default=""),
-            "start": _txt(pr, "PromotionStartDate"),
-            "end": _txt(pr, "PromotionEndDate"),
-            "reward_type": _txt(pr, "RewardType"),
-            "min_qty": _f(_txt(pr, "MinQty"), 1.0) or 1.0,
-            "max_qty": _f(_txt(pr, "MaxQty")),
-            "discount_rate": _f(_txt(pr, "DiscountRate")),
-            "discount_type": _txt(pr, "DiscountType"),
-            "min_purchase": _f(_txt(pr, "MinPurchaseAmnt"), 0.0) or 0.0,
-            "discounted_price": _f(_txt(pr, "DiscountedPrice")),
-            "discounted_price_per_mida": _f(_txt(pr, "DiscountedPricePerMida")),
-            "min_items_offered": _f(_txt(pr, "MinNoOfItemOfered")),
+            "promo_id": _direct_text(pr, "PromotionId", "PromotionID"),
+            "promo_desc": _direct_text(pr, "PromotionDescription", default=""),
+            "start": _direct_text(pr, "PromotionStartDate", "PromotionStartDateTime"),
+            "end": _direct_text(pr, "PromotionEndDate", "PromotionEndDateTime"),
+            "reward_type_p": _direct_text(pr, "RewardType"),
+            "min_qty_p": _f(_direct_text(pr, "MinQty")),
+            "discount_rate_p": _f(_direct_text(pr, "DiscountRate")),
+            "discount_type": _direct_text(pr, "DiscountType"),
+            "discounted_price_p": _f(_direct_text(pr, "DiscountedPrice")),
+            "min_purchase": _f(_direct_text(pr, "MinPurchaseAmnt", "MinPurchaseAmount"), 0.0) or 0.0,
+            "min_items_offered": _f(_direct_text(pr, "MinNoOfItemOfered", "MinNoOfItemOffered")),
             "clubs": ",".join(clubs),
-            "is_coupon": _txt(add, "AdditionalIsCoupon", default="0"),
-            "is_total": _txt(add, "AdditionalIsTotal", default="0"),
-            "gift_count": _txt(add, "AdditionalGiftCount", default="0"),
-            "min_basket": _f(_txt(add, "AdditionalMinBasketAmount"), 0.0) or 0.0,
+            "is_coupon": _direct_text(pr, "AdditionalIsCoupon", "IsCoupon", default="0"),
+            "is_total": _direct_text(pr, "AdditionalIsTotal", "IsTotal", default="0"),
+            "min_basket": _f(_direct_text(pr, "AdditionalMinBasketAmount"), 0.0) or 0.0,
+            "allow_multi": _direct_text(pr, "AllowMultipleDiscounts", default=""),
         }
-        for it in _iter(pr, "Item"):
-            code = _txt(it, "ItemCode")
+        items = list(_iter(pr, "PromotionItem")) or list(_iter(pr, "Item"))
+        for it in items:
+            code = _direct_text(it, "ItemCode")
             if not code:
                 continue
             r = dict(base)
             r["barcode"] = code.strip()
-            r["is_gift"] = _txt(it, "IsGiftItem", default="0")
+            r["is_gift"] = _direct_text(it, "IsGiftItem", default="0")
+            # per-item reward fields override promotion-level
+            r["min_qty"] = _f(_direct_text(it, "MinQty"), base["min_qty_p"]) or base["min_qty_p"] or 1.0
+            r["max_qty"] = _f(_direct_text(it, "MaxQty"))
+            r["discount_rate"] = _f(_direct_text(it, "DiscountRate"), base["discount_rate_p"])
+            r["discounted_price"] = _f(_direct_text(it, "DiscountedPrice"), base["discounted_price_p"])
+            r["discounted_price_per_mida"] = _f(_direct_text(it, "DiscountedPricePerMida"))
+            r["reward_type"] = _direct_text(it, "RewardType", default=base["reward_type_p"])
             rows.append(r)
     return rows
 
 
+def _club_is_all(c: str) -> bool:
+    """A club token counts as 'all customers' iff its leading id is 0 (e.g. '0 - כלל הלקוחות')."""
+    c = c.strip()
+    if not c:
+        return True
+    lead = re.match(r"\s*(\d+)", c)
+    return lead is not None and lead.group(1) == "0"
+
+
 def promo_open_to_all(p: dict) -> bool:
     """CBS-style rule: promotion any consumer gets at the till, no club/coupon/basket condition."""
-    clubs = [c for c in p["clubs"].split(",") if c]
-    if any(c not in ("0", "") for c in clubs):
+    clubs = [c for c in p["clubs"].split(",") if c.strip()]
+    if clubs and not all(_club_is_all(c) for c in clubs):
         return False
-    if p["is_coupon"] not in ("0", "", None):
+    if str(p.get("is_coupon") or "0").strip() not in ("0", "false", "False"):
         return False
-    if p["is_total"] not in ("0", "", None):
+    if "קופון" in (p.get("promo_desc") or ""):
         return False
-    if (p["min_purchase"] or 0) > 0 or (p["min_basket"] or 0) > 0:
+    if str(p.get("is_total") or "0").strip() not in ("0", "false", "False"):
         return False
-    if p["is_gift"] not in ("0", "", None):
+    if (p.get("min_purchase") or 0) > 0 or (p.get("min_basket") or 0) > 0:
         return False
-    if p["min_qty"] and p["min_qty"] > 3:
+    if str(p.get("is_gift") or "0").strip() not in ("0", "false", "False", ""):
+        return False
+    if p.get("min_qty") and p["min_qty"] > 3:
         return False
     return True
 

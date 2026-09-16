@@ -209,23 +209,8 @@ def mode_daily(ads, on):
             n_open = sum(1 for p in promos if promo_active(p, on) and promo_open_to_all(p))
             bset = set(bk["barcode"])
             n_basket = sum(1 for p in promos if p["barcode"] in bset)
-            raw_struct = {}
-            try:
-                from sources import decode_payload as _dp
-                from lxml import etree as _et
-                pf_files = ad.list_files("PromoFull", store_id=store)
-                pf_pick = pick_latest(pf_files, store)
-                xmlb = _dp(ad.fetch(pf_pick["url"]))
-                root = _et.fromstring(xmlb, parser=_et.XMLParser(recover=True, huge_tree=True))
-                tags = {}
-                for el in root.iter():
-                    if isinstance(el.tag, str):
-                        tags[el.tag] = tags.get(el.tag, 0) + 1
-                raw_struct = {"root": root.tag, "head": xmlb[:1500].decode("utf-8", "replace"), "tag_counts": dict(sorted(tags.items(), key=lambda x: -x[1])[:25])}
-            except Exception as e:  # noqa
-                raw_struct = {"error": str(e)}
-            dbg = {"promos": len(promos), "active": n_active, "open_to_all": n_open, "basket_hits": n_basket, "raw": raw_struct,
-                   "sample": [{k: p.get(k) for k in ("promo_desc", "start", "end", "clubs", "is_coupon", "is_total", "min_qty", "min_purchase", "min_basket", "discounted_price", "discount_rate", "reward_type", "barcode")} for p in promos[:6]]}
+            dbg = {"promos": len(promos), "active": n_active, "open_to_all": n_open, "basket_hits": n_basket,
+                   "sample": [{k: p.get(k) for k in ("promo_desc", "start", "end", "clubs", "is_coupon", "min_qty", "discounted_price", "discount_rate", "barcode")} for p in promos[:6]]}
             (DATA / "discover").mkdir(parents=True, exist_ok=True)
             (DATA / "discover" / f"{name}_promo_debug.json").write_text(json.dumps(dbg, ensure_ascii=False, indent=1, default=str), encoding="utf-8")
             df = effective_prices(prices, promos, on)

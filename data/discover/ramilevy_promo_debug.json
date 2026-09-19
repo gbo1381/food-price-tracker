@@ -1,7 +1,7 @@
 {
- "promos": 14412,
- "active": 14412,
- "open_to_all": 9463,
+ "promos": 14398,
+ "active": 14398,
+ "open_to_all": 9449,
  "basket_hits": 58,
  "sample": [
   {
@@ -16,59 +16,59 @@
    "barcode": "7290001004746"
   },
   {
-   "promo_desc": "טחון צלעות בקר טרי ב69.90 מו6 מעל 75רשתי",
-   "start": "2026-07-22T00:00:00.000",
-   "end": "2026-09-18T23:59:00.000",
+   "promo_desc": "כרוב לבן ב3.4 מוגבל ל3",
+   "start": "2026-09-18T12:44:00.000",
+   "end": "2026-09-19T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
    "min_qty": 0.01,
-   "discounted_price": 69.9,
-   "discount_rate": 22.25,
-   "barcode": "7290001464236"
+   "discounted_price": 3.4,
+   "discount_rate": 12.82,
+   "barcode": "7290000000109"
   },
   {
-   "promo_desc": "צלי כתף בקר טרי ב99.90 מו6 מעל 75רשתי",
-   "start": "2026-07-22T00:00:00.000",
-   "end": "2026-09-18T23:59:00.000",
+   "promo_desc": "חציל ב5.9 מוגבל ל3",
+   "start": "2026-09-18T12:44:00.000",
+   "end": "2026-09-19T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
    "min_qty": 0.01,
-   "discounted_price": 99.9,
-   "discount_rate": 9.1,
-   "barcode": "7290008202053"
+   "discounted_price": 5.9,
+   "discount_rate": 21.33,
+   "barcode": "7290000000106"
   },
   {
-   "promo_desc": "טחון כתף בקר טרי ב74.90 מו9 מעל 75 רשתי",
-   "start": "2026-07-22T00:00:00.000",
-   "end": "2026-09-18T23:59:00.000",
+   "promo_desc": "גזר ארוז ב2.9 מוגבל ל3",
+   "start": "2026-09-18T12:41:00.000",
+   "end": "2026-09-19T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
    "min_qty": 0.01,
-   "discounted_price": 74.9,
-   "discount_rate": 16.69,
-   "barcode": "7290001464229"
+   "discounted_price": 2.9,
+   "discount_rate": 25.64,
+   "barcode": "7290000000102"
   },
   {
-   "promo_desc": "טחון פילה מדומה ב 74.90 מו6 רשתי",
-   "start": "2026-08-04T00:00:00.000",
-   "end": "2026-09-18T23:59:00.000",
+   "promo_desc": "בטטה ב5.9 מוגבל ל3",
+   "start": "2026-09-18T12:41:00.000",
+   "end": "2026-09-19T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
    "min_qty": 0.01,
-   "discounted_price": 74.9,
-   "discount_rate": 25.03,
-   "barcode": "7290001464212"
+   "discounted_price": 5.9,
+   "discount_rate": 13.24,
+   "barcode": "7290000000138"
   },
   {
-   "promo_desc": "צלעות בקר טרי ב69.90 מו6 מעל 75 רשתי",
-   "start": "2026-08-17T00:00:00.000",
-   "end": "2026-09-18T23:59:00.000",
+   "promo_desc": "קו קופות באזז מבעבעת 750מל 2ב50 כולל",
+   "start": "2026-09-13T00:00:00.000",
+   "end": "2026-10-03T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 0.01,
-   "discounted_price": 69.9,
-   "discount_rate": 22.25,
-   "barcode": "7290008202022"
+   "min_qty": 2.0,
+   "discounted_price": 50.0,
+   "discount_rate": 22.36,
+   "barcode": "7290014256620"
   }
  ]
 }

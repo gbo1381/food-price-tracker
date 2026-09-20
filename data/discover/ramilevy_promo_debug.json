@@ -1,64 +1,9 @@
 {
- "promos": 14398,
- "active": 14398,
- "open_to_all": 9449,
- "basket_hits": 58,
+ "promos": 14370,
+ "active": 14370,
+ "open_to_all": 9421,
+ "basket_hits": 56,
  "sample": [
-  {
-   "promo_desc": "בשר טחון טרי ב54.90 מעל 75 מו6 רשתי",
-   "start": "2026-09-06T00:00:00.000",
-   "end": "2026-09-19T23:59:00.000",
-   "clubs": "0",
-   "is_coupon": "0",
-   "min_qty": 0.01,
-   "discounted_price": 54.9,
-   "discount_rate": 15.41,
-   "barcode": "7290001004746"
-  },
-  {
-   "promo_desc": "כרוב לבן ב3.4 מוגבל ל3",
-   "start": "2026-09-18T12:44:00.000",
-   "end": "2026-09-19T23:59:00.000",
-   "clubs": "0",
-   "is_coupon": "0",
-   "min_qty": 0.01,
-   "discounted_price": 3.4,
-   "discount_rate": 12.82,
-   "barcode": "7290000000109"
-  },
-  {
-   "promo_desc": "חציל ב5.9 מוגבל ל3",
-   "start": "2026-09-18T12:44:00.000",
-   "end": "2026-09-19T23:59:00.000",
-   "clubs": "0",
-   "is_coupon": "0",
-   "min_qty": 0.01,
-   "discounted_price": 5.9,
-   "discount_rate": 21.33,
-   "barcode": "7290000000106"
-  },
-  {
-   "promo_desc": "גזר ארוז ב2.9 מוגבל ל3",
-   "start": "2026-09-18T12:41:00.000",
-   "end": "2026-09-19T23:59:00.000",
-   "clubs": "0",
-   "is_coupon": "0",
-   "min_qty": 0.01,
-   "discounted_price": 2.9,
-   "discount_rate": 25.64,
-   "barcode": "7290000000102"
-  },
-  {
-   "promo_desc": "בטטה ב5.9 מוגבל ל3",
-   "start": "2026-09-18T12:41:00.000",
-   "end": "2026-09-19T23:59:00.000",
-   "clubs": "0",
-   "is_coupon": "0",
-   "min_qty": 0.01,
-   "discounted_price": 5.9,
-   "discount_rate": 13.24,
-   "barcode": "7290000000138"
-  },
   {
    "promo_desc": "קו קופות באזז מבעבעת 750מל 2ב50 כולל",
    "start": "2026-09-13T00:00:00.000",
@@ -69,6 +14,61 @@
    "discounted_price": 50.0,
    "discount_rate": 22.36,
    "barcode": "7290014256620"
+  },
+  {
+   "promo_desc": "קו קופות באזז מבעבעת 750מל 2ב50 כולל",
+   "start": "2026-09-13T00:00:00.000",
+   "end": "2026-10-03T23:59:00.000",
+   "clubs": "0",
+   "is_coupon": "0",
+   "min_qty": 2.0,
+   "discounted_price": 50.0,
+   "discount_rate": 22.36,
+   "barcode": "7290014256637"
+  },
+  {
+   "promo_desc": "קו קופות באזז מבעבעת 750מל 2ב50 כולל",
+   "start": "2026-09-13T00:00:00.000",
+   "end": "2026-10-03T23:59:00.000",
+   "clubs": "0",
+   "is_coupon": "0",
+   "min_qty": 2.0,
+   "discounted_price": 50.0,
+   "discount_rate": 22.36,
+   "barcode": "7290016717044"
+  },
+  {
+   "promo_desc": "קו קופות באזז מבעבעת 750מל 2ב50 כולל",
+   "start": "2026-09-13T00:00:00.000",
+   "end": "2026-10-03T23:59:00.000",
+   "clubs": "0",
+   "is_coupon": "0",
+   "min_qty": 2.0,
+   "discounted_price": 50.0,
+   "discount_rate": 22.36,
+   "barcode": "7290016717976"
+  },
+  {
+   "promo_desc": "קו קופות באזז מבעבעת 750מל 2ב50 כולל",
+   "start": "2026-09-13T00:00:00.000",
+   "end": "2026-10-03T23:59:00.000",
+   "clubs": "0",
+   "is_coupon": "0",
+   "min_qty": 2.0,
+   "discounted_price": 50.0,
+   "discount_rate": 22.36,
+   "barcode": "7290017812977"
+  },
+  {
+   "promo_desc": "קו קופות באזז מבעבעת 750מל 2ב50 כולל",
+   "start": "2026-09-13T00:00:00.000",
+   "end": "2026-10-03T23:59:00.000",
+   "clubs": "0",
+   "is_coupon": "0",
+   "min_qty": 2.0,
+   "discounted_price": 50.0,
+   "discount_rate": 22.36,
+   "barcode": "7290019302643"
   }
  ]
 }

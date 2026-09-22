@@ -1,20 +1,9 @@
 {
- "promos": 14357,
- "active": 14357,
- "open_to_all": 9408,
+ "promos": 14297,
+ "active": 14297,
+ "open_to_all": 9348,
  "basket_hits": 58,
  "sample": [
-  {
-   "promo_desc": "חציל ב6.8 מוגבל ל3",
-   "start": "2026-09-20T19:33:00.000",
-   "end": "2026-09-26T23:59:00.000",
-   "clubs": "0",
-   "is_coupon": "0",
-   "min_qty": 0.01,
-   "discounted_price": 6.8,
-   "discount_rate": 9.33,
-   "barcode": "7290000000106"
-  },
   {
    "promo_desc": "קו קופות באזז מבעבעת 750מל 2ב50 כולל",
    "start": "2026-09-13T00:00:00.000",
@@ -69,6 +58,17 @@
    "discounted_price": 50.0,
    "discount_rate": 22.36,
    "barcode": "7290017812977"
+  },
+  {
+   "promo_desc": "קו קופות באזז מבעבעת 750מל 2ב50 כולל",
+   "start": "2026-09-13T00:00:00.000",
+   "end": "2026-10-03T23:59:00.000",
+   "clubs": "0",
+   "is_coupon": "0",
+   "min_qty": 2.0,
+   "discounted_price": 50.0,
+   "discount_rate": 22.36,
+   "barcode": "7290019302643"
   }
  ]
 }

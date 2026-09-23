@@ -1,9 +1,20 @@
 {
- "promos": 14297,
- "active": 14297,
- "open_to_all": 9348,
+ "promos": 14597,
+ "active": 14597,
+ "open_to_all": 9500,
  "basket_hits": 58,
  "sample": [
+  {
+   "promo_desc": "עגבניה ב2.9 מוגבל ל3",
+   "start": "2026-09-22T08:18:00.000",
+   "end": "2026-09-26T23:59:00.000",
+   "clubs": "0",
+   "is_coupon": "0",
+   "min_qty": 0.01,
+   "discounted_price": 2.9,
+   "discount_rate": 50.85,
+   "barcode": "7290000000100"
+  },
   {
    "promo_desc": "קו קופות באזז מבעבעת 750מל 2ב50 כולל",
    "start": "2026-09-13T00:00:00.000",
@@ -58,17 +69,6 @@
    "discounted_price": 50.0,
    "discount_rate": 22.36,
    "barcode": "7290017812977"
-  },
-  {
-   "promo_desc": "קו קופות באזז מבעבעת 750מל 2ב50 כולל",
-   "start": "2026-09-13T00:00:00.000",
-   "end": "2026-10-03T23:59:00.000",
-   "clubs": "0",
-   "is_coupon": "0",
-   "min_qty": 2.0,
-   "discounted_price": 50.0,
-   "discount_rate": 22.36,
-   "barcode": "7290019302643"
   }
  ]
 }

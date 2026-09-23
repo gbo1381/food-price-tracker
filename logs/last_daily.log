@@ -1,11 +1,11 @@
-04:45:53 === mode daily ===
-04:46:09   shufersal: PriceFull PriceFull7290027600007-002-290-20260922-030000.gz -> 9205 rows
-04:46:18   shufersal: PromoFull PromoFull7290027600007-002-290-20260922-030000.gz -> 27908 rows
-04:46:24   ramilevy: PriceFull PriceFull7290058140886-001-055-20260922-060006.gz -> 14857 rows
-04:46:25   ramilevy: PromoFull PromoFull7290058140886-001-055-20260922-060059.gz -> 14297 rows
-04:46:30   tivtaam: PriceFull PriceFull7290873255550-000-014-20260922-004004.gz -> 23224 rows
-04:46:32   tivtaam: PromoFull PromoFull7290873255550-000-014-20260922-004004.gz -> 33479 rows
-04:46:37   carrefour: PriceFull PriceFull7290055700007-001-009-20260922-051018.gz -> 12589 rows
-04:46:37   carrefour: PromoFull PromoFull7290055700007-001-009-20260922-051111.gz -> 5980 rows
-04:46:38 daily: 378 observations written to 2026-09.csv
-04:46:38 {"date": "2026-09-22", "run_utc": "2026-09-22T04:45:53+00:00", "chains": {"shufersal": {"ok": true, "price_file": "PriceFull7290027600007-002-290-20260922-030000.gz", "promo_file": "PromoFull7290027600007-002-290-20260922-030000.gz", "basket_items": 93, "found": 93, "on_promo": 27}, "ramilevy": {"ok": true, "price_file": "PriceFull7290058140886-001-055-20260922-060006.gz", "promo_file": "PromoFull7290058140886-001-055-20260922-060059.gz", "basket_items": 95, "found": 94, "on_promo": 44}, "tivtaam": {"ok": true, "price_file": "PriceFull7290873255550-000-014-20260922-004004.gz", "promo_file": "PromoFull7290873255550-000-014-20260922-004004.gz", "basket_items": 94, "found": 94, "on_promo": 27}, "carrefour": {"ok": true, "price_file": "PriceFull7290055700007-001-009-20260922-051018.gz", "promo_file": "PromoFull7290055700007-001-009-20260922-051111.gz", "basket_items": 96, "found": 95, "on_promo": 20}}}
+04:46:18 === mode daily ===
+04:46:36   shufersal: PriceFull PriceFull7290027600007-002-290-20260923-030000.gz -> 9213 rows
+04:46:55   shufersal: PromoFull PromoFull7290027600007-002-290-20260923-030000.gz -> 27936 rows
+04:47:01   ramilevy: PriceFull PriceFull7290058140886-001-055-20260923-060006.gz -> 14862 rows
+04:47:02   ramilevy: PromoFull PromoFull7290058140886-001-055-20260923-060100.gz -> 14597 rows
+04:47:08   tivtaam: PriceFull PriceFull7290873255550-000-014-20260923-004004.gz -> 23220 rows
+04:47:10   tivtaam: PromoFull PromoFull7290873255550-000-014-20260923-004004.gz -> 33465 rows
+04:47:15   carrefour: PriceFull PriceFull7290055700007-001-009-20260923-051006.gz -> 12571 rows
+04:47:16   carrefour: PromoFull PromoFull7290055700007-001-009-20260923-051059.gz -> 6082 rows
+04:47:16 daily: 378 observations written to 2026-09.csv
+04:47:16 {"date": "2026-09-23", "run_utc": "2026-09-23T04:46:18+00:00", "chains": {"shufersal": {"ok": true, "price_file": "PriceFull7290027600007-002-290-20260923-030000.gz", "promo_file": "PromoFull7290027600007-002-290-20260923-030000.gz", "basket_items": 93, "found": 91, "on_promo": 27}, "ramilevy": {"ok": true, "price_file": "PriceFull7290058140886-001-055-20260923-060006.gz", "promo_file": "PromoFull7290058140886-001-055-20260923-060100.gz", "basket_items": 95, "found": 94, "on_promo": 44}, "tivtaam": {"ok": true, "price_file": "PriceFull7290873255550-000-014-20260923-004004.gz", "promo_file": "PromoFull7290873255550-000-014-20260923-004004.gz", "basket_items": 94, "found": 94, "on_promo": 27}, "carrefour": {"ok": true, "price_file": "PriceFull7290055700007-001-009-20260923-051006.gz", "promo_file": "PromoFull7290055700007-001-009-20260923-051059.gz", "basket_items": 96, "found": 95, "on_promo": 20}}}

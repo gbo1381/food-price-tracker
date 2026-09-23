@@ -1,6 +1,6 @@
 ﻿group,cbs_code,cbs_name,chain,items,found,on_promo
 food,120070,לחם,carrefour,3,3,0
-food,120070,לחם,ramilevy,3,3,1
+food,120070,לחם,ramilevy,3,3,2
 food,120070,לחם,shufersal,3,3,1
 food,120070,לחם,tivtaam,3,3,1
 food,120080,"ביסקוויטים, עוגות וכדומה",carrefour,3,3,0
@@ -24,7 +24,7 @@ food,120120,ביצים,shufersal,2,2,0
 food,120120,ביצים,tivtaam,2,2,0
 food,120140,בשר בקר,carrefour,3,3,0
 food,120140,בשר בקר,ramilevy,3,3,1
-food,120140,בשר בקר,shufersal,2,2,0
+food,120140,בשר בקר,shufersal,2,1,0
 food,120140,בשר בקר,tivtaam,2,2,0
 food,120160,עופות,carrefour,3,3,0
 food,120160,עופות,ramilevy,3,3,3
@@ -44,7 +44,7 @@ food,120190,שימורי דגים ודגים מעובדים,shufersal,3,3,1
 food,120190,שימורי דגים ודגים מעובדים,tivtaam,3,3,0
 food,120210,שמנים,carrefour,3,3,1
 food,120210,שמנים,ramilevy,3,3,2
-food,120210,שמנים,shufersal,3,3,1
+food,120210,שמנים,shufersal,3,2,1
 food,120210,שמנים,tivtaam,3,3,2
 food,120220,מרגרינה,carrefour,3,3,0
 food,120220,מרגרינה,ramilevy,3,3,0
@@ -91,7 +91,7 @@ food,120330,קקאו,ramilevy,3,3,1
 food,120330,קקאו,shufersal,3,3,1
 food,120330,קקאו,tivtaam,3,3,0
 food,120350,משקאות קלים,carrefour,3,3,1
-food,120350,משקאות קלים,ramilevy,3,3,0
+food,120350,משקאות קלים,ramilevy,3,3,1
 food,120350,משקאות קלים,shufersal,3,3,1
 food,120350,משקאות קלים,tivtaam,3,3,1
 food,120360,משקאות אלכוהולים,carrefour,3,3,0
@@ -114,10 +114,10 @@ food,150315,סלטים מוכנים,carrefour,3,3,3
 food,150315,סלטים מוכנים,ramilevy,3,3,3
 food,150315,סלטים מוכנים,tivtaam,3,3,2
 fv,120042,ירקות טריים,carrefour,5,5,0
-fv,120042,ירקות טריים,ramilevy,6,6,1
+fv,120042,ירקות טריים,ramilevy,6,6,0
 fv,120042,ירקות טריים,shufersal,6,6,3
 fv,120042,ירקות טריים,tivtaam,5,5,0
 fv,120043,פירות טריים,carrefour,5,5,0
-fv,120043,פירות טריים,ramilevy,6,6,1
+fv,120043,פירות טריים,ramilevy,6,6,0
 fv,120043,פירות טריים,shufersal,6,6,1
 fv,120043,פירות טריים,tivtaam,6,6,1

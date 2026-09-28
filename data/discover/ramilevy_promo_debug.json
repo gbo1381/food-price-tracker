@@ -1,7 +1,7 @@
 {
- "promos": 14650,
- "active": 14650,
- "open_to_all": 9553,
+ "promos": 14687,
+ "active": 14687,
+ "open_to_all": 9584,
  "basket_hits": 58,
  "sample": [
   {
@@ -68,7 +68,7 @@
    "min_qty": 2.0,
    "discounted_price": 50.0,
    "discount_rate": 22.36,
-   "barcode": "7290019302643"
+   "barcode": "7290019302315"
   }
  ]
 }

@@ -70,7 +70,7 @@ food,120280,גבינה,carrefour,3,2,1
 food,120280,גבינה,ramilevy,3,2,2
 food,120280,גבינה,shufersal,3,2,0
 food,120280,גבינה,tivtaam,3,2,0
-food,120285,גלידות,carrefour,3,3,2
+food,120285,גלידות,carrefour,3,3,1
 food,120285,גלידות,ramilevy,3,3,2
 food,120285,גלידות,shufersal,3,3,3
 food,120285,גלידות,tivtaam,3,3,1
@@ -115,7 +115,7 @@ food,150315,סלטים מוכנים,ramilevy,3,3,3
 food,150315,סלטים מוכנים,tivtaam,3,3,2
 fv,120042,ירקות טריים,carrefour,5,5,0
 fv,120042,ירקות טריים,ramilevy,6,6,0
-fv,120042,ירקות טריים,shufersal,6,6,3
+fv,120042,ירקות טריים,shufersal,6,6,4
 fv,120042,ירקות טריים,tivtaam,5,5,0
 fv,120043,פירות טריים,carrefour,5,5,0
 fv,120043,פירות טריים,ramilevy,6,6,0

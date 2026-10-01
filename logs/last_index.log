@@ -1,5 +1,5 @@
-days: 15 | latest index:
-   group       index  dod_pct  sub_items  coverage_permille
-28  food   99.708532      0.0         29             114.16
-29    fv  101.517949      0.0          2              23.74
+days: 16 | latest index:
+   group       index   dod_pct  sub_items  coverage_permille
+30  food   99.755404  0.047009         29             114.16
+31    fv  100.867437 -0.640785          2              23.74
 workbook -> /home/runner/work/food-price-tracker/food-price-tracker/data/workbook/מעקב מחירי מזון.xlsx

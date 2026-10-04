@@ -1,74 +1,74 @@
 {
- "promos": 14818,
- "active": 14818,
- "open_to_all": 9524,
- "basket_hits": 57,
+ "promos": 9714,
+ "active": 9714,
+ "open_to_all": 4629,
+ "basket_hits": 25,
  "sample": [
   {
-   "promo_desc": "קו קופות באזז מבעבעת 750מל 2ב50 כולל",
-   "start": "2026-09-13T00:00:00.000",
-   "end": "2026-10-03T23:59:00.000",
+   "promo_desc": "שום יבש יבוא רמי לוי ב2.9 מוגבל ל3",
+   "start": "2026-10-04T08:42:00.000",
+   "end": "2026-10-10T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 2.0,
-   "discounted_price": 50.0,
-   "discount_rate": 22.36,
-   "barcode": "7290014256620"
+   "min_qty": 1.0,
+   "discounted_price": 2.9,
+   "discount_rate": 40.82,
+   "barcode": "7290000000411"
   },
   {
-   "promo_desc": "קו קופות באזז מבעבעת 750מל 2ב50 כולל",
-   "start": "2026-09-13T00:00:00.000",
-   "end": "2026-10-03T23:59:00.000",
+   "promo_desc": "תפוח אדמה לבן ארוז ב4.9 מוגבל ל5",
+   "start": "2026-10-04T06:04:00.000",
+   "end": "2026-10-10T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 2.0,
-   "discounted_price": 50.0,
-   "discount_rate": 22.36,
-   "barcode": "7290014256637"
+   "min_qty": 0.01,
+   "discounted_price": 4.9,
+   "discount_rate": 12.5,
+   "barcode": "7290000000111"
   },
   {
-   "promo_desc": "קו קופות באזז מבעבעת 750מל 2ב50 כולל",
-   "start": "2026-09-13T00:00:00.000",
-   "end": "2026-10-03T23:59:00.000",
+   "promo_desc": "קופון מתנה דלי 750ג חלב הארץ",
+   "start": "2022-05-12T00:00:00.000",
+   "end": "2028-04-30T23:59:00.000",
    "clubs": "0",
-   "is_coupon": "0",
-   "min_qty": 2.0,
-   "discounted_price": 50.0,
-   "discount_rate": 22.36,
-   "barcode": "7290016717044"
+   "is_coupon": "1",
+   "min_qty": 1.0,
+   "discounted_price": 0.0,
+   "discount_rate": 100.0,
+   "barcode": "7290012645112"
   },
   {
-   "promo_desc": "קו קופות באזז מבעבעת 750מל 2ב50 כולל",
-   "start": "2026-09-13T00:00:00.000",
-   "end": "2026-10-03T23:59:00.000",
+   "promo_desc": "קופון מתנה דלי 750ג חלב הארץ",
+   "start": "2022-05-12T00:00:00.000",
+   "end": "2028-04-30T23:59:00.000",
    "clubs": "0",
-   "is_coupon": "0",
-   "min_qty": 2.0,
-   "discounted_price": 50.0,
-   "discount_rate": 22.36,
-   "barcode": "7290016717976"
+   "is_coupon": "1",
+   "min_qty": 1.0,
+   "discounted_price": 0.0,
+   "discount_rate": 100.0,
+   "barcode": "7290012645129"
   },
   {
-   "promo_desc": "קו קופות באזז מבעבעת 750מל 2ב50 כולל",
-   "start": "2026-09-13T00:00:00.000",
-   "end": "2026-10-03T23:59:00.000",
+   "promo_desc": "רבעיית מגבונים 4*64 יח פישר פרייס ב12.90",
+   "start": "2025-08-25T00:00:00.000",
+   "end": "2026-10-15T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 2.0,
-   "discounted_price": 50.0,
-   "discount_rate": 22.36,
-   "barcode": "7290017812977"
+   "min_qty": 1.0,
+   "discounted_price": 12.9,
+   "discount_rate": 23.67,
+   "barcode": "7290118661405"
   },
   {
-   "promo_desc": "קו קופות באזז מבעבעת 750מל 2ב50 כולל",
-   "start": "2026-09-13T00:00:00.000",
-   "end": "2026-10-03T23:59:00.000",
+   "promo_desc": "רבעיית מגבונים 4*64 יח פישר פרייס ב12.90",
+   "start": "2025-08-25T00:00:00.000",
+   "end": "2026-10-15T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 2.0,
-   "discounted_price": 50.0,
-   "discount_rate": 22.36,
-   "barcode": "7290019302315"
+   "min_qty": 1.0,
+   "discounted_price": 12.9,
+   "discount_rate": 23.67,
+   "barcode": "7290118661412"
   }
  ]
 }

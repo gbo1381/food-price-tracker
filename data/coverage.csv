@@ -8,11 +8,11 @@ food,120080,"ביסקוויטים, עוגות וכדומה",ramilevy,3,3,1
 food,120080,"ביסקוויטים, עוגות וכדומה",shufersal,3,3,0
 food,120080,"ביסקוויטים, עוגות וכדומה",tivtaam,3,3,1
 food,120090,קמח,carrefour,3,3,0
-food,120090,קמח,ramilevy,3,3,0
+food,120090,קמח,ramilevy,3,3,2
 food,120090,קמח,shufersal,3,3,0
 food,120090,קמח,tivtaam,3,3,2
 food,120100,מוצרי בצק,carrefour,3,3,1
-food,120100,מוצרי בצק,ramilevy,3,3,0
+food,120100,מוצרי בצק,ramilevy,3,3,1
 food,120100,מוצרי בצק,shufersal,3,3,3
 food,120100,מוצרי בצק,tivtaam,3,3,1
 food,120110,קטניות ומוצרי דגן,carrefour,3,3,2
@@ -55,7 +55,7 @@ food,120240,חלב,ramilevy,3,3,0
 food,120240,חלב,shufersal,3,3,0
 food,120240,חלב,tivtaam,3,3,0
 food,120250,"לבן, יוגורט ומעדני חלב",carrefour,3,3,1
-food,120250,"לבן, יוגורט ומעדני חלב",ramilevy,3,3,0
+food,120250,"לבן, יוגורט ומעדני חלב",ramilevy,3,3,1
 food,120250,"לבן, יוגורט ומעדני חלב",shufersal,3,3,1
 food,120250,"לבן, יוגורט ומעדני חלב",tivtaam,3,3,1
 food,120260,שמנת,carrefour,3,3,0
@@ -83,7 +83,7 @@ food,120310,תה,ramilevy,3,3,2
 food,120310,תה,shufersal,3,3,0
 food,120310,תה,tivtaam,3,3,2
 food,120320,קפה,carrefour,3,3,1
-food,120320,קפה,ramilevy,3,3,0
+food,120320,קפה,ramilevy,3,3,1
 food,120320,קפה,shufersal,3,3,0
 food,120320,קפה,tivtaam,3,3,0
 food,120330,קקאו,carrefour,3,3,0
@@ -107,17 +107,17 @@ food,120390,"ריבה, דבש וכדומה",ramilevy,3,3,2
 food,120390,"ריבה, דבש וכדומה",shufersal,3,3,1
 food,120390,"ריבה, דבש וכדומה",tivtaam,3,3,1
 food,120400,ממתקים ושוקולד,carrefour,3,3,1
-food,120400,ממתקים ושוקולד,ramilevy,3,3,0
+food,120400,ממתקים ושוקולד,ramilevy,3,3,1
 food,120400,ממתקים ושוקולד,shufersal,3,2,0
 food,120400,ממתקים ושוקולד,tivtaam,3,3,1
 food,150315,סלטים מוכנים,carrefour,3,3,1
-food,150315,סלטים מוכנים,ramilevy,3,3,1
+food,150315,סלטים מוכנים,ramilevy,3,3,3
 food,150315,סלטים מוכנים,tivtaam,3,3,2
-fv,120042,ירקות טריים,carrefour,5,5,0
-fv,120042,ירקות טריים,ramilevy,6,6,0
+fv,120042,ירקות טריים,carrefour,5,5,1
+fv,120042,ירקות טריים,ramilevy,6,6,2
 fv,120042,ירקות טריים,shufersal,6,6,2
 fv,120042,ירקות טריים,tivtaam,5,5,0
-fv,120043,פירות טריים,carrefour,5,5,0
-fv,120043,פירות טריים,ramilevy,6,6,1
+fv,120043,פירות טריים,carrefour,5,5,1
+fv,120043,פירות טריים,ramilevy,6,6,0
 fv,120043,פירות טריים,shufersal,6,6,1
 fv,120043,פירות טריים,tivtaam,6,6,1

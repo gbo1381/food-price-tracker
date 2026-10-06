@@ -1,74 +1,74 @@
 {
- "promos": 11808,
- "active": 11808,
- "open_to_all": 6500,
- "basket_hits": 35,
+ "promos": 12668,
+ "active": 12668,
+ "open_to_all": 7338,
+ "basket_hits": 45,
  "sample": [
   {
-   "promo_desc": "אבטיח ב3.9 מוגבל ל12",
-   "start": "2026-10-04T16:43:00.000",
-   "end": "2026-10-10T23:59:00.000",
-   "clubs": "0",
-   "is_coupon": "0",
-   "min_qty": 0.01,
-   "discounted_price": 3.9,
-   "discount_rate": null,
-   "barcode": "7290000000169"
-  },
-  {
-   "promo_desc": "קופון מתנה דלי 750ג חלב הארץ",
-   "start": "2022-05-12T00:00:00.000",
-   "end": "2028-04-30T23:59:00.000",
-   "clubs": "0",
-   "is_coupon": "1",
-   "min_qty": 1.0,
-   "discounted_price": 0.0,
-   "discount_rate": 100.0,
-   "barcode": "7290012645112"
-  },
-  {
-   "promo_desc": "קופון מתנה דלי 750ג חלב הארץ",
-   "start": "2022-05-12T00:00:00.000",
-   "end": "2028-04-30T23:59:00.000",
-   "clubs": "0",
-   "is_coupon": "1",
-   "min_qty": 1.0,
-   "discounted_price": 0.0,
-   "discount_rate": 100.0,
-   "barcode": "7290012645129"
-  },
-  {
-   "promo_desc": "רבעיית מגבונים 4*64 יח פישר פרייס ב12.90",
-   "start": "2025-08-25T00:00:00.000",
-   "end": "2026-10-15T23:59:00.000",
+   "promo_desc": "פיניש קואנטום אולטימייט 55 יח ב54.90",
+   "start": "2026-07-05T00:00:00.000",
+   "end": "2026-10-31T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
    "min_qty": 1.0,
-   "discounted_price": 12.9,
-   "discount_rate": 23.67,
-   "barcode": "7290118661405"
+   "discounted_price": 54.9,
+   "discount_rate": 15.41,
+   "barcode": "7290112006011"
   },
   {
-   "promo_desc": "רבעיית מגבונים 4*64 יח פישר פרייס ב12.90",
-   "start": "2025-08-25T00:00:00.000",
-   "end": "2026-10-15T23:59:00.000",
+   "promo_desc": "פיניש קואנטום אולטימייט 55 יח ב54.90",
+   "start": "2026-07-05T00:00:00.000",
+   "end": "2026-10-31T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
    "min_qty": 1.0,
-   "discounted_price": 12.9,
-   "discount_rate": 23.67,
-   "barcode": "7290118661412"
+   "discounted_price": 54.9,
+   "discount_rate": 15.41,
+   "barcode": "7290112006028"
   },
   {
-   "promo_desc": "ממתיק טרוביה 360 גרם ב24.90",
+   "promo_desc": "פחית בירה מכבי/גולדסטא 500 מ ל 3ב20 כולל",
+   "start": "2026-07-05T00:00:00.000",
+   "end": "2026-10-31T23:59:00.000",
+   "clubs": "0",
+   "is_coupon": "0",
+   "min_qty": 3.0,
+   "discounted_price": 20.0,
+   "discount_rate": 18.7,
+   "barcode": "7290008464222"
+  },
+  {
+   "promo_desc": "פחית בירה מכבי/גולדסטא 500 מ ל 3ב20 כולל",
+   "start": "2026-07-05T00:00:00.000",
+   "end": "2026-10-31T23:59:00.000",
+   "clubs": "0",
+   "is_coupon": "0",
+   "min_qty": 3.0,
+   "discounted_price": 20.0,
+   "discount_rate": 18.7,
+   "barcode": "7290008464468"
+  },
+  {
+   "promo_desc": "פחית בירה מכבי/גולדסטא 500 מ ל 3ב20 כולל",
+   "start": "2026-07-05T00:00:00.000",
+   "end": "2026-10-31T23:59:00.000",
+   "clubs": "0",
+   "is_coupon": "0",
+   "min_qty": 3.0,
+   "discounted_price": 20.0,
+   "discount_rate": 14.53,
+   "barcode": "7290008464475"
+  },
+  {
+   "promo_desc": "סוכריות גלי 700 גרם לוקיטוס ב10.90",
    "start": "2026-08-02T00:00:00.000",
-   "end": "2026-10-05T23:59:00.000",
+   "end": "2026-10-31T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
    "min_qty": 1.0,
-   "discounted_price": 24.9,
-   "discount_rate": 16.72,
-   "barcode": "8121300208780"
+   "discounted_price": 10.9,
+   "discount_rate": 39.11,
+   "barcode": "7290018893920"
   }
  ]
 }

@@ -1,74 +1,74 @@
 {
- "promos": 12668,
- "active": 12668,
- "open_to_all": 7338,
- "basket_hits": 45,
+ "promos": 13130,
+ "active": 13130,
+ "open_to_all": 7770,
+ "basket_hits": 50,
  "sample": [
   {
-   "promo_desc": "פיניש קואנטום אולטימייט 55 יח ב54.90",
-   "start": "2026-07-05T00:00:00.000",
+   "promo_desc": "שמן קנולה 1 ליטר 2ב15",
+   "start": "2026-06-01T00:00:00.000",
    "end": "2026-10-31T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 1.0,
-   "discounted_price": 54.9,
-   "discount_rate": 15.41,
-   "barcode": "7290112006011"
+   "min_qty": 2.0,
+   "discounted_price": 15.0,
+   "discount_rate": 15.73,
+   "barcode": "7290002374312"
   },
   {
-   "promo_desc": "פיניש קואנטום אולטימייט 55 יח ב54.90",
-   "start": "2026-07-05T00:00:00.000",
+   "promo_desc": "שמן קנולה 1 ליטר 2ב15",
+   "start": "2026-06-01T00:00:00.000",
    "end": "2026-10-31T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 1.0,
-   "discounted_price": 54.9,
-   "discount_rate": 15.41,
-   "barcode": "7290112006028"
+   "min_qty": 2.0,
+   "discounted_price": 15.0,
+   "discount_rate": 15.73,
+   "barcode": "7290002881803"
   },
   {
-   "promo_desc": "פחית בירה מכבי/גולדסטא 500 מ ל 3ב20 כולל",
-   "start": "2026-07-05T00:00:00.000",
+   "promo_desc": "שמן קנולה 1 ליטר 2ב15",
+   "start": "2026-06-01T00:00:00.000",
    "end": "2026-10-31T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 3.0,
-   "discounted_price": 20.0,
-   "discount_rate": 18.7,
-   "barcode": "7290008464222"
+   "min_qty": 2.0,
+   "discounted_price": 15.0,
+   "discount_rate": 15.73,
+   "barcode": "7290005437632"
   },
   {
-   "promo_desc": "פחית בירה מכבי/גולדסטא 500 מ ל 3ב20 כולל",
-   "start": "2026-07-05T00:00:00.000",
+   "promo_desc": "שמן קנולה 1 ליטר 2ב15",
+   "start": "2026-06-01T00:00:00.000",
    "end": "2026-10-31T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 3.0,
-   "discounted_price": 20.0,
-   "discount_rate": 18.7,
-   "barcode": "7290008464468"
+   "min_qty": 2.0,
+   "discounted_price": 15.0,
+   "discount_rate": 15.73,
+   "barcode": "7290010259977"
   },
   {
-   "promo_desc": "פחית בירה מכבי/גולדסטא 500 מ ל 3ב20 כולל",
-   "start": "2026-07-05T00:00:00.000",
+   "promo_desc": "שמן קנולה 1 ליטר 2ב15",
+   "start": "2026-06-01T00:00:00.000",
    "end": "2026-10-31T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 3.0,
-   "discounted_price": 20.0,
-   "discount_rate": 14.53,
-   "barcode": "7290008464475"
+   "min_qty": 2.0,
+   "discounted_price": 15.0,
+   "discount_rate": 15.73,
+   "barcode": "7290010639267"
   },
   {
-   "promo_desc": "סוכריות גלי 700 גרם לוקיטוס ב10.90",
-   "start": "2026-08-02T00:00:00.000",
+   "promo_desc": "שמן קנולה 1 ליטר 2ב15",
+   "start": "2026-06-01T00:00:00.000",
    "end": "2026-10-31T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 1.0,
-   "discounted_price": 10.9,
-   "discount_rate": 39.11,
-   "barcode": "7290018893920"
+   "min_qty": 2.0,
+   "discounted_price": 15.0,
+   "discount_rate": 15.73,
+   "barcode": "7290013472847"
   }
  ]
 }

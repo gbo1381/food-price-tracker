@@ -1,9 +1,42 @@
 {
- "promos": 13130,
- "active": 13130,
- "open_to_all": 7770,
+ "promos": 12212,
+ "active": 12212,
+ "open_to_all": 7520,
  "basket_hits": 50,
  "sample": [
+  {
+   "promo_desc": "מיץ תפוזים סחוט 2 ליטר פריניב ב24.90 כול",
+   "start": "2026-08-02T00:00:00.000",
+   "end": "2026-10-31T23:59:00.000",
+   "clubs": "0",
+   "is_coupon": "0",
+   "min_qty": 1.0,
+   "discounted_price": 24.9,
+   "discount_rate": 11.7,
+   "barcode": "7290016682335"
+  },
+  {
+   "promo_desc": "מיץ תפוזים סחוט 2 ליטר פריניב ב24.90 כול",
+   "start": "2026-08-02T00:00:00.000",
+   "end": "2026-10-31T23:59:00.000",
+   "clubs": "0",
+   "is_coupon": "0",
+   "min_qty": 1.0,
+   "discounted_price": 24.9,
+   "discount_rate": 11.7,
+   "barcode": "7290016682342"
+  },
+  {
+   "promo_desc": "מיץ תפוזים סחוט 2 ליטר פריניב ב24.90 כול",
+   "start": "2026-08-02T00:00:00.000",
+   "end": "2026-10-31T23:59:00.000",
+   "clubs": "0",
+   "is_coupon": "0",
+   "min_qty": 1.0,
+   "discounted_price": 24.9,
+   "discount_rate": 11.7,
+   "barcode": "7290016682359"
+  },
   {
    "promo_desc": "שמן קנולה 1 ליטר 2ב15",
    "start": "2026-06-01T00:00:00.000",
@@ -36,39 +69,6 @@
    "discounted_price": 15.0,
    "discount_rate": 15.73,
    "barcode": "7290005437632"
-  },
-  {
-   "promo_desc": "שמן קנולה 1 ליטר 2ב15",
-   "start": "2026-06-01T00:00:00.000",
-   "end": "2026-10-31T23:59:00.000",
-   "clubs": "0",
-   "is_coupon": "0",
-   "min_qty": 2.0,
-   "discounted_price": 15.0,
-   "discount_rate": 15.73,
-   "barcode": "7290010259977"
-  },
-  {
-   "promo_desc": "שמן קנולה 1 ליטר 2ב15",
-   "start": "2026-06-01T00:00:00.000",
-   "end": "2026-10-31T23:59:00.000",
-   "clubs": "0",
-   "is_coupon": "0",
-   "min_qty": 2.0,
-   "discounted_price": 15.0,
-   "discount_rate": 15.73,
-   "barcode": "7290010639267"
-  },
-  {
-   "promo_desc": "שמן קנולה 1 ליטר 2ב15",
-   "start": "2026-06-01T00:00:00.000",
-   "end": "2026-10-31T23:59:00.000",
-   "clubs": "0",
-   "is_coupon": "0",
-   "min_qty": 2.0,
-   "discounted_price": 15.0,
-   "discount_rate": 15.73,
-   "barcode": "7290013472847"
   }
  ]
 }

@@ -1,8 +1,8 @@
 {
- "promos": 5308,
- "active": 5308,
- "open_to_all": 4070,
- "basket_hits": 29,
+ "promos": 5280,
+ "active": 5280,
+ "open_to_all": 4082,
+ "basket_hits": 30,
  "sample": [
   {
    "promo_desc": "פיצוי קוטג/גבינה/חלב 1 ליטר/מוו קבוצה 2",
@@ -46,17 +46,6 @@
    "min_qty": 1.0,
    "discounted_price": 0.0,
    "discount_rate": 100.0,
-   "barcode": "7290000474076"
-  },
-  {
-   "promo_desc": "פיצוי קוטג/גבינה/חלב 1 ליטר/מוו קבוצה 2",
-   "start": "2024-09-01T00:00:00.000",
-   "end": "2026-12-31T23:59:00.000",
-   "clubs": "0",
-   "is_coupon": "1",
-   "min_qty": 1.0,
-   "discounted_price": 0.0,
-   "discount_rate": 100.0,
    "barcode": "7290000474090"
   },
   {
@@ -69,6 +58,17 @@
    "discounted_price": 0.0,
    "discount_rate": 100.0,
    "barcode": "7290102396948"
+  },
+  {
+   "promo_desc": "פיצוי קוטג/גבינה/חלב 1 ליטר/מוו קבוצה 2",
+   "start": "2024-09-01T00:00:00.000",
+   "end": "2026-12-31T23:59:00.000",
+   "clubs": "0",
+   "is_coupon": "1",
+   "min_qty": 1.0,
+   "discounted_price": 0.0,
+   "discount_rate": 100.0,
+   "barcode": "7290102398072"
   }
  ]
 }

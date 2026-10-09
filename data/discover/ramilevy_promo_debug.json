@@ -1,7 +1,7 @@
 {
- "promos": 12212,
- "active": 12212,
- "open_to_all": 7520,
+ "promos": 13313,
+ "active": 13313,
+ "open_to_all": 7948,
  "basket_hits": 50,
  "sample": [
   {
@@ -38,37 +38,37 @@
    "barcode": "7290016682359"
   },
   {
-   "promo_desc": "שמן קנולה 1 ליטר 2ב15",
-   "start": "2026-06-01T00:00:00.000",
+   "promo_desc": "פסטה מיוחדת 500 גרם ברילה ב14.90",
+   "start": "2026-05-04T00:00:00.000",
    "end": "2026-10-31T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 2.0,
-   "discounted_price": 15.0,
-   "discount_rate": 15.73,
-   "barcode": "7290002374312"
+   "min_qty": 1.0,
+   "discounted_price": 14.9,
+   "discount_rate": 4.49,
+   "barcode": "8076808070882"
   },
   {
-   "promo_desc": "שמן קנולה 1 ליטר 2ב15",
-   "start": "2026-06-01T00:00:00.000",
+   "promo_desc": "פסטה מיוחדת 500 גרם ברילה ב14.90",
+   "start": "2026-05-04T00:00:00.000",
    "end": "2026-10-31T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 2.0,
-   "discounted_price": 15.0,
-   "discount_rate": 15.73,
-   "barcode": "7290002881803"
+   "min_qty": 1.0,
+   "discounted_price": 14.9,
+   "discount_rate": 6.29,
+   "barcode": "8076809501415"
   },
   {
-   "promo_desc": "שמן קנולה 1 ליטר 2ב15",
-   "start": "2026-06-01T00:00:00.000",
+   "promo_desc": "פסטה מיוחדת 500 גרם ברילה ב14.90",
+   "start": "2026-05-04T00:00:00.000",
    "end": "2026-10-31T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 2.0,
-   "discounted_price": 15.0,
-   "discount_rate": 15.73,
-   "barcode": "7290005437632"
+   "min_qty": 1.0,
+   "discounted_price": 14.9,
+   "discount_rate": 11.83,
+   "barcode": "8076809514774"
   }
  ]
 }

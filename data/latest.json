@@ -1,35 +1,35 @@
 {
- "date": "2026-10-08",
- "run_utc": "2026-10-08T04:51:10+00:00",
+ "date": "2026-10-09",
+ "run_utc": "2026-10-09T04:51:18+00:00",
  "chains": {
   "shufersal": {
    "ok": true,
-   "price_file": "PriceFull7290027600007-002-290-20261008-030000.gz",
-   "promo_file": "PromoFull7290027600007-002-290-20261008-030000.gz",
+   "price_file": "PriceFull7290027600007-002-290-20261009-030000.gz",
+   "promo_file": "PromoFull7290027600007-002-290-20261009-030000.gz",
    "basket_items": 93,
    "found": 90,
    "on_promo": 18
   },
   "ramilevy": {
    "ok": true,
-   "price_file": "PriceFull7290058140886-001-055-20261008-060016.gz",
-   "promo_file": "PromoFull7290058140886-001-055-20261008-060103.gz",
+   "price_file": "PriceFull7290058140886-001-055-20261009-060006.gz",
+   "promo_file": "PromoFull7290058140886-001-055-20261009-060056.gz",
    "basket_items": 95,
    "found": 93,
    "on_promo": 35
   },
   "tivtaam": {
    "ok": true,
-   "price_file": "PriceFull7290873255550-000-014-20261008-004004.gz",
-   "promo_file": "PromoFull7290873255550-000-014-20261008-004004.gz",
+   "price_file": "PriceFull7290873255550-000-014-20261009-004004.gz",
+   "promo_file": "PromoFull7290873255550-000-014-20261009-004004.gz",
    "basket_items": 94,
-   "found": 93,
+   "found": 92,
    "on_promo": 26
   },
   "carrefour": {
    "ok": true,
-   "price_file": "PriceFull7290055700007-001-009-20261008-051017.gz",
-   "promo_file": "PromoFull7290055700007-001-009-20261008-051109.gz",
+   "price_file": "PriceFull7290055700007-001-009-20261009-051018.gz",
+   "promo_file": "PromoFull7290055700007-001-009-20261009-051110.gz",
    "basket_items": 96,
    "found": 95,
    "on_promo": 18

@@ -1,7 +1,7 @@
 {
- "promos": 37502,
- "active": 37502,
- "open_to_all": 9791,
+ "promos": 37514,
+ "active": 37514,
+ "open_to_all": 9798,
  "basket_hits": 124,
  "sample": [
   {
@@ -49,15 +49,15 @@
    "barcode": "7290015937405"
   },
   {
-   "promo_desc": "יין מוני 2 ב 80 מועדון",
-   "start": "2018-01-24T00:00:00.000",
-   "end": "2027-01-04T14:34:00.000",
+   "promo_desc": "הנחה DM 10%",
+   "start": "2016-01-01T00:00:00.000",
+   "end": "2030-12-31T23:58:00.000",
    "clubs": "1 - המועדון החדש",
    "is_coupon": "0",
-   "min_qty": 2.0,
-   "discounted_price": 80.0,
+   "min_qty": 1.0,
+   "discounted_price": null,
    "discount_rate": null,
-   "barcode": "7290006744302"
+   "barcode": "7290017177830"
   },
   {
    "promo_desc": "יין מוני 2 ב 80 מועדון",
@@ -68,7 +68,7 @@
    "min_qty": 2.0,
    "discounted_price": 80.0,
    "discount_rate": null,
-   "barcode": "7290006744333"
+   "barcode": "7290006744302"
   }
  ]
 }

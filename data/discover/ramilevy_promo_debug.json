@@ -1,41 +1,19 @@
 {
- "promos": 12828,
- "active": 12828,
- "open_to_all": 7585,
- "basket_hits": 50,
+ "promos": 12927,
+ "active": 12927,
+ "open_to_all": 7684,
+ "basket_hits": 49,
  "sample": [
   {
-   "promo_desc": "מיץ תפוזים סחוט 2 ליטר פריניב ב24.90 כול",
-   "start": "2026-08-02T00:00:00.000",
-   "end": "2026-10-31T23:59:00.000",
+   "promo_desc": "אננס מובחר ב7.9 מוגבל ל3",
+   "start": "2026-10-12T12:35:00.000",
+   "end": "2026-10-17T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 1.0,
-   "discounted_price": 24.9,
-   "discount_rate": 11.7,
-   "barcode": "7290016682335"
-  },
-  {
-   "promo_desc": "מיץ תפוזים סחוט 2 ליטר פריניב ב24.90 כול",
-   "start": "2026-08-02T00:00:00.000",
-   "end": "2026-10-31T23:59:00.000",
-   "clubs": "0",
-   "is_coupon": "0",
-   "min_qty": 1.0,
-   "discounted_price": 24.9,
-   "discount_rate": 11.7,
-   "barcode": "7290016682342"
-  },
-  {
-   "promo_desc": "מיץ תפוזים סחוט 2 ליטר פריניב ב24.90 כול",
-   "start": "2026-08-02T00:00:00.000",
-   "end": "2026-10-31T23:59:00.000",
-   "clubs": "0",
-   "is_coupon": "0",
-   "min_qty": 1.0,
-   "discounted_price": 24.9,
-   "discount_rate": 11.7,
-   "barcode": "7290016682359"
+   "min_qty": 0.01,
+   "discounted_price": 7.9,
+   "discount_rate": 43.17,
+   "barcode": "7290000000502"
   },
   {
    "promo_desc": "פסטה מיוחדת 500 גרם ברילה ב14.90",
@@ -69,6 +47,28 @@
    "discounted_price": 14.9,
    "discount_rate": 11.83,
    "barcode": "8076809514774"
+  },
+  {
+   "promo_desc": "פסטה מיוחדת 500 גרם ברילה ב14.90",
+   "start": "2026-05-04T00:00:00.000",
+   "end": "2026-10-31T23:59:00.000",
+   "clubs": "0",
+   "is_coupon": "0",
+   "min_qty": 1.0,
+   "discounted_price": 14.9,
+   "discount_rate": 16.76,
+   "barcode": "8076809523707"
+  },
+  {
+   "promo_desc": "פסטה מיוחדת 500 גרם ברילה ב14.90",
+   "start": "2026-05-04T00:00:00.000",
+   "end": "2026-10-31T23:59:00.000",
+   "clubs": "0",
+   "is_coupon": "0",
+   "min_qty": 1.0,
+   "discounted_price": 14.9,
+   "discount_rate": 25.13,
+   "barcode": "8076809523714"
   }
  ]
 }

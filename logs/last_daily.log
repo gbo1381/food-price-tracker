@@ -1,11 +1,87 @@
-05:00:18 === mode daily ===
-05:00:57   shufersal: PriceFull PriceFull7290027600007-002-290-20261017-030000.gz -> 9181 rows
-05:01:36   shufersal: PromoFull PromoFull7290027600007-002-290-20261017-030000.gz -> 27361 rows
-05:01:43   ramilevy: PriceFull PriceFull7290058140886-001-055-20261017-060006.gz -> 14556 rows
-05:01:45   ramilevy: PromoFull PromoFull7290058140886-001-055-20261017-060056.gz -> 13272 rows
-05:01:51   tivtaam: PriceFull PriceFull7290873255550-000-014-20261017-004004.gz -> 23319 rows
-05:01:53   tivtaam: PromoFull PromoFull7290873255550-000-014-20261017-004004.gz -> 32642 rows
-05:01:58   carrefour: PriceFull PriceFull7290055700007-001-009-20261017-051003.gz -> 12605 rows
-05:01:59   carrefour: PromoFull PromoFull7290055700007-001-009-20261017-051055.gz -> 6012 rows
-05:01:59 daily: 378 observations written to 2026-10.csv
-05:01:59 {"date": "2026-10-17", "run_utc": "2026-10-17T05:00:18+00:00", "chains": {"shufersal": {"ok": true, "price_file": "PriceFull7290027600007-002-290-20261017-030000.gz", "promo_file": "PromoFull7290027600007-002-290-20261017-030000.gz", "basket_items": 93, "found": 89, "on_promo": 23}, "ramilevy": {"ok": true, "price_file": "PriceFull7290058140886-001-055-20261017-060006.gz", "promo_file": "PromoFull7290058140886-001-055-20261017-060056.gz", "basket_items": 95, "found": 93, "on_promo": 36}, "tivtaam": {"ok": true, "price_file": "PriceFull7290873255550-000-014-20261017-004004.gz", "promo_file": "PromoFull7290873255550-000-014-20261017-004004.gz", "basket_items": 94, "found": 92, "on_promo": 18}, "carrefour": {"ok": true, "price_file": "PriceFull7290055700007-001-009-20261017-051003.gz", "promo_file": "PromoFull7290055700007-001-009-20261017-051055.gz", "basket_items": 96, "found": 95, "on_promo": 20}}}
+09:01:43 === mode daily ===
+09:03:42   shufersal: PriceFull PriceFull7290027600007-002-290-20261018-030000.gz -> 9176 rows
+09:06:22 shufersal: daily FAILED HTTPSConnectionPool(host='prices.shufersal.co.il', port=443): Read timed out. (read timeout=90)
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connectionpool.py", line 540, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connection.py", line 638, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/http/client.py", line 1478, in getresponse
+    response.begin()
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/http/client.py", line 343, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/http/client.py", line 304, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/ssl.py", line 1264, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/ssl.py", line 1116, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/util/retry.py", line 510, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connectionpool.py", line 542, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connectionpool.py", line 373, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='prices.shufersal.co.il', port=443): Read timed out. (read timeout=90)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/work/food-price-tracker/food-price-tracker/collector/collect.py", line 205, in mode_daily
+    pf, promos = with_budget(600, download_kind, ad, "PromoFull", store)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/food-price-tracker/food-price-tracker/collector/collect.py", line 68, in with_budget
+    return fn(*a, **k)
+           ^^^^^^^^^^^
+  File "/home/runner/work/food-price-tracker/food-price-tracker/collector/collect.py", line 94, in download_kind
+    files = ad.list_files(kind, store_id=store_id) if kind != "Stores" else ad.list_files(kind)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/food-price-tracker/food-price-tracker/collector/sources.py", line 282, in list_files
+    r = self.s.get(url, timeout=TIMEOUT)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/sessions.py", line 671, in get
+    return self.request("GET", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/adapters.py", line 742, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='prices.shufersal.co.il', port=443): Read timed out. (read timeout=90)
+09:06:27   ramilevy: PriceFull PriceFull7290058140886-001-055-20261018-120010.gz -> 14541 rows
+09:06:29   ramilevy: PromoFull PromoFull7290058140886-001-055-20261018-001108.gz -> 12771 rows
+09:06:35   tivtaam: PriceFull PriceFull7290873255550-000-014-20261018-093137.gz -> 23316 rows
+09:06:37   tivtaam: PromoFull PromoFull7290873255550-000-014-20261018-093137.gz -> 32607 rows
+09:06:42   carrefour: PriceFull PriceFull7290055700007-001-009-20261018-051001.gz -> 12589 rows
+09:06:43   carrefour: PromoFull PromoFull7290055700007-001-009-20261018-051052.gz -> 5987 rows
+09:06:44 daily: 285 observations written to 2026-10.csv
+09:06:44 {"date": "2026-10-18", "run_utc": "2026-10-18T09:01:43+00:00", "chains": {"shufersal": {"ok": false, "error": "HTTPSConnectionPool(host='prices.shufersal.co.il', port=443): Read timed out. (read timeout=90)"}, "ramilevy": {"ok": true, "price_file": "PriceFull7290058140886-001-055-20261018-120010.gz", "promo_file": "PromoFull7290058140886-001-055-20261018-001108.gz", "basket_items": 95, "found": 93, "on_promo": 32}, "tivtaam": {"ok": true, "price_file": "PriceFull7290873255550-000-014-20261018-093137.gz", "promo_file": "PromoFull7290873255550-000-014-20261018-093137.gz", "basket_items": 94, "found": 92, "on_promo": 18}, "carrefour": {"ok": true, "price_file": "PriceFull7290055700007-001-009-20261018-051001.gz", "promo_file": "PromoFull7290055700007-001-009-20261018-051052.gz", "basket_items": 96, "found": 95, "on_promo": 20}}}

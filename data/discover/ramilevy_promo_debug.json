@@ -1,20 +1,9 @@
 {
- "promos": 13272,
- "active": 13272,
- "open_to_all": 8205,
- "basket_hits": 52,
+ "promos": 12771,
+ "active": 12771,
+ "open_to_all": 7710,
+ "basket_hits": 47,
  "sample": [
-  {
-   "promo_desc": "אננס מובחר ב7.9 מוגבל ל3",
-   "start": "2026-10-12T12:35:00.000",
-   "end": "2026-10-17T23:59:00.000",
-   "clubs": "0",
-   "is_coupon": "0",
-   "min_qty": 0.01,
-   "discounted_price": 7.9,
-   "discount_rate": 43.17,
-   "barcode": "7290000000502"
-  },
   {
    "promo_desc": "פסטה מיוחדת 500 גרם ברילה ב14.90",
    "start": "2026-05-04T00:00:00.000",
@@ -69,6 +58,17 @@
    "discounted_price": 14.9,
    "discount_rate": 25.13,
    "barcode": "8076809523714"
+  },
+  {
+   "promo_desc": "פסטה מיוחדת 500 גרם ברילה ב14.90",
+   "start": "2026-05-04T00:00:00.000",
+   "end": "2026-10-31T23:59:00.000",
+   "clubs": "0",
+   "is_coupon": "0",
+   "min_qty": 1.0,
+   "discounted_price": 14.9,
+   "discount_rate": 6.29,
+   "barcode": "8076809523769"
   }
  ]
 }

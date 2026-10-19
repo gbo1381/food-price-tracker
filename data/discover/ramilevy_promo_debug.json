@@ -1,74 +1,74 @@
 {
- "promos": 12771,
- "active": 12771,
- "open_to_all": 7710,
- "basket_hits": 47,
+ "promos": 12960,
+ "active": 12960,
+ "open_to_all": 7887,
+ "basket_hits": 51,
  "sample": [
   {
-   "promo_desc": "פסטה מיוחדת 500 גרם ברילה ב14.90",
-   "start": "2026-05-04T00:00:00.000",
+   "promo_desc": "קולה/ספרייט/פאנטה/פיוזטי 500מל 5ב20 כולל",
+   "start": "2026-05-31T00:00:00.000",
    "end": "2026-10-31T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 1.0,
-   "discounted_price": 14.9,
-   "discount_rate": 4.49,
-   "barcode": "8076808070882"
+   "min_qty": 5.0,
+   "discounted_price": 20.0,
+   "discount_rate": 34.43,
+   "barcode": "7290001594155"
   },
   {
-   "promo_desc": "פסטה מיוחדת 500 גרם ברילה ב14.90",
-   "start": "2026-05-04T00:00:00.000",
+   "promo_desc": "קולה/ספרייט/פאנטה/פיוזטי 500מל 5ב20 כולל",
+   "start": "2026-05-31T00:00:00.000",
    "end": "2026-10-31T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 1.0,
-   "discounted_price": 14.9,
-   "discount_rate": 6.29,
-   "barcode": "8076809501415"
+   "min_qty": 5.0,
+   "discounted_price": 20.0,
+   "discount_rate": 34.43,
+   "barcode": "7290001594179"
   },
   {
-   "promo_desc": "פסטה מיוחדת 500 גרם ברילה ב14.90",
-   "start": "2026-05-04T00:00:00.000",
+   "promo_desc": "קולה/ספרייט/פאנטה/פיוזטי 500מל 5ב20 כולל",
+   "start": "2026-05-31T00:00:00.000",
    "end": "2026-10-31T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 1.0,
-   "discounted_price": 14.9,
-   "discount_rate": 11.83,
-   "barcode": "8076809514774"
+   "min_qty": 5.0,
+   "discounted_price": 20.0,
+   "discount_rate": 34.43,
+   "barcode": "7290001594186"
   },
   {
-   "promo_desc": "פסטה מיוחדת 500 גרם ברילה ב14.90",
-   "start": "2026-05-04T00:00:00.000",
+   "promo_desc": "קולה/ספרייט/פאנטה/פיוזטי 500מל 5ב20 כולל",
+   "start": "2026-05-31T00:00:00.000",
    "end": "2026-10-31T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 1.0,
-   "discounted_price": 14.9,
-   "discount_rate": 16.76,
-   "barcode": "8076809523707"
+   "min_qty": 5.0,
+   "discounted_price": 20.0,
+   "discount_rate": 34.43,
+   "barcode": "7290002331124"
   },
   {
-   "promo_desc": "פסטה מיוחדת 500 גרם ברילה ב14.90",
-   "start": "2026-05-04T00:00:00.000",
+   "promo_desc": "קולה/ספרייט/פאנטה/פיוזטי 500מל 5ב20 כולל",
+   "start": "2026-05-31T00:00:00.000",
    "end": "2026-10-31T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 1.0,
-   "discounted_price": 14.9,
-   "discount_rate": 25.13,
-   "barcode": "8076809523714"
+   "min_qty": 5.0,
+   "discounted_price": 20.0,
+   "discount_rate": 34.43,
+   "barcode": "7290002331155"
   },
   {
-   "promo_desc": "פסטה מיוחדת 500 גרם ברילה ב14.90",
-   "start": "2026-05-04T00:00:00.000",
+   "promo_desc": "קולה/ספרייט/פאנטה/פיוזטי 500מל 5ב20 כולל",
+   "start": "2026-05-31T00:00:00.000",
    "end": "2026-10-31T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 1.0,
-   "discounted_price": 14.9,
-   "discount_rate": 6.29,
-   "barcode": "8076809523769"
+   "min_qty": 5.0,
+   "discounted_price": 20.0,
+   "discount_rate": 34.43,
+   "barcode": "7290005605895"
   }
  ]
 }

@@ -1,5 +1,6 @@
-10:13:27 === mode daily ===
-10:14:58 shufersal: daily FAILED HTTPSConnectionPool(host='prices.shufersal.co.il', port=443): Read timed out. (read timeout=90)
+09:35:50 === mode daily ===
+09:38:45   shufersal: PriceFull PriceFull7290027600007-002-290-20261020-030000.gz -> 9169 rows
+09:41:17 shufersal: daily FAILED HTTPSConnectionPool(host='prices.shufersal.co.il', port=443): Read timed out. (read timeout=90)
 Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/urllib3/connectionpool.py", line 540, in _make_request
     response = conn.getresponse()
@@ -52,8 +53,8 @@ urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='prices.shufersal.
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "/home/runner/work/food-price-tracker/food-price-tracker/collector/collect.py", line 204, in mode_daily
-    fp, prices = with_budget(600, download_kind, ad, "PriceFull", store)
+  File "/home/runner/work/food-price-tracker/food-price-tracker/collector/collect.py", line 205, in mode_daily
+    pf, promos = with_budget(600, download_kind, ad, "PromoFull", store)
                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/home/runner/work/food-price-tracker/food-price-tracker/collector/collect.py", line 68, in with_budget
     return fn(*a, **k)
@@ -76,11 +77,11 @@ Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/adapters.py", line 742, in send
     raise ReadTimeout(e, request=request)
 requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='prices.shufersal.co.il', port=443): Read timed out. (read timeout=90)
-10:15:03   ramilevy: PriceFull PriceFull7290058140886-001-055-20261019-120011.gz -> 14538 rows
-10:15:06   ramilevy: PromoFull PromoFull7290058140886-001-055-20261019-120101.gz -> 12960 rows
-10:15:13   tivtaam: PriceFull PriceFull7290873255550-000-014-20261019-004004.gz -> 23266 rows
-10:15:15   tivtaam: PromoFull PromoFull7290873255550-000-014-20261019-004004.gz -> 32619 rows
-10:15:20   carrefour: PriceFull PriceFull7290055700007-001-009-20261019-051015.gz -> 12586 rows
-10:15:21   carrefour: PromoFull PromoFull7290055700007-001-009-20261019-051108.gz -> 6087 rows
-10:15:22 daily: 285 observations written to 2026-10.csv
-10:15:22 {"date": "2026-10-19", "run_utc": "2026-10-19T10:13:27+00:00", "chains": {"shufersal": {"ok": false, "error": "HTTPSConnectionPool(host='prices.shufersal.co.il', port=443): Read timed out. (read timeout=90)"}, "ramilevy": {"ok": true, "price_file": "PriceFull7290058140886-001-055-20261019-120011.gz", "promo_file": "PromoFull7290058140886-001-055-20261019-120101.gz", "basket_items": 95, "found": 93, "on_promo": 36}, "tivtaam": {"ok": true, "price_file": "PriceFull7290873255550-000-014-20261019-004004.gz", "promo_file": "PromoFull7290873255550-000-014-20261019-004004.gz", "basket_items": 94, "found": 92, "on_promo": 18}, "carrefour": {"ok": true, "price_file": "PriceFull7290055700007-001-009-20261019-051015.gz", "promo_file": "PromoFull7290055700007-001-009-20261019-051108.gz", "basket_items": 96, "found": 95, "on_promo": 26}}}
+09:41:21   ramilevy: PriceFull PriceFull7290058140886-001-055-20261020-120021.gz -> 14538 rows
+09:41:22   ramilevy: PromoFull PromoFull7290058140886-001-055-20261020-120110.gz -> 13067 rows
+09:41:27   tivtaam: PriceFull PriceFull7290873255550-000-014-20261020-004004.gz -> 23256 rows
+09:41:29   tivtaam: PromoFull PromoFull7290873255550-000-014-20261020-004004.gz -> 32666 rows
+09:41:33   carrefour: PriceFull PriceFull7290055700007-001-009-20261020-051004.gz -> 12588 rows
+09:41:34   carrefour: PromoFull PromoFull7290055700007-001-009-20261020-051056.gz -> 6146 rows
+09:41:34 daily: 285 observations written to 2026-10.csv
+09:41:34 {"date": "2026-10-20", "run_utc": "2026-10-20T09:35:50+00:00", "chains": {"shufersal": {"ok": false, "error": "HTTPSConnectionPool(host='prices.shufersal.co.il', port=443): Read timed out. (read timeout=90)"}, "ramilevy": {"ok": true, "price_file": "PriceFull7290058140886-001-055-20261020-120021.gz", "promo_file": "PromoFull7290058140886-001-055-20261020-120110.gz", "basket_items": 95, "found": 93, "on_promo": 37}, "tivtaam": {"ok": true, "price_file": "PriceFull7290873255550-000-014-20261020-004004.gz", "promo_file": "PromoFull7290873255550-000-014-20261020-004004.gz", "basket_items": 94, "found": 92, "on_promo": 18}, "carrefour": {"ok": true, "price_file": "PriceFull7290055700007-001-009-20261020-051004.gz", "promo_file": "PromoFull7290055700007-001-009-20261020-051056.gz", "basket_items": 96, "found": 95, "on_promo": 29}}}

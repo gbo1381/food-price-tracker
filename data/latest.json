@@ -1,6 +1,6 @@
 {
- "date": "2026-10-22",
- "run_utc": "2026-10-22T09:35:15+00:00",
+ "date": "2026-10-23",
+ "run_utc": "2026-10-23T09:31:03+00:00",
  "chains": {
   "shufersal": {
    "ok": false,
@@ -8,23 +8,23 @@
   },
   "ramilevy": {
    "ok": true,
-   "price_file": "PriceFull7290058140886-001-055-20261022-060006.gz",
-   "promo_file": "PromoFull7290058140886-001-055-20261022-120039.gz",
+   "price_file": "PriceFull7290058140886-001-055-20261023-120006.gz",
+   "promo_file": "PromoFull7290058140886-001-055-20261023-120056.gz",
    "basket_items": 95,
    "found": 93,
    "on_promo": 37
   },
   "tivtaam": {
    "ok": true,
-   "price_file": "PriceFull7290873255550-000-014-20261022-004004.gz",
-   "promo_file": "PromoFull7290873255550-000-014-20261022-004004.gz",
+   "price_file": "PriceFull7290873255550-000-014-20261023-004004.gz",
+   "promo_file": "PromoFull7290873255550-000-014-20261023-004004.gz",
    "basket_items": 94,
    "found": 91,
    "on_promo": 18
   },
   "carrefour": {
    "ok": false,
-   "error": "HTTPSConnectionPool(host='prices.carrefour.co.il', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='prices.carrefour.co.il', port=443) at 0x7fb2f74ce330>, 'Connection to prices.carrefour.co.il timed out. (connect timeout=90)'))"
+   "error": "HTTPSConnectionPool(host='prices.carrefour.co.il', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='prices.carrefour.co.il', port=443) at 0x79ae0dfda720>, 'Connection to prices.carrefour.co.il timed out. (connect timeout=90)'))"
   }
  }
 }

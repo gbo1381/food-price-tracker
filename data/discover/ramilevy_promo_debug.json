@@ -1,20 +1,9 @@
 {
- "promos": 13907,
- "active": 13907,
- "open_to_all": 8108,
- "basket_hits": 52,
+ "promos": 13727,
+ "active": 13727,
+ "open_to_all": 7934,
+ "basket_hits": 49,
  "sample": [
-  {
-   "promo_desc": "אשכולית אדומה ב5.9 מוגבל ל3",
-   "start": "2026-10-20T15:26:00.000",
-   "end": "2026-10-24T23:59:00.000",
-   "clubs": "0",
-   "is_coupon": "0",
-   "min_qty": 0.01,
-   "discounted_price": 5.9,
-   "discount_rate": 33.71,
-   "barcode": "7290000000142"
-  },
   {
    "promo_desc": "קולה/ספרייט/פאנטה/פיוזטי 500מל 5ב20 כולל",
    "start": "2026-05-31T00:00:00.000",
@@ -69,6 +58,17 @@
    "discounted_price": 20.0,
    "discount_rate": 34.43,
    "barcode": "7290002331155"
+  },
+  {
+   "promo_desc": "קולה/ספרייט/פאנטה/פיוזטי 500מל 5ב20 כולל",
+   "start": "2026-05-31T00:00:00.000",
+   "end": "2026-10-31T23:59:00.000",
+   "clubs": "0",
+   "is_coupon": "0",
+   "min_qty": 5.0,
+   "discounted_price": 20.0,
+   "discount_rate": 34.43,
+   "barcode": "7290005605895"
   }
  ]
 }

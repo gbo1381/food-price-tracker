@@ -1,74 +1,74 @@
 {
- "promos": 13727,
- "active": 13727,
- "open_to_all": 7934,
- "basket_hits": 49,
+ "promos": 13965,
+ "active": 13965,
+ "open_to_all": 8172,
+ "basket_hits": 54,
  "sample": [
   {
-   "promo_desc": "קולה/ספרייט/פאנטה/פיוזטי 500מל 5ב20 כולל",
-   "start": "2026-05-31T00:00:00.000",
+   "promo_desc": "פיצה מאמאיה מעדנות 2ב34",
+   "start": "2026-02-02T00:00:00.000",
    "end": "2026-10-31T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 5.0,
-   "discounted_price": 20.0,
-   "discount_rate": 34.43,
-   "barcode": "7290001594155"
+   "min_qty": 2.0,
+   "discounted_price": 34.0,
+   "discount_rate": 34.36,
+   "barcode": "7290018091111"
   },
   {
-   "promo_desc": "קולה/ספרייט/פאנטה/פיוזטי 500מל 5ב20 כולל",
-   "start": "2026-05-31T00:00:00.000",
+   "promo_desc": "פיצה מאמאיה מעדנות 2ב34",
+   "start": "2026-02-02T00:00:00.000",
    "end": "2026-10-31T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 5.0,
-   "discounted_price": 20.0,
-   "discount_rate": 34.43,
-   "barcode": "7290001594179"
+   "min_qty": 2.0,
+   "discounted_price": 34.0,
+   "discount_rate": 34.36,
+   "barcode": "7290018091142"
   },
   {
-   "promo_desc": "קולה/ספרייט/פאנטה/פיוזטי 500מל 5ב20 כולל",
-   "start": "2026-05-31T00:00:00.000",
+   "promo_desc": "פיצה מאמאיה מעדנות 2ב34",
+   "start": "2026-02-02T00:00:00.000",
    "end": "2026-10-31T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 5.0,
-   "discounted_price": 20.0,
-   "discount_rate": 34.43,
-   "barcode": "7290001594186"
+   "min_qty": 2.0,
+   "discounted_price": 34.0,
+   "discount_rate": 31.73,
+   "barcode": "7290018091302"
   },
   {
-   "promo_desc": "קולה/ספרייט/פאנטה/פיוזטי 500מל 5ב20 כולל",
-   "start": "2026-05-31T00:00:00.000",
+   "promo_desc": "פיצה מאמאיה מעדנות 2ב34",
+   "start": "2026-02-02T00:00:00.000",
    "end": "2026-10-31T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 5.0,
-   "discounted_price": 20.0,
-   "discount_rate": 34.43,
-   "barcode": "7290002331124"
+   "min_qty": 2.0,
+   "discounted_price": 34.0,
+   "discount_rate": 34.36,
+   "barcode": "7290018091340"
   },
   {
-   "promo_desc": "קולה/ספרייט/פאנטה/פיוזטי 500מל 5ב20 כולל",
-   "start": "2026-05-31T00:00:00.000",
+   "promo_desc": "פיצה מאמאיה מעדנות 2ב34",
+   "start": "2026-02-02T00:00:00.000",
    "end": "2026-10-31T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 5.0,
-   "discounted_price": 20.0,
-   "discount_rate": 34.43,
-   "barcode": "7290002331155"
+   "min_qty": 2.0,
+   "discounted_price": 34.0,
+   "discount_rate": 31.73,
+   "barcode": "7290018091500"
   },
   {
-   "promo_desc": "קולה/ספרייט/פאנטה/פיוזטי 500מל 5ב20 כולל",
-   "start": "2026-05-31T00:00:00.000",
+   "promo_desc": "פיצה מאמאיה מעדנות 2ב34",
+   "start": "2026-02-02T00:00:00.000",
    "end": "2026-10-31T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 5.0,
-   "discounted_price": 20.0,
-   "discount_rate": 34.43,
-   "barcode": "7290005605895"
+   "min_qty": 2.0,
+   "discounted_price": 34.0,
+   "discount_rate": 34.36,
+   "barcode": "7290018091708"
   }
  ]
 }

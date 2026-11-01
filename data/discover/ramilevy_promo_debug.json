@@ -1,74 +1,74 @@
 {
- "promos": 13979,
- "active": 13979,
- "open_to_all": 8168,
- "basket_hits": 54,
+ "promos": 10163,
+ "active": 10163,
+ "open_to_all": 4635,
+ "basket_hits": 30,
  "sample": [
   {
-   "promo_desc": "פיצה מאמאיה מעדנות 2ב34",
-   "start": "2026-02-02T00:00:00.000",
-   "end": "2026-10-31T23:59:00.000",
+   "promo_desc": "אשכולית אדומה ב5.9 מוגבל ל3",
+   "start": "2026-11-01T09:52:00.000",
+   "end": "2026-11-07T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 2.0,
-   "discounted_price": 34.0,
-   "discount_rate": 34.36,
-   "barcode": "7290018091111"
+   "min_qty": 0.01,
+   "discounted_price": 5.9,
+   "discount_rate": 14.49,
+   "barcode": "7290000000142"
   },
   {
-   "promo_desc": "פיצה מאמאיה מעדנות 2ב34",
-   "start": "2026-02-02T00:00:00.000",
-   "end": "2026-10-31T23:59:00.000",
+   "promo_desc": "שניצל עוף טרי ב33.9 מו3",
+   "start": "2026-10-30T00:00:00.000",
+   "end": "2026-11-01T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 2.0,
-   "discounted_price": 34.0,
-   "discount_rate": 34.36,
-   "barcode": "7290018091142"
+   "min_qty": 0.01,
+   "discounted_price": 39.9,
+   "discount_rate": null,
+   "barcode": "7290001001981"
   },
   {
-   "promo_desc": "פיצה מאמאיה מעדנות 2ב34",
-   "start": "2026-02-02T00:00:00.000",
-   "end": "2026-10-31T23:59:00.000",
+   "promo_desc": "שניצל עוף טרי ב33.9 מו3",
+   "start": "2026-10-30T00:00:00.000",
+   "end": "2026-11-01T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 2.0,
-   "discounted_price": 34.0,
-   "discount_rate": 31.73,
-   "barcode": "7290018091302"
+   "min_qty": 0.01,
+   "discounted_price": 39.9,
+   "discount_rate": null,
+   "barcode": "7290002610489"
   },
   {
-   "promo_desc": "פיצה מאמאיה מעדנות 2ב34",
-   "start": "2026-02-02T00:00:00.000",
-   "end": "2026-10-31T23:59:00.000",
+   "promo_desc": "שניצל עוף טרי ב33.9 מו3",
+   "start": "2026-10-30T00:00:00.000",
+   "end": "2026-11-01T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 2.0,
-   "discounted_price": 34.0,
-   "discount_rate": 34.36,
-   "barcode": "7290018091340"
+   "min_qty": 0.01,
+   "discounted_price": 39.9,
+   "discount_rate": null,
+   "barcode": "7290002610786"
   },
   {
-   "promo_desc": "פיצה מאמאיה מעדנות 2ב34",
-   "start": "2026-02-02T00:00:00.000",
-   "end": "2026-10-31T23:59:00.000",
+   "promo_desc": "שניצל עוף טרי ב33.9 מו3",
+   "start": "2026-10-30T00:00:00.000",
+   "end": "2026-11-01T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 2.0,
-   "discounted_price": 34.0,
-   "discount_rate": 31.73,
-   "barcode": "7290018091500"
+   "min_qty": 0.01,
+   "discounted_price": 39.9,
+   "discount_rate": null,
+   "barcode": "7290002680154"
   },
   {
-   "promo_desc": "פיצה מאמאיה מעדנות 2ב34",
-   "start": "2026-02-02T00:00:00.000",
-   "end": "2026-10-31T23:59:00.000",
+   "promo_desc": "שניצל עוף טרי ב33.9 מו3",
+   "start": "2026-10-30T00:00:00.000",
+   "end": "2026-11-01T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 2.0,
-   "discounted_price": 34.0,
-   "discount_rate": 34.36,
-   "barcode": "7290018091708"
+   "min_qty": 0.01,
+   "discounted_price": 39.9,
+   "discount_rate": null,
+   "barcode": "7290002684206"
   }
  ]
 }

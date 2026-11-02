@@ -1,74 +1,74 @@
 {
- "promos": 10163,
- "active": 10163,
- "open_to_all": 4635,
- "basket_hits": 30,
+ "promos": 12455,
+ "active": 12455,
+ "open_to_all": 6476,
+ "basket_hits": 42,
  "sample": [
   {
-   "promo_desc": "אשכולית אדומה ב5.9 מוגבל ל3",
-   "start": "2026-11-01T09:52:00.000",
+   "promo_desc": "תפוז ברשת ב2.9 מוגבל ל3",
+   "start": "2026-11-01T22:22:00.000",
    "end": "2026-11-07T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
    "min_qty": 0.01,
-   "discounted_price": 5.9,
-   "discount_rate": 14.49,
-   "barcode": "7290000000142"
+   "discounted_price": 2.9,
+   "discount_rate": 25.64,
+   "barcode": "7290000000230"
   },
   {
-   "promo_desc": "שניצל עוף טרי ב33.9 מו3",
-   "start": "2026-10-30T00:00:00.000",
-   "end": "2026-11-01T23:59:00.000",
+   "promo_desc": "אוכמניות 2 ב 24 שיווק השקמה",
+   "start": "2026-08-02T00:00:00.000",
+   "end": "2026-11-28T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 0.01,
-   "discounted_price": 39.9,
-   "discount_rate": null,
-   "barcode": "7290001001981"
+   "min_qty": 2.0,
+   "discounted_price": 24.0,
+   "discount_rate": 19.46,
+   "barcode": "7290000000236"
   },
   {
-   "promo_desc": "שניצל עוף טרי ב33.9 מו3",
-   "start": "2026-10-30T00:00:00.000",
-   "end": "2026-11-01T23:59:00.000",
+   "promo_desc": "אוכמניות 2 ב 24 שיווק השקמה",
+   "start": "2026-08-02T00:00:00.000",
+   "end": "2026-11-28T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 0.01,
-   "discounted_price": 39.9,
-   "discount_rate": null,
-   "barcode": "7290002610489"
+   "min_qty": 2.0,
+   "discounted_price": 24.0,
+   "discount_rate": 19.46,
+   "barcode": "33383220291"
   },
   {
-   "promo_desc": "שניצל עוף טרי ב33.9 מו3",
-   "start": "2026-10-30T00:00:00.000",
-   "end": "2026-11-01T23:59:00.000",
+   "promo_desc": "אוכמניות 2 ב 24 שיווק השקמה",
+   "start": "2026-08-02T00:00:00.000",
+   "end": "2026-11-28T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 0.01,
-   "discounted_price": 39.9,
-   "discount_rate": null,
-   "barcode": "7290002610786"
+   "min_qty": 2.0,
+   "discounted_price": 24.0,
+   "discount_rate": 19.46,
+   "barcode": "33383222288"
   },
   {
-   "promo_desc": "שניצל עוף טרי ב33.9 מו3",
-   "start": "2026-10-30T00:00:00.000",
-   "end": "2026-11-01T23:59:00.000",
+   "promo_desc": "אוכמניות 2 ב 24 שיווק השקמה",
+   "start": "2026-08-02T00:00:00.000",
+   "end": "2026-11-28T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 0.01,
-   "discounted_price": 39.9,
-   "discount_rate": null,
-   "barcode": "7290002680154"
+   "min_qty": 2.0,
+   "discounted_price": 24.0,
+   "discount_rate": 19.46,
+   "barcode": "40232885518"
   },
   {
-   "promo_desc": "שניצל עוף טרי ב33.9 מו3",
-   "start": "2026-10-30T00:00:00.000",
-   "end": "2026-11-01T23:59:00.000",
+   "promo_desc": "אוכמניות 2 ב 24 שיווק השקמה",
+   "start": "2026-08-02T00:00:00.000",
+   "end": "2026-11-28T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 0.01,
-   "discounted_price": 39.9,
-   "discount_rate": null,
-   "barcode": "7290002684206"
+   "min_qty": 2.0,
+   "discounted_price": 24.0,
+   "discount_rate": 19.46,
+   "barcode": "202521000010"
   }
  ]
 }

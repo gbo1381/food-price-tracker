@@ -5,13 +5,13 @@ food,120070,לחם,tivtaam,3,3,0
 food,120080,"ביסקוויטים, עוגות וכדומה",ramilevy,3,3,2
 food,120080,"ביסקוויטים, עוגות וכדומה",shufersal,3,3,0
 food,120080,"ביסקוויטים, עוגות וכדומה",tivtaam,3,3,0
-food,120090,קמח,ramilevy,3,3,0
+food,120090,קמח,ramilevy,3,3,2
 food,120090,קמח,shufersal,3,3,0
 food,120090,קמח,tivtaam,3,3,2
 food,120100,מוצרי בצק,ramilevy,3,3,0
 food,120100,מוצרי בצק,shufersal,3,3,3
 food,120100,מוצרי בצק,tivtaam,3,3,0
-food,120110,קטניות ומוצרי דגן,ramilevy,3,3,0
+food,120110,קטניות ומוצרי דגן,ramilevy,3,3,1
 food,120110,קטניות ומוצרי דגן,shufersal,3,2,0
 food,120110,קטניות ומוצרי דגן,tivtaam,3,2,0
 food,120120,ביצים,shufersal,2,1,0
@@ -49,7 +49,7 @@ food,120260,שמנת,tivtaam,3,3,0
 food,120270,חמאה,ramilevy,3,3,2
 food,120270,חמאה,shufersal,3,3,1
 food,120270,חמאה,tivtaam,3,3,1
-food,120280,גבינה,ramilevy,3,2,0
+food,120280,גבינה,ramilevy,3,2,1
 food,120280,גבינה,shufersal,3,2,1
 food,120280,גבינה,tivtaam,3,2,0
 food,120285,גלידות,ramilevy,3,3,2
@@ -58,14 +58,14 @@ food,120285,גלידות,tivtaam,3,3,0
 food,120300,"תבלינים, רטבים, מוצרים לעוגה ומזון לתינוקות",ramilevy,3,3,2
 food,120300,"תבלינים, רטבים, מוצרים לעוגה ומזון לתינוקות",shufersal,3,3,1
 food,120300,"תבלינים, רטבים, מוצרים לעוגה ומזון לתינוקות",tivtaam,3,3,1
-food,120310,תה,ramilevy,3,3,2
+food,120310,תה,ramilevy,3,3,3
 food,120310,תה,shufersal,3,3,2
 food,120310,תה,tivtaam,3,3,1
 food,120320,קפה,ramilevy,3,3,0
 food,120320,קפה,shufersal,3,3,0
 food,120320,קפה,tivtaam,3,3,0
 food,120330,קקאו,ramilevy,3,3,1
-food,120330,קקאו,shufersal,3,3,1
+food,120330,קקאו,shufersal,3,3,0
 food,120330,קקאו,tivtaam,3,3,1
 food,120350,משקאות קלים,ramilevy,3,3,1
 food,120350,משקאות קלים,shufersal,3,3,1
@@ -79,7 +79,7 @@ food,120380,סוכר ותחליפיו,tivtaam,3,3,1
 food,120390,"ריבה, דבש וכדומה",ramilevy,3,3,3
 food,120390,"ריבה, דבש וכדומה",shufersal,3,3,1
 food,120390,"ריבה, דבש וכדומה",tivtaam,3,3,0
-food,120400,ממתקים ושוקולד,ramilevy,3,3,1
+food,120400,ממתקים ושוקולד,ramilevy,3,3,2
 food,120400,ממתקים ושוקולד,shufersal,3,2,1
 food,120400,ממתקים ושוקולד,tivtaam,3,3,1
 food,150315,סלטים מוכנים,ramilevy,3,3,2
@@ -87,6 +87,6 @@ food,150315,סלטים מוכנים,tivtaam,3,3,1
 fv,120042,ירקות טריים,ramilevy,6,6,1
 fv,120042,ירקות טריים,shufersal,6,6,2
 fv,120042,ירקות טריים,tivtaam,5,5,0
-fv,120043,פירות טריים,ramilevy,6,6,1
+fv,120043,פירות טריים,ramilevy,6,6,0
 fv,120043,פירות טריים,shufersal,6,6,2
 fv,120043,פירות טריים,tivtaam,6,6,1

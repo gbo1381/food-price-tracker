@@ -1,8 +1,8 @@
 {
- "promos": 13488,
- "active": 13488,
- "open_to_all": 7235,
- "basket_hits": 47,
+ "promos": 13804,
+ "active": 13804,
+ "open_to_all": 7554,
+ "basket_hits": 49,
  "sample": [
   {
    "promo_desc": "תפוז ברשת ב2.9 מוגבל ל3",
@@ -14,6 +14,28 @@
    "discounted_price": 2.9,
    "discount_rate": 25.64,
    "barcode": "7290000000230"
+  },
+  {
+   "promo_desc": "וופלים רמי לוי 500 גרם ב8.90",
+   "start": "2023-06-18T00:00:00.000",
+   "end": "2026-11-30T23:59:00.000",
+   "clubs": "0",
+   "is_coupon": "0",
+   "min_qty": 1.0,
+   "discounted_price": 8.9,
+   "discount_rate": 11.0,
+   "barcode": "7290016733716"
+  },
+  {
+   "promo_desc": "וופלים רמי לוי 500 גרם ב8.90",
+   "start": "2023-06-18T00:00:00.000",
+   "end": "2026-11-30T23:59:00.000",
+   "clubs": "0",
+   "is_coupon": "0",
+   "min_qty": 1.0,
+   "discounted_price": 8.9,
+   "discount_rate": 11.0,
+   "barcode": "7290016733730"
   },
   {
    "promo_desc": "נייר טואלט כפול 24 גלילים רמי לוי ב39.90",
@@ -47,28 +69,6 @@
    "discounted_price": 24.0,
    "discount_rate": 19.46,
    "barcode": "33383220291"
-  },
-  {
-   "promo_desc": "אוכמניות 2 ב 24 שיווק השקמה",
-   "start": "2026-08-02T00:00:00.000",
-   "end": "2026-11-28T23:59:00.000",
-   "clubs": "0",
-   "is_coupon": "0",
-   "min_qty": 2.0,
-   "discounted_price": 24.0,
-   "discount_rate": 19.46,
-   "barcode": "33383222288"
-  },
-  {
-   "promo_desc": "אוכמניות 2 ב 24 שיווק השקמה",
-   "start": "2026-08-02T00:00:00.000",
-   "end": "2026-11-28T23:59:00.000",
-   "clubs": "0",
-   "is_coupon": "0",
-   "min_qty": 2.0,
-   "discounted_price": 24.0,
-   "discount_rate": 19.46,
-   "barcode": "40232885518"
   }
  ]
 }

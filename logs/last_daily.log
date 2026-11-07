@@ -1,11 +1,86 @@
-12:24:06 === mode daily ===
-12:25:08   shufersal: PriceFull PriceFull7290027600007-002-290-20261106-043100.gz -> 9134 rows
-12:26:23   shufersal: PromoFull PromoFull7290027600007-002-290-20261106-043100.gz -> 27431 rows
-12:26:29   ramilevy: PriceFull PriceFull7290058140886-001-055-20261106-060006.gz -> 14602 rows
-12:26:31   ramilevy: PromoFull PromoFull7290058140886-001-055-20261106-120039.gz -> 13910 rows
-12:26:37   tivtaam: PriceFull PriceFull7290873255550-000-014-20261106-004004.gz -> 23417 rows
-12:26:39   tivtaam: PromoFull PromoFull7290873255550-000-014-20261106-004004.gz -> 33020 rows
-12:28:11 carrefour: daily FAILED HTTPSConnectionPool(host='prices.carrefour.co.il', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='prices.carrefour.co.il', port=443) at 0x7268bb206660>, 'Connection to prices.carrefour.co.il timed out. (connect timeout=90)'))
+11:17:16 === mode daily ===
+11:18:47 shufersal: daily FAILED HTTPSConnectionPool(host='prices.shufersal.co.il', port=443): Read timed out. (read timeout=90)
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connectionpool.py", line 540, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connection.py", line 638, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/http/client.py", line 1478, in getresponse
+    response.begin()
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/http/client.py", line 343, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/http/client.py", line 304, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/ssl.py", line 1264, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/ssl.py", line 1116, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/util/retry.py", line 510, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connectionpool.py", line 542, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connectionpool.py", line 373, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='prices.shufersal.co.il', port=443): Read timed out. (read timeout=90)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/work/food-price-tracker/food-price-tracker/collector/collect.py", line 204, in mode_daily
+    fp, prices = with_budget(600, download_kind, ad, "PriceFull", store)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/food-price-tracker/food-price-tracker/collector/collect.py", line 68, in with_budget
+    return fn(*a, **k)
+           ^^^^^^^^^^^
+  File "/home/runner/work/food-price-tracker/food-price-tracker/collector/collect.py", line 94, in download_kind
+    files = ad.list_files(kind, store_id=store_id) if kind != "Stores" else ad.list_files(kind)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/food-price-tracker/food-price-tracker/collector/sources.py", line 282, in list_files
+    r = self.s.get(url, timeout=TIMEOUT)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py", line 671, in get
+    return self.request("GET", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/adapters.py", line 742, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='prices.shufersal.co.il', port=443): Read timed out. (read timeout=90)
+11:18:55   ramilevy: PriceFull PriceFull7290058140886-001-055-20261107-120011.gz -> 14627 rows
+11:18:58   ramilevy: PromoFull PromoFull7290058140886-001-055-20261107-120103.gz -> 13619 rows
+11:19:06   tivtaam: PriceFull PriceFull7290873255550-000-014-20261107-004004.gz -> 23466 rows
+11:19:08   tivtaam: PromoFull PromoFull7290873255550-000-014-20261107-004004.gz -> 33197 rows
+11:20:40 carrefour: daily FAILED HTTPSConnectionPool(host='prices.carrefour.co.il', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='prices.carrefour.co.il', port=443) at 0x7700d4d0d2e0>, 'Connection to prices.carrefour.co.il timed out. (connect timeout=90)'))
 Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connection.py", line 239, in _new_conn
     sock = connection.create_connection(
@@ -33,7 +108,7 @@ Traceback (most recent call last):
                        ^^^^^^^^^^^^^^^^
   File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connection.py", line 248, in _new_conn
     raise ConnectTimeoutError(
-urllib3.exceptions.ConnectTimeoutError: (<HTTPSConnection(host='prices.carrefour.co.il', port=443) at 0x7268bb206660>, 'Connection to prices.carrefour.co.il timed out. (connect timeout=90)')
+urllib3.exceptions.ConnectTimeoutError: (<HTTPSConnection(host='prices.carrefour.co.il', port=443) at 0x7700d4d0d2e0>, 'Connection to prices.carrefour.co.il timed out. (connect timeout=90)')
 
 The above exception was the direct cause of the following exception:
 
@@ -47,7 +122,7 @@ Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/util/retry.py", line 555, in increment
     raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='prices.carrefour.co.il', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='prices.carrefour.co.il', port=443) at 0x7268bb206660>, 'Connection to prices.carrefour.co.il timed out. (connect timeout=90)'))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='prices.carrefour.co.il', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='prices.carrefour.co.il', port=443) at 0x7700d4d0d2e0>, 'Connection to prices.carrefour.co.il timed out. (connect timeout=90)'))
 
 During handling of the above exception, another exception occurred:
 
@@ -75,6 +150,6 @@ Traceback (most recent call last):
         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/adapters.py", line 717, in send
     raise ConnectTimeout(e, request=request)
-requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='prices.carrefour.co.il', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='prices.carrefour.co.il', port=443) at 0x7268bb206660>, 'Connection to prices.carrefour.co.il timed out. (connect timeout=90)'))
-12:28:11 daily: 282 observations written to 2026-11.csv
-12:28:11 {"date": "2026-11-06", "run_utc": "2026-11-06T12:24:06+00:00", "chains": {"shufersal": {"ok": true, "price_file": "PriceFull7290027600007-002-290-20261106-043100.gz", "promo_file": "PromoFull7290027600007-002-290-20261106-043100.gz", "basket_items": 93, "found": 88, "on_promo": 22}, "ramilevy": {"ok": true, "price_file": "PriceFull7290058140886-001-055-20261106-060006.gz", "promo_file": "PromoFull7290058140886-001-055-20261106-120039.gz", "basket_items": 95, "found": 93, "on_promo": 33}, "tivtaam": {"ok": true, "price_file": "PriceFull7290873255550-000-014-20261106-004004.gz", "promo_file": "PromoFull7290873255550-000-014-20261106-004004.gz", "basket_items": 94, "found": 91, "on_promo": 16}, "carrefour": {"ok": false, "error": "HTTPSConnectionPool(host='prices.carrefour.co.il', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='prices.carrefour.co.il', port=443) at 0x7268bb206660>, 'Connection to prices.carrefour.co.il timed out. (connect timeout=90)'))"}}}
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='prices.carrefour.co.il', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='prices.carrefour.co.il', port=443) at 0x7700d4d0d2e0>, 'Connection to prices.carrefour.co.il timed out. (connect timeout=90)'))
+11:20:40 daily: 189 observations written to 2026-11.csv
+11:20:40 {"date": "2026-11-07", "run_utc": "2026-11-07T11:17:16+00:00", "chains": {"shufersal": {"ok": false, "error": "HTTPSConnectionPool(host='prices.shufersal.co.il', port=443): Read timed out. (read timeout=90)"}, "ramilevy": {"ok": true, "price_file": "PriceFull7290058140886-001-055-20261107-120011.gz", "promo_file": "PromoFull7290058140886-001-055-20261107-120103.gz", "basket_items": 95, "found": 93, "on_promo": 32}, "tivtaam": {"ok": true, "price_file": "PriceFull7290873255550-000-014-20261107-004004.gz", "promo_file": "PromoFull7290873255550-000-014-20261107-004004.gz", "basket_items": 94, "found": 91, "on_promo": 16}, "carrefour": {"ok": false, "error": "HTTPSConnectionPool(host='prices.carrefour.co.il', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='prices.carrefour.co.il', port=443) at 0x7700d4d0d2e0>, 'Connection to prices.carrefour.co.il timed out. (connect timeout=90)'))"}}}

@@ -1,9 +1,20 @@
 {
- "promos": 13273,
- "active": 13273,
- "open_to_all": 7408,
- "basket_hits": 47,
+ "promos": 13509,
+ "active": 13509,
+ "open_to_all": 7817,
+ "basket_hits": 52,
  "sample": [
+  {
+   "promo_desc": "פלפל אדום ב2.9 מוגבל ל3",
+   "start": "2026-11-09T11:01:00.000",
+   "end": "2026-11-14T23:59:00.000",
+   "clubs": "0",
+   "is_coupon": "0",
+   "min_qty": 0.01,
+   "discounted_price": 2.9,
+   "discount_rate": 63.29,
+   "barcode": "7290000000104"
+  },
   {
    "promo_desc": "וופלים רמי לוי 500 גרם ב8.90",
    "start": "2023-06-18T00:00:00.000",
@@ -38,37 +49,26 @@
    "barcode": "7290103702946"
   },
   {
-   "promo_desc": "אוכמניות 2 ב 24 שיווק השקמה",
-   "start": "2026-08-02T00:00:00.000",
-   "end": "2026-11-28T23:59:00.000",
+   "promo_desc": "פטריות שלמות 400 גרם רמי לוי ב4.90",
+   "start": "2024-07-02T00:00:00.000",
+   "end": "2026-11-30T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 2.0,
-   "discounted_price": 24.0,
-   "discount_rate": 19.46,
-   "barcode": "7290000000236"
+   "min_qty": 1.0,
+   "discounted_price": 4.9,
+   "discount_rate": 16.95,
+   "barcode": "7290001591598"
   },
   {
-   "promo_desc": "אוכמניות 2 ב 24 שיווק השקמה",
-   "start": "2026-08-02T00:00:00.000",
-   "end": "2026-11-28T23:59:00.000",
+   "promo_desc": "ירכיים עוף טרי ב 19.9 מו9 נתיבות",
+   "start": "2026-11-06T00:00:00.000",
+   "end": "2026-11-09T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 2.0,
-   "discounted_price": 24.0,
-   "discount_rate": 19.46,
-   "barcode": "33383220291"
-  },
-  {
-   "promo_desc": "אוכמניות 2 ב 24 שיווק השקמה",
-   "start": "2026-08-02T00:00:00.000",
-   "end": "2026-11-28T23:59:00.000",
-   "clubs": "0",
-   "is_coupon": "0",
-   "min_qty": 2.0,
-   "discounted_price": 24.0,
-   "discount_rate": 19.46,
-   "barcode": "33383222288"
+   "min_qty": 0.01,
+   "discounted_price": 21.9,
+   "discount_rate": 18.59,
+   "barcode": "7290002680178"
   }
  ]
 }

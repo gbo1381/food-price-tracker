@@ -1,19 +1,19 @@
 {
- "promos": 13509,
- "active": 13509,
- "open_to_all": 7817,
- "basket_hits": 52,
+ "promos": 13727,
+ "active": 13727,
+ "open_to_all": 8026,
+ "basket_hits": 53,
  "sample": [
   {
-   "promo_desc": "פלפל אדום ב2.9 מוגבל ל3",
-   "start": "2026-11-09T11:01:00.000",
-   "end": "2026-11-14T23:59:00.000",
-   "clubs": "0",
+   "promo_desc": "קרם גוף פנינה 340 מ ל ב16.90 מועדון מו1",
+   "start": "2026-08-02T00:00:00.000",
+   "end": "2026-11-28T23:59:00.000",
+   "clubs": "(1=מועדון שיווק   השקמה|1=מועדון חברתי)",
    "is_coupon": "0",
-   "min_qty": 0.01,
-   "discounted_price": 2.9,
-   "discount_rate": 63.29,
-   "barcode": "7290000000104"
+   "min_qty": 1.0,
+   "discounted_price": 16.9,
+   "discount_rate": 29.29,
+   "barcode": "7290002782759"
   },
   {
    "promo_desc": "וופלים רמי לוי 500 גרם ב8.90",
@@ -60,15 +60,15 @@
    "barcode": "7290001591598"
   },
   {
-   "promo_desc": "ירכיים עוף טרי ב 19.9 מו9 נתיבות",
-   "start": "2026-11-06T00:00:00.000",
-   "end": "2026-11-09T23:59:00.000",
+   "promo_desc": "סכין פנינה מנהטן רמי לוי 10ב9.90",
+   "start": "2026-09-23T00:00:00.000",
+   "end": "2026-12-31T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 0.01,
-   "discounted_price": 21.9,
-   "discount_rate": 18.59,
-   "barcode": "7290002680178"
+   "min_qty": 10.0,
+   "discounted_price": 9.9,
+   "discount_rate": 79.8,
+   "barcode": "7290108278965"
   }
  ]
 }

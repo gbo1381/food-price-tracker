@@ -1,11 +1,11 @@
-13:10:28 === mode daily ===
-13:10:30   shufersal: PriceFull PriceFull7290027600007-002-290-20261112-030000.gz -> 9150 rows
-13:10:31   shufersal: PromoFull PromoFull7290027600007-002-290-20261112-030000.gz -> 28294 rows
-13:10:37   ramilevy: PriceFull PriceFull7290058140886-001-055-20261112-060007.gz -> 14504 rows
-13:10:38   ramilevy: PromoFull PromoFull7290058140886-001-055-20261112-120111.gz -> 13842 rows
-13:10:43   tivtaam: PriceFull PriceFull7290873255550-000-014-20261112-004004.gz -> 23427 rows
-13:10:45   tivtaam: PromoFull PromoFull7290873255550-000-014-20261112-004004.gz -> 33268 rows
-13:12:17 carrefour: daily FAILED HTTPSConnectionPool(host='prices.carrefour.co.il', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='prices.carrefour.co.il', port=443) at 0x7fd54304d850>, 'Connection to prices.carrefour.co.il timed out. (connect timeout=90)'))
+12:32:55 === mode daily ===
+12:32:58   shufersal: PriceFull PriceFull7290027600007-002-290-20261113-030000.gz -> 9146 rows
+12:33:00   shufersal: PromoFull PromoFull7290027600007-002-290-20261113-030000.gz -> 28367 rows
+12:33:07   ramilevy: PriceFull PriceFull7290058140886-001-055-20261113-120010.gz -> 14511 rows
+12:33:09   ramilevy: PromoFull PromoFull7290058140886-001-055-20261113-120104.gz -> 13871 rows
+12:33:16   tivtaam: PriceFull PriceFull7290873255550-000-014-20261113-004004.gz -> 23441 rows
+12:33:18   tivtaam: PromoFull PromoFull7290873255550-000-014-20261113-004004.gz -> 33295 rows
+12:34:50 carrefour: daily FAILED HTTPSConnectionPool(host='prices.carrefour.co.il', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='prices.carrefour.co.il', port=443) at 0x7e129b83e390>, 'Connection to prices.carrefour.co.il timed out. (connect timeout=90)'))
 Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connection.py", line 239, in _new_conn
     sock = connection.create_connection(
@@ -33,7 +33,7 @@ Traceback (most recent call last):
                        ^^^^^^^^^^^^^^^^
   File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connection.py", line 248, in _new_conn
     raise ConnectTimeoutError(
-urllib3.exceptions.ConnectTimeoutError: (<HTTPSConnection(host='prices.carrefour.co.il', port=443) at 0x7fd54304d850>, 'Connection to prices.carrefour.co.il timed out. (connect timeout=90)')
+urllib3.exceptions.ConnectTimeoutError: (<HTTPSConnection(host='prices.carrefour.co.il', port=443) at 0x7e129b83e390>, 'Connection to prices.carrefour.co.il timed out. (connect timeout=90)')
 
 The above exception was the direct cause of the following exception:
 
@@ -47,7 +47,7 @@ Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/util/retry.py", line 555, in increment
     raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='prices.carrefour.co.il', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='prices.carrefour.co.il', port=443) at 0x7fd54304d850>, 'Connection to prices.carrefour.co.il timed out. (connect timeout=90)'))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='prices.carrefour.co.il', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='prices.carrefour.co.il', port=443) at 0x7e129b83e390>, 'Connection to prices.carrefour.co.il timed out. (connect timeout=90)'))
 
 During handling of the above exception, another exception occurred:
 
@@ -75,6 +75,6 @@ Traceback (most recent call last):
         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/adapters.py", line 717, in send
     raise ConnectTimeout(e, request=request)
-requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='prices.carrefour.co.il', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='prices.carrefour.co.il', port=443) at 0x7fd54304d850>, 'Connection to prices.carrefour.co.il timed out. (connect timeout=90)'))
-13:12:17 daily: 282 observations written to 2026-11.csv
-13:12:17 {"date": "2026-11-12", "run_utc": "2026-11-12T13:10:28+00:00", "chains": {"shufersal": {"ok": true, "price_file": "PriceFull7290027600007-002-290-20261112-030000.gz", "promo_file": "PromoFull7290027600007-002-290-20261112-030000.gz", "basket_items": 93, "found": 88, "on_promo": 25}, "ramilevy": {"ok": true, "price_file": "PriceFull7290058140886-001-055-20261112-060007.gz", "promo_file": "PromoFull7290058140886-001-055-20261112-120111.gz", "basket_items": 95, "found": 93, "on_promo": 37}, "tivtaam": {"ok": true, "price_file": "PriceFull7290873255550-000-014-20261112-004004.gz", "promo_file": "PromoFull7290873255550-000-014-20261112-004004.gz", "basket_items": 94, "found": 91, "on_promo": 16}, "carrefour": {"ok": false, "error": "HTTPSConnectionPool(host='prices.carrefour.co.il', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='prices.carrefour.co.il', port=443) at 0x7fd54304d850>, 'Connection to prices.carrefour.co.il timed out. (connect timeout=90)'))"}}}
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='prices.carrefour.co.il', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='prices.carrefour.co.il', port=443) at 0x7e129b83e390>, 'Connection to prices.carrefour.co.il timed out. (connect timeout=90)'))
+12:34:50 daily: 282 observations written to 2026-11.csv
+12:34:50 {"date": "2026-11-13", "run_utc": "2026-11-13T12:32:55+00:00", "chains": {"shufersal": {"ok": true, "price_file": "PriceFull7290027600007-002-290-20261113-030000.gz", "promo_file": "PromoFull7290027600007-002-290-20261113-030000.gz", "basket_items": 93, "found": 88, "on_promo": 26}, "ramilevy": {"ok": true, "price_file": "PriceFull7290058140886-001-055-20261113-120010.gz", "promo_file": "PromoFull7290058140886-001-055-20261113-120104.gz", "basket_items": 95, "found": 93, "on_promo": 37}, "tivtaam": {"ok": true, "price_file": "PriceFull7290873255550-000-014-20261113-004004.gz", "promo_file": "PromoFull7290873255550-000-014-20261113-004004.gz", "basket_items": 94, "found": 91, "on_promo": 16}, "carrefour": {"ok": false, "error": "HTTPSConnectionPool(host='prices.carrefour.co.il', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='prices.carrefour.co.il', port=443) at 0x7e129b83e390>, 'Connection to prices.carrefour.co.il timed out. (connect timeout=90)'))"}}}

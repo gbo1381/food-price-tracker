@@ -1,8 +1,8 @@
 {
- "promos": 13286,
- "active": 13286,
- "open_to_all": 7572,
- "basket_hits": 47,
+ "promos": 13644,
+ "active": 13644,
+ "open_to_all": 7999,
+ "basket_hits": 52,
  "sample": [
   {
    "promo_desc": "קרם גוף פנינה 340 מ ל ב16.90 מועדון מו1",
@@ -60,15 +60,15 @@
    "barcode": "7290001591598"
   },
   {
-   "promo_desc": "סכין פנינה מנהטן רמי לוי 10ב9.90",
-   "start": "2026-09-23T00:00:00.000",
-   "end": "2026-12-31T23:59:00.000",
+   "promo_desc": "כרוב לבן ב2.9 מוגבל ל3",
+   "start": "2026-11-16T06:22:00.000",
+   "end": "2026-11-21T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 10.0,
-   "discounted_price": 9.9,
-   "discount_rate": 79.8,
-   "barcode": "7290108278965"
+   "min_qty": 0.01,
+   "discounted_price": 2.9,
+   "discount_rate": 30.95,
+   "barcode": "7290000000109"
   }
  ]
 }

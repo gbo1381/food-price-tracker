@@ -16,7 +16,7 @@ food,120110,קטניות ומוצרי דגן,shufersal,3,3,1
 food,120110,קטניות ומוצרי דגן,tivtaam,3,2,0
 food,120120,ביצים,shufersal,2,1,0
 food,120120,ביצים,tivtaam,2,2,0
-food,120140,בשר בקר,ramilevy,3,3,0
+food,120140,בשר בקר,ramilevy,3,2,0
 food,120140,בשר בקר,shufersal,2,1,0
 food,120140,בשר בקר,tivtaam,2,2,0
 food,120160,עופות,ramilevy,3,3,1
@@ -64,7 +64,7 @@ food,120310,תה,tivtaam,3,3,1
 food,120320,קפה,ramilevy,3,3,0
 food,120320,קפה,shufersal,3,3,0
 food,120320,קפה,tivtaam,3,3,0
-food,120330,קקאו,ramilevy,3,3,0
+food,120330,קקאו,ramilevy,3,3,1
 food,120330,קקאו,shufersal,3,3,0
 food,120330,קקאו,tivtaam,3,3,1
 food,120350,משקאות קלים,ramilevy,3,3,1
@@ -79,13 +79,13 @@ food,120380,סוכר ותחליפיו,tivtaam,3,3,1
 food,120390,"ריבה, דבש וכדומה",ramilevy,3,3,3
 food,120390,"ריבה, דבש וכדומה",shufersal,3,3,2
 food,120390,"ריבה, דבש וכדומה",tivtaam,3,3,0
-food,120400,ממתקים ושוקולד,ramilevy,3,3,1
+food,120400,ממתקים ושוקולד,ramilevy,3,3,2
 food,120400,ממתקים ושוקולד,shufersal,3,2,1
 food,120400,ממתקים ושוקולד,tivtaam,3,3,1
 food,150315,סלטים מוכנים,ramilevy,3,3,2
 food,150315,סלטים מוכנים,tivtaam,3,3,1
-fv,120042,ירקות טריים,ramilevy,6,6,0
-fv,120042,ירקות טריים,shufersal,6,6,2
+fv,120042,ירקות טריים,ramilevy,6,6,3
+fv,120042,ירקות טריים,shufersal,6,6,3
 fv,120042,ירקות טריים,tivtaam,5,4,0
 fv,120043,פירות טריים,ramilevy,6,6,0
 fv,120043,פירות טריים,shufersal,6,5,2

@@ -1,7 +1,7 @@
 {
- "promos": 13644,
- "active": 13644,
- "open_to_all": 7999,
+ "promos": 13793,
+ "active": 13793,
+ "open_to_all": 8133,
  "basket_hits": 52,
  "sample": [
   {
@@ -60,15 +60,15 @@
    "barcode": "7290001591598"
   },
   {
-   "promo_desc": "כרוב לבן ב2.9 מוגבל ל3",
-   "start": "2026-11-16T06:22:00.000",
-   "end": "2026-11-21T23:59:00.000",
+   "promo_desc": "לחם אקטיב חיטה מלאה 100% ברמן 750ג ב12.9",
+   "start": "2026-11-11T00:00:00.000",
+   "end": "2026-12-05T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
-   "min_qty": 0.01,
-   "discounted_price": 2.9,
-   "discount_rate": 30.95,
-   "barcode": "7290000000109"
+   "min_qty": 1.0,
+   "discounted_price": 12.9,
+   "discount_rate": 18.87,
+   "barcode": "7290000497044"
   }
  ]
 }

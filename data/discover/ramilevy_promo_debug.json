@@ -1,9 +1,20 @@
 {
- "promos": 13762,
- "active": 13762,
- "open_to_all": 8147,
+ "promos": 13767,
+ "active": 13767,
+ "open_to_all": 8148,
  "basket_hits": 51,
  "sample": [
+  {
+   "promo_desc": "תירס טרי ב6.9 מוגבל ל3",
+   "start": "2026-11-19T06:23:00.000",
+   "end": "2026-11-21T23:59:00.000",
+   "clubs": "0",
+   "is_coupon": "0",
+   "min_qty": 0.01,
+   "discounted_price": 6.9,
+   "discount_rate": 11.54,
+   "barcode": "7290000000148"
+  },
   {
    "promo_desc": "קרם גוף פנינה 340 מ ל ב16.90 מועדון מו1",
    "start": "2026-08-02T00:00:00.000",
@@ -58,17 +69,6 @@
    "discounted_price": 4.9,
    "discount_rate": 16.95,
    "barcode": "7290001591598"
-  },
-  {
-   "promo_desc": "לחם אקטיב חיטה מלאה 100% ברמן 750ג ב12.9",
-   "start": "2026-11-11T00:00:00.000",
-   "end": "2026-12-05T23:59:00.000",
-   "clubs": "0",
-   "is_coupon": "0",
-   "min_qty": 1.0,
-   "discounted_price": 12.9,
-   "discount_rate": 18.87,
-   "barcode": "7290000497044"
   }
  ]
 }

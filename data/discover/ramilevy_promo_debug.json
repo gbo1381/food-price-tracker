@@ -1,19 +1,19 @@
 {
- "promos": 13767,
- "active": 13767,
- "open_to_all": 8148,
+ "promos": 13797,
+ "active": 13797,
+ "open_to_all": 8178,
  "basket_hits": 51,
  "sample": [
   {
-   "promo_desc": "תירס טרי ב6.9 מוגבל ל3",
-   "start": "2026-11-19T06:23:00.000",
+   "promo_desc": "בצל יבש ב3.9 מוגבל ל3",
+   "start": "2026-11-20T09:59:00.000",
    "end": "2026-11-21T23:59:00.000",
    "clubs": "0",
    "is_coupon": "0",
    "min_qty": 0.01,
-   "discounted_price": 6.9,
-   "discount_rate": 11.54,
-   "barcode": "7290000000148"
+   "discounted_price": 3.9,
+   "discount_rate": 30.36,
+   "barcode": "7290000000108"
   },
   {
    "promo_desc": "קרם גוף פנינה 340 מ ל ב16.90 מועדון מו1",

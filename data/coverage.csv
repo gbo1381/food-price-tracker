@@ -19,7 +19,7 @@ food,120120,ביצים,tivtaam,2,2,0
 food,120140,בשר בקר,ramilevy,3,2,0
 food,120140,בשר בקר,shufersal,2,1,0
 food,120140,בשר בקר,tivtaam,2,2,0
-food,120160,עופות,ramilevy,3,3,1
+food,120160,עופות,ramilevy,3,3,0
 food,120160,עופות,shufersal,3,3,0
 food,120160,עופות,tivtaam,3,3,0
 food,120170,בשר משומר ומעובד,ramilevy,3,3,1
@@ -58,7 +58,7 @@ food,120285,גלידות,tivtaam,3,3,0
 food,120300,"תבלינים, רטבים, מוצרים לעוגה ומזון לתינוקות",ramilevy,3,3,2
 food,120300,"תבלינים, רטבים, מוצרים לעוגה ומזון לתינוקות",shufersal,3,3,2
 food,120300,"תבלינים, רטבים, מוצרים לעוגה ומזון לתינוקות",tivtaam,3,3,1
-food,120310,תה,ramilevy,3,3,3
+food,120310,תה,ramilevy,3,3,2
 food,120310,תה,shufersal,3,3,2
 food,120310,תה,tivtaam,3,3,1
 food,120320,קפה,ramilevy,3,3,0

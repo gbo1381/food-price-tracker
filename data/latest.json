@@ -1,34 +1,34 @@
 {
- "date": "2026-11-21",
- "run_utc": "2026-11-21T12:57:13+00:00",
+ "date": "2026-11-22",
+ "run_utc": "2026-11-22T12:48:58+00:00",
  "chains": {
   "shufersal": {
    "ok": true,
-   "price_file": "PriceFull7290027600007-002-290-20261121-030000.gz",
-   "promo_file": "PromoFull7290027600007-002-290-20261121-030000.gz",
+   "price_file": "PriceFull7290027600007-002-290-20261122-133718.gz",
+   "promo_file": "PromoFull7290027600007-002-290-20261122-133718.gz",
    "basket_items": 93,
    "found": 86,
-   "on_promo": 27
+   "on_promo": 28
   },
   "ramilevy": {
    "ok": true,
-   "price_file": "PriceFull7290058140886-001-055-20261121-120011.gz",
-   "promo_file": "PromoFull7290058140886-001-055-20261121-120103.gz",
+   "price_file": "PriceFull7290058140886-001-055-20261122-120010.gz",
+   "promo_file": "PromoFull7290058140886-001-055-20261122-120109.gz",
    "basket_items": 95,
    "found": 92,
-   "on_promo": 33
+   "on_promo": 34
   },
   "tivtaam": {
    "ok": true,
-   "price_file": "PriceFull7290873255550-000-014-20261121-041537.gz",
-   "promo_file": "PromoFull7290873255550-000-014-20261121-041537.gz",
+   "price_file": "PriceFull7290873255550-000-014-20261122-004004.gz",
+   "promo_file": "PromoFull7290873255550-000-014-20261122-004004.gz",
    "basket_items": 94,
    "found": 91,
    "on_promo": 16
   },
   "carrefour": {
    "ok": false,
-   "error": "HTTPSConnectionPool(host='prices.carrefour.co.il', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='prices.carrefour.co.il', port=443) at 0x7d3f6e3fa930>, 'Connection to prices.carrefour.co.il timed out. (connect timeout=90)'))"
+   "error": "HTTPSConnectionPool(host='prices.carrefour.co.il', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='prices.carrefour.co.il', port=443) at 0x79514f7e3110>, 'Connection to prices.carrefour.co.il timed out. (connect timeout=90)'))"
   }
  }
 }

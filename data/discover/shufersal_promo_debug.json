@@ -1,8 +1,8 @@
 {
- "promos": 10100,
- "active": 10100,
- "open_to_all": 5098,
- "basket_hits": 77,
+ "promos": 10270,
+ "active": 10270,
+ "open_to_all": 5260,
+ "basket_hits": 75,
  "sample": [
   {
    "promo_desc": "קופון דבש לחיץ 500 גרם - מתנה",
@@ -49,26 +49,26 @@
    "barcode": "0000000000000"
   },
   {
-   "promo_desc": "סוף יום ש-א מאפינס/שמרים/סבתא/שטרודל15.9",
-   "start": "2026-11-22T06:00:00.000",
-   "end": "2026-11-23T02:59:00.000",
+   "promo_desc": "תו זהב 5% הנחה מותג שופרסל",
+   "start": "2022-07-27T00:00:00.000",
+   "end": "2031-01-01T02:59:00.000",
    "clubs": "0 - כלל הלקוחות",
    "is_coupon": "0",
    "min_qty": 1.0,
-   "discounted_price": 15.9,
-   "discount_rate": 35.0,
-   "barcode": "7290002472186"
+   "discounted_price": 12.26,
+   "discount_rate": 5.0,
+   "barcode": "4770577229062"
   },
   {
-   "promo_desc": "סוף יום ש-א מאפינס/שמרים/סבתא/שטרודל15.9",
-   "start": "2026-11-22T06:00:00.000",
-   "end": "2026-11-23T02:59:00.000",
+   "promo_desc": "תו זהב 5% הנחה מותג שופרסל",
+   "start": "2022-07-27T00:00:00.000",
+   "end": "2031-01-01T02:59:00.000",
    "clubs": "0 - כלל הלקוחות",
    "is_coupon": "0",
    "min_qty": 1.0,
-   "discounted_price": 15.9,
-   "discount_rate": 35.0,
-   "barcode": "7290002472193"
+   "discounted_price": 5.61,
+   "discount_rate": 5.0,
+   "barcode": "6935325410118"
   }
  ]
 }

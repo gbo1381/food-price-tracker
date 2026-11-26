@@ -1,9 +1,20 @@
 {
- "promos": 14089,
- "active": 14089,
- "open_to_all": 8368,
- "basket_hits": 54,
+ "promos": 14173,
+ "active": 14173,
+ "open_to_all": 8462,
+ "basket_hits": 55,
  "sample": [
+  {
+   "promo_desc": "שום יבש ב2.9 מוגבל ל3",
+   "start": "2026-11-26T09:03:00.000",
+   "end": "2026-11-28T23:59:00.000",
+   "clubs": "0",
+   "is_coupon": "0",
+   "min_qty": 1.0,
+   "discounted_price": 2.9,
+   "discount_rate": 40.82,
+   "barcode": "7290000000133"
+  },
   {
    "promo_desc": "גל כביסה 3 ליטר רמי לוי ב14.90",
    "start": "2025-11-04T00:00:00.000",
@@ -58,17 +69,6 @@
    "discounted_price": 8.9,
    "discount_rate": 11.0,
    "barcode": "7290016733716"
-  },
-  {
-   "promo_desc": "וופלים רמי לוי 500 גרם ב8.90",
-   "start": "2023-06-18T00:00:00.000",
-   "end": "2026-11-30T23:59:00.000",
-   "clubs": "0",
-   "is_coupon": "0",
-   "min_qty": 1.0,
-   "discounted_price": 8.9,
-   "discount_rate": 11.0,
-   "barcode": "7290016733730"
   }
  ]
 }
